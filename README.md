@@ -39,7 +39,7 @@
 
 - rails can also be installed using the following after ruby:
 
-  $ gem install rails
+  *$ gem install rails*
 
 #### For Mac: 
 
