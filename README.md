@@ -2,7 +2,7 @@
 
 ## **Intro**  
 
-### Description 
+### **Description** 
 
 #### Protest Planner App — a way to organize and find social causes in real-time that are important to you. This application pulls on many different platforms, including the event creation capability of Eventbrite, and a map & route planner with live updates that is Waze. However, while online platforms such as Facebook or Eventbrite can allow socal causes to initially organize an event, it fails to provide real-time access in case unplanned events occur. This could include sudden police presence, blocked routes, unsafe zones, etc. Protest Planner is an one-stop platform to plan protests, streamline organization, and provide a powerful tool to social causes that need it. 
 
@@ -55,11 +55,15 @@ https://gorails.com/setup/ubuntu/19.10
 
 
 ### Heroku 
-
+- more to add 
 
 ### MySQL 
 
+- more to add 
+
 ## **Schema** 
+
+- more to add 
 
 #### Link displaying DB Schema: https://drive.google.com/open?id=1-1pdKsBODWZG2AeLYroyUIRjv6Ih5FFJ
 
@@ -67,13 +71,15 @@ https://gorails.com/setup/ubuntu/19.10
 
 ## **Test Suite** 
 
-
+- more to add
 
 ## **Services** 
 
-
+- more to add
 
 ## **Deployment Instructions** 
+
+- more to add 
 
 ## ** Authors **
 
