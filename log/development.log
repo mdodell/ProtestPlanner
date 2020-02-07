@@ -6,3 +6,11 @@ Processing by ApplicationController#hello as HTML
 Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1697)
 
 
+Started GET "/" for ::1 at 2020-02-07 15:17:25 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 1610)
+
+
