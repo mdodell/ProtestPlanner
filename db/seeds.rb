@@ -5,3 +5,46 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.delete_all
+Event.delete_all
+UserEventRelationship.delete_all
+MapMarker.detele_all
+RoleTypePermission.delete_all
+
+5.times do
+    User.create(
+                first_name: Faker::Name.first_name,
+                  last_name: Faker::Name.last_name,
+                  email: Faker::Internet.email,
+                  profile: Faker::Hacker.say_something_smart,
+                  phone: Faker::Number.number(digits:10)
+                  password: Faker::Number.number(digits:10).to_s
+                  )
+  end
+
+  5.times do
+    Event.create(
+                  first_name: Faker::Name.first_name,
+                  last_name: Faker::Name.last_name,
+                  email: Faker::Internet.email,
+                  profile: Faker::Hacker.say_something_smart,
+                  phone: Faker::Number.number(digits:10)
+                  password: Faker::Number.number(digits:10).to_s
+                  )
+  end
+
+
+5.times do
+    event_name = (Faker::Hacker.ingverb + " " + Faker::Hacker.noun + "s").capitalize
+    Event.create(name: event_name, event_date: Faker::Date.between(from: 1.year.ago, to: 1.day.ago), event_time: '12:00pm')
+  end
+  
+  (1..10).each do
+    p = Person.create(name: Faker::Name.name,
+      dob: Faker::Date.between(from: 30.years.ago, to: 10.years.ago),
+      gender: ['f', 'm'].sample, zipcode: Faker::Address.zip)
+  end
+  
+  3.times do
+    r = Registration.create(person_id: Person.all.sample.id, event_id: Event.all.sample.id)
+  end

@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tags: MyString
+  date_from: 2020-02-07
+  date_to: 2020-02-07
+  location: MyString
+  dexcription: MyString
+  time_from: 2020-02-07 15:43:44
+  time_to: 2020-02-07 15:43:44
+
+two:
+  name: MyString
+  tags: MyString
+  date_from: 2020-02-07
+  date_to: 2020-02-07
+  location: MyString
+  dexcription: MyString
+  time_from: 2020-02-07 15:43:44
+  time_to: 2020-02-07 15:43:44

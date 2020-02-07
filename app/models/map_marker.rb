@@ -1,0 +1,2 @@
+class MapMarker < ApplicationRecord
+end

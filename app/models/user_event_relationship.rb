@@ -1,0 +1,2 @@
+class UserEventRelationship < ApplicationRecord
+end
