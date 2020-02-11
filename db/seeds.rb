@@ -20,6 +20,45 @@ RoleTypePermission.delete_all
                   profile: Faker::Hacker.say_something_smart,
                   phone: Faker::Number.number(digits:10),
                   password: Faker::Number.number(digits:10).to_s
-                  )
-  end
+    )
+end
 
+5.times do
+  Event.create(
+      name: Faker::Movie.quote,
+      tag_id: Faker::Number.within(range: 1..10),
+      date_from: Faker::Date.between(from: 1.days.ago, to: Date.today),
+      date_to: Faker::Date.between(from: 1.days.from_now, to: 2.days_from_now, excepted: Date.today),
+      location: Faker::Address.full_address,
+      location_long: Faker::Address.longitude,
+      location_lat: Faker::Address.latitude,
+      description: Faker::Movie.quote
+  )
+end
+
+  #5.times do
+  #  Event.create(
+  #                first_name: Faker::Name.first_name,
+  #                last_name: Faker::Name.last_name,
+  #                email: Faker::Internet.email,
+  #                profile: Faker::Hacker.say_something_smart,
+  #                phone: Faker::Number.number(digits:10),
+  #                password: Faker::Number.number(digits:10).to_s
+  #  )
+  #end
+
+
+#5.times do
+#    event_name = (Faker::Hacker.ingverb + " " + Faker::Hacker.noun + "s").capitalize
+#    Event.create(name: event_name, event_date: Faker::Date.between(from: 1.year.ago, to: 1.day.ago), event_time: '12:00pm')
+#  end
+  
+  #(1..10).each do
+  #  p = Person.create(name: Faker::Name.name,
+  #    dob: Faker::Date.between(from: 30.years.ago, to: 10.years.ago),
+  #    gender: ['f', 'm'].sample, zipcode: Faker::Address.zip)
+  #end
+  
+  #3.times do
+  #  r = Registration.create(person_id: Person.all.sample.id, event_id: Event.all.sample.id)
+  #end

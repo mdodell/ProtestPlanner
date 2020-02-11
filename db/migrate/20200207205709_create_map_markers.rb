@@ -2,7 +2,8 @@ class CreateMapMarkers < ActiveRecord::Migration[6.0]
   def change
     create_table :map_markers do |t|
       t.string :message
-      t.string :location
+      t.float :location_lat
+      t.float :location_long
       t.integer :event_id
       t.string :type
 
