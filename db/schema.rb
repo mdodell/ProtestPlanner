@@ -14,20 +14,21 @@ ActiveRecord::Schema.define(version: 2020_02_07_205709) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.string "tags"
+    t.integer "tag_id"
     t.date "date_from"
     t.date "date_to"
     t.string "location"
-    t.string "dexcription"
-    t.time "time_from"
-    t.time "time_to"
+    t.float "location_lat"
+    t.float "location_long"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "map_markers", force: :cascade do |t|
     t.string "message"
-    t.string "location"
+    t.float "location_lat"
+    t.float "location_long"
     t.integer "event_id"
     t.string "type"
     t.datetime "created_at", precision: 6, null: false

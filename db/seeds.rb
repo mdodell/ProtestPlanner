@@ -27,8 +27,8 @@ end
   Event.create(
       name: Faker::Movie.quote,
       tag_id: Faker::Number.within(range: 1..10),
-      date_from: Faker::Date.between(from: 1.days.ago, to: Date.today),
-      date_to: Faker::Date.between(from: 1.days.from_now, to: 2.days_from_now, excepted: Date.today),
+      date_from: Faker::Date.backward(days: 14),
+      date_to: Faker::Date.forward(days: 1),
       location: Faker::Address.full_address,
       location_long: Faker::Address.longitude,
       location_lat: Faker::Address.latitude,
@@ -36,16 +36,10 @@ end
   )
 end
 
-  #5.times do
-  #  Event.create(
-  #                first_name: Faker::Name.first_name,
-  #                last_name: Faker::Name.last_name,
-  #                email: Faker::Internet.email,
-  #                profile: Faker::Hacker.say_something_smart,
-  #                phone: Faker::Number.number(digits:10),
-  #                password: Faker::Number.number(digits:10).to_s
-  #  )
-  #end
+5.times do
+  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)
+end
+
 
 
 #5.times do
