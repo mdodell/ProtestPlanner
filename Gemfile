@@ -6,6 +6,7 @@ ruby '2.7.0'
 gem 'rails_12factor', group: :production
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
