@@ -40,6 +40,10 @@ end
   UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)
 end
 
+100.times do
+  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 0)
+end
+
 
 
 #5.times do
