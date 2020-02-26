@@ -3473,3 +3473,44 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 253ms (Views: 249.8ms | ActiveRecord: 0.0ms | Allocations: 188968)
 
 
+Started GET "/users" for ::1 at 2020-02-26 15:50:26 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 145.7ms | Allocations: 18627)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 333ms (Views: 268.9ms | ActiveRecord: 10.5ms | Allocations: 41444)
+
+
+Started GET "/users/401/edit" for ::1 at 2020-02-26 15:50:33 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"401"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 401], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.5ms | Allocations: 1475)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=401):
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/" for ::1 at 2020-02-26 15:50:40 -0500
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 649)
+
+
+Started GET "/users" for ::1 at 2020-02-26 15:50:44 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 42.1ms | Allocations: 13332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 1.2ms | Allocations: 17316)
+
+
