@@ -1,5 +1,51 @@
-<h1>New Event</h1>
+<%= provide(:title, 'new event') %>
+<h1> New Event </h1>
+<p>Create a new event here</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@event) do |f| %>
+      
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-<%= render 'form', event: @event %>
+    <br>
 
-<%= link_to 'Back', events_path %>
+    <%= f.label :date_from%>
+    <%= f.date_field :date_from %>
+
+    <br>
+
+    <%= f.label :date_to %>
+    <%= f.date_field :date_to %>
+
+    <br>
+
+    <%= f.label :tag_id %>
+    <%= f.number_field :tag_id %>
+    <br>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <br>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <br>
+
+    <%= f.label :location_lat %>
+    <%= f.text_field :location %>
+
+    <br>
+
+    <%= f.label :location_long %>
+    <%= f.text_field :location %>
+
+    <br>
+
+    <%= f.submit "Create event", class: "btn btn-primary" %>
+    <%= link_to 'Back', events_path %>
+    <% end %>
+  </div>
+</div>
