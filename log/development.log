@@ -3514,3 +3514,918 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 1.2ms | Allocations: 17316)
 
 
+Started GET "/events/new" for ::1 at 2020-02-26 18:10:15 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:10:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:10:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:10:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:13:46 -0500
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:17:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:17:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:17:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:17:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:20:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2020-02-26 18:20:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-26 18:20:41 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms | Allocations: 50457)
+
+
+  
+NoMethodError (undefined method `get' for #<ApplicationController:0x00007fad578b3bf0>
+Did you mean?  gets
+               gem):
+  
+app/controllers/application_controller.rb:3:in `hello'
+Started GET "/" for ::1 at 2020-02-26 18:21:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#hello as HTML
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 0.0ms | Allocations: 50205)
+
+
+  
+NoMethodError (undefined method `get' for #<ApplicationController:0x00007fad54e034f0>
+Did you mean?  gets
+               gem):
+  
+app/controllers/application_controller.rb:3:in `hello'
+Started GET "/" for ::1 at 2020-02-26 18:21:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 739)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:22:00 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1036ms (Views: 974.2ms | ActiveRecord: 2.0ms | Allocations: 29857)
+
+
+Started GET "/events/new" for ::1 at 2020-02-26 18:22:04 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 631.5ms | Allocations: 184588)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 659ms (Views: 642.4ms | ActiveRecord: 0.6ms | Allocations: 195484)
+
+
+Started POST "/events" for ::1 at 2020-02-26 18:22:19 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"luy+N0xsxLhfScw/5mstck5L32NmPBH/3mxpbBCxUeZTEZBNFYf5YuMEgsRJkJeXquNojwCKrGxEkOWhFtxl9w==", "event"=>{"name"=>"Jade's cool event", "date_from"=>"", "date_to"=>"", "tag_id"=>"1", "description"=>"dadl;a;aw;aw", "location"=>"here"}, "commit"=>"Create event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:29:in `create'
+  [1m[36mEvent Create (1.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "location", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jade's cool event"], ["tag_id", 1], ["location", "here"], ["description", "dadl;a;aw;aw"], ["created_at", "2020-02-26 23:22:19.330631"], ["updated_at", "2020-02-26 23:22:19.330631"]]
+  ↳ app/controllers/events_controller.rb:29:in `create'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:29:in `create'
+No template found for EventsController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 7.1ms | Allocations: 4332)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:22:21 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 762)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.6ms | Allocations: 4839)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:27:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4215)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 5475)
+
+
+  
+ActionView::Template::Error (undefined method `date' for #<Event:0x00007fad58965ef8>
+Did you mean?  date_to):
+    14:       <tr>
+    15:         <td><%= event.name %></td>
+    16:         <td><%= event.description %></td>
+    17:         <td><%= event.date %></td>
+    18:         <td><%= event.location %></td>
+    19:         <td><%= link_to 'Show', event %></td>
+    20:         <td><%= link_to 'Edit', edit_event_path(event) %></td>
+  
+app/views/events/index.html.erb:17
+app/views/events/index.html.erb:13
+Started GET "/events" for ::1 at 2020-02-26 18:28:06 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 6013)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:28:14 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 757)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4839)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:28:15 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 750)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 4816)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (8.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mEvent Destroy (18.5ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[36mUserEventRelationship Destroy (41.4ms)[0m  [1m[31mDELETE FROM "user_event_relationships"[0m
+  [1m[36mMapMarker Destroy (6.4ms)[0m  [1m[31mDELETE FROM "map_markers"[0m
+  [1m[36mRoleTypePermission Destroy (65.0ms)[0m  [1m[31mDELETE FROM "role_type_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Leif"], ["last_name", "Hermann"], ["email", "jeramy@senger.info"], ["profile", "We need to compress the neural USB pixel!"], ["phone", "6177810131"], ["password", "3684587999"], ["created_at", "2020-02-26 23:29:22.142436"], ["updated_at", "2020-02-26 23:29:22.142436"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Bryant"], ["last_name", "Wilkinson"], ["email", "catheryn.schinner@jones.org"], ["profile", "The HTTP matrix is down, input the auxiliary sensor so we can navigate the AI bus!"], ["phone", "4603749226"], ["password", "1177544671"], ["created_at", "2020-02-26 23:29:22.154890"], ["updated_at", "2020-02-26 23:29:22.154890"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Caitlin"], ["last_name", "Connelly"], ["email", "marcus@mraz.com"], ["profile", "If we back up the alarm, we can get to the RAM interface through the wireless ADP application!"], ["phone", "8338360282"], ["password", "5564253031"], ["created_at", "2020-02-26 23:29:22.164128"], ["updated_at", "2020-02-26 23:29:22.164128"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Johnson"], ["last_name", "Rice"], ["email", "broderick_runte@swift.info"], ["profile", "Hacking the capacitor won't do anything, we need to back up the mobile tcp interface!"], ["phone", "2204947975"], ["password", "6600099445"], ["created_at", "2020-02-26 23:29:22.173967"], ["updated_at", "2020-02-26 23:29:22.173967"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Robby"], ["last_name", "Kassulke"], ["email", "janelle@oreilly.io"], ["profile", "Parsing the pixel won't do anything, we need to transmit the redundant sms matrix!"], ["phone", "1083496723"], ["password", "3147772777"], ["created_at", "2020-02-26 23:29:22.183868"], ["updated_at", "2020-02-26 23:29:22.183868"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Chad"], ["last_name", "Boyer"], ["email", "junior@herzog.com"], ["profile", "I'll connect the neural FTP protocol, that should circuit the RAM sensor!"], ["phone", "5836260789"], ["password", "1097409190"], ["created_at", "2020-02-26 23:29:22.193340"], ["updated_at", "2020-02-26 23:29:22.193340"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rickie"], ["last_name", "Bednar"], ["email", "rey@abernathymarvin.biz"], ["profile", "I'll hack the haptic PNG panel, that should alarm the THX hard drive!"], ["phone", "8720505247"], ["password", "8168791533"], ["created_at", "2020-02-26 23:29:22.202556"], ["updated_at", "2020-02-26 23:29:22.202556"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Bryon"], ["last_name", "Gorczany"], ["email", "faustino@murray.org"], ["profile", "The JBOD monitor is down, connect the digital microchip so we can transmit the SMTP driver!"], ["phone", "1144551503"], ["password", "1359130826"], ["created_at", "2020-02-26 23:29:22.212170"], ["updated_at", "2020-02-26 23:29:22.212170"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Santo"], ["last_name", "Ledner"], ["email", "carla.jakubowski@sipes.io"], ["profile", "You can't index the interface without parsing the cross-platform SCSI application!"], ["phone", "6078534632"], ["password", "1746132173"], ["created_at", "2020-02-26 23:29:22.220640"], ["updated_at", "2020-02-26 23:29:22.220640"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Porfirio"], ["last_name", "Lockman"], ["email", "ruell.schroeder@lakin.com"], ["profile", "I'll quantify the virtual GB transmitter, that should driver the AI feed!"], ["phone", "3329879924"], ["password", "9017592205"], ["created_at", "2020-02-26 23:29:22.229754"], ["updated_at", "2020-02-26 23:29:22.229754"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Dong"], ["last_name", "Ward"], ["email", "melinda@hintzzboncak.co"], ["profile", "Use the digital SAS driver, then you can transmit the primary transmitter!"], ["phone", "8927311786"], ["password", "8021873538"], ["created_at", "2020-02-26 23:29:22.239598"], ["updated_at", "2020-02-26 23:29:22.239598"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ladonna"], ["last_name", "Quitzon"], ["email", "morris.denesik@ferry.name"], ["profile", "Copying the card won't do anything, we need to parse the online scsi capacitor!"], ["phone", "6056285557"], ["password", "2740286256"], ["created_at", "2020-02-26 23:29:22.248994"], ["updated_at", "2020-02-26 23:29:22.248994"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Brendon"], ["last_name", "Nicolas"], ["email", "emil@cartwrightohara.biz"], ["profile", "Try to synthesize the HTTP matrix, maybe it will transmit the back-end hard drive!"], ["phone", "2278860794"], ["password", "7915917316"], ["created_at", "2020-02-26 23:29:22.258244"], ["updated_at", "2020-02-26 23:29:22.258244"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Annabelle"], ["last_name", "Hettinger"], ["email", "pam@macejkovic.org"], ["profile", "Parsing the firewall won't do anything, we need to transmit the multi-byte usb interface!"], ["phone", "7360712422"], ["password", "3893294772"], ["created_at", "2020-02-26 23:29:22.268229"], ["updated_at", "2020-02-26 23:29:22.268229"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Barney"], ["last_name", "Bailey"], ["email", "wilson@hauck.io"], ["profile", "If we calculate the bus, we can get to the SAS circuit through the neural SMTP capacitor!"], ["phone", "8574867185"], ["password", "6751241031"], ["created_at", "2020-02-26 23:29:22.278803"], ["updated_at", "2020-02-26 23:29:22.278803"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Stephen"], ["last_name", "Tremblay"], ["email", "matt@collins.biz"], ["profile", "Try to program the PCI matrix, maybe it will program the cross-platform array!"], ["phone", "6783219306"], ["password", "2288148582"], ["created_at", "2020-02-26 23:29:22.290361"], ["updated_at", "2020-02-26 23:29:22.290361"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ashanti"], ["last_name", "Stokes"], ["email", "shena_oberbrunner@douglaswalter.name"], ["profile", "Generating the circuit won't do anything, we need to hack the wireless sas array!"], ["phone", "3840824381"], ["password", "6950353840"], ["created_at", "2020-02-26 23:29:22.300219"], ["updated_at", "2020-02-26 23:29:22.300219"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Curt"], ["last_name", "Morar"], ["email", "denis@murrayward.co"], ["profile", "I'll calculate the haptic COM system, that should feed the GB application!"], ["phone", "6324571818"], ["password", "6662984350"], ["created_at", "2020-02-26 23:29:22.309544"], ["updated_at", "2020-02-26 23:29:22.309544"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sue"], ["last_name", "Labadie"], ["email", "elia.mosciski@howellruel.biz"], ["profile", "The PNG bandwidth is down, compress the redundant port so we can reboot the COM monitor!"], ["phone", "2735609726"], ["password", "3329158328"], ["created_at", "2020-02-26 23:29:22.318786"], ["updated_at", "2020-02-26 23:29:22.318786"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Annice"], ["last_name", "Yost"], ["email", "markus_dooley@kuphal.info"], ["profile", "You can't program the system without copying the solid state SMTP bus!"], ["phone", "9733304015"], ["password", "8542139615"], ["created_at", "2020-02-26 23:29:22.327873"], ["updated_at", "2020-02-26 23:29:22.327873"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kasey"], ["last_name", "Schimmel"], ["email", "darron@fisherhegmann.biz"], ["profile", "If we back up the driver, we can get to the CSS system through the auxiliary SDD feed!"], ["phone", "4676771267"], ["password", "6856844668"], ["created_at", "2020-02-26 23:29:22.337708"], ["updated_at", "2020-02-26 23:29:22.337708"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rudolph"], ["last_name", "Crist"], ["email", "lena@zemlak.com"], ["profile", "You can't override the card without compressing the auxiliary CSS sensor!"], ["phone", "8055809498"], ["password", "8019142466"], ["created_at", "2020-02-26 23:29:22.351483"], ["updated_at", "2020-02-26 23:29:22.351483"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Myrna"], ["last_name", "Ryan"], ["email", "reid.hegmann@howellankunding.biz"], ["profile", "Calculating the bus won't do anything, we need to bypass the virtual agp circuit!"], ["phone", "8169487948"], ["password", "4354023621"], ["created_at", "2020-02-26 23:29:22.362454"], ["updated_at", "2020-02-26 23:29:22.362454"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Yi"], ["last_name", "Conn"], ["email", "sanford@schuliststamm.com"], ["profile", "Transmitting the pixel won't do anything, we need to program the solid state ram interface!"], ["phone", "1252360326"], ["password", "6250534072"], ["created_at", "2020-02-26 23:29:22.372674"], ["updated_at", "2020-02-26 23:29:22.372674"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Omer"], ["last_name", "Greenfelder"], ["email", "ray.koepp@marquardt.org"], ["profile", "Use the online COM pixel, then you can parse the cross-platform application!"], ["phone", "8597313632"], ["password", "4376221591"], ["created_at", "2020-02-26 23:29:22.381557"], ["updated_at", "2020-02-26 23:29:22.381557"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Vada"], ["last_name", "Mayert"], ["email", "marcelo@millerdicki.org"], ["profile", "Use the wireless CSS bus, then you can connect the haptic hard drive!"], ["phone", "3742301813"], ["password", "7135628108"], ["created_at", "2020-02-26 23:29:22.391530"], ["updated_at", "2020-02-26 23:29:22.391530"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Emanuel"], ["last_name", "O'Kon"], ["email", "conchita@mcdermott.name"], ["profile", "The HTTP system is down, synthesize the online panel so we can parse the HTTP array!"], ["phone", "3278734426"], ["password", "6387127808"], ["created_at", "2020-02-26 23:29:22.401909"], ["updated_at", "2020-02-26 23:29:22.401909"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Claudie"], ["last_name", "Braun"], ["email", "irvin.damore@ziemanncasper.org"], ["profile", "Use the 1080p USB feed, then you can bypass the multi-byte feed!"], ["phone", "6391424162"], ["password", "4961253065"], ["created_at", "2020-02-26 23:29:22.411395"], ["updated_at", "2020-02-26 23:29:22.411395"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jill"], ["last_name", "Schowalter"], ["email", "jacinto.emmerich@halvorsonsenger.com"], ["profile", "Try to compress the PCI protocol, maybe it will copy the mobile firewall!"], ["phone", "3979495469"], ["password", "8735836862"], ["created_at", "2020-02-26 23:29:22.420973"], ["updated_at", "2020-02-26 23:29:22.420973"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hong"], ["last_name", "Kub"], ["email", "lashandra_daniel@jenkins.com"], ["profile", "Overriding the matrix won't do anything, we need to synthesize the 1080p json pixel!"], ["phone", "4524636518"], ["password", "3414464630"], ["created_at", "2020-02-26 23:29:22.444749"], ["updated_at", "2020-02-26 23:29:22.444749"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Elisa"], ["last_name", "Kessler"], ["email", "tyra.marquardt@nitzsche.name"], ["profile", "You can't override the capacitor without quantifying the virtual PCI application!"], ["phone", "8245605880"], ["password", "7087288478"], ["created_at", "2020-02-26 23:29:22.458286"], ["updated_at", "2020-02-26 23:29:22.458286"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Floretta"], ["last_name", "Wuckert"], ["email", "asa_schuster@hand.net"], ["profile", "I'll override the redundant SQL hard drive, that should microchip the AI microchip!"], ["phone", "2509584452"], ["password", "8638363110"], ["created_at", "2020-02-26 23:29:22.468136"], ["updated_at", "2020-02-26 23:29:22.468136"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Gilda"], ["last_name", "Weissnat"], ["email", "ngoc_mayert@ritchieschmidt.name"], ["profile", "Try to generate the COM program, maybe it will quantify the cross-platform application!"], ["phone", "8663276162"], ["password", "2451856654"], ["created_at", "2020-02-26 23:29:22.477213"], ["updated_at", "2020-02-26 23:29:22.477213"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Peter"], ["last_name", "Veum"], ["email", "allen_cole@lebsack.com"], ["profile", "If we reboot the circuit, we can get to the AI sensor through the back-end EXE application!"], ["phone", "3115193821"], ["password", "1253728229"], ["created_at", "2020-02-26 23:29:22.485654"], ["updated_at", "2020-02-26 23:29:22.485654"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Starr"], ["last_name", "Johnston"], ["email", "eleni.mccullough@haag.name"], ["profile", "Use the multi-byte HDD application, then you can compress the auxiliary port!"], ["phone", "7259953963"], ["password", "3352473111"], ["created_at", "2020-02-26 23:29:22.494506"], ["updated_at", "2020-02-26 23:29:22.494506"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Celestina"], ["last_name", "Bartell"], ["email", "manual@blanda.io"], ["profile", "The AGP microchip is down, hack the virtual circuit so we can transmit the COM microchip!"], ["phone", "3094656884"], ["password", "9590332577"], ["created_at", "2020-02-26 23:29:22.503460"], ["updated_at", "2020-02-26 23:29:22.503460"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Terrell"], ["last_name", "Kautzer"], ["email", "geraldo@mannschaden.name"], ["profile", "Try to input the THX alarm, maybe it will copy the primary bus!"], ["phone", "7027888066"], ["password", "4892689924"], ["created_at", "2020-02-26 23:29:22.513420"], ["updated_at", "2020-02-26 23:29:22.513420"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Denyse"], ["last_name", "Effertz"], ["email", "delisa.armstrong@kuvalisrowe.org"], ["profile", "Programming the program won't do anything, we need to compress the wireless jbod matrix!"], ["phone", "8804051246"], ["password", "5402751666"], ["created_at", "2020-02-26 23:29:22.523234"], ["updated_at", "2020-02-26 23:29:22.523234"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Louis"], ["last_name", "Luettgen"], ["email", "akilah.rempel@crooks.info"], ["profile", "Try to connect the AI matrix, maybe it will synthesize the 1080p pixel!"], ["phone", "9783005689"], ["password", "2519838590"], ["created_at", "2020-02-26 23:29:22.532340"], ["updated_at", "2020-02-26 23:29:22.532340"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Winford"], ["last_name", "Kessler"], ["email", "breana.hane@lang.biz"], ["profile", "Use the optical SCSI bandwidth, then you can input the virtual array!"], ["phone", "8918571180"], ["password", "2086820079"], ["created_at", "2020-02-26 23:29:22.541559"], ["updated_at", "2020-02-26 23:29:22.541559"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Samual"], ["last_name", "Stiedemann"], ["email", "chi_harris@framideckow.net"], ["profile", "Bypassing the system won't do anything, we need to navigate the auxiliary ai array!"], ["phone", "7154833558"], ["password", "3044523909"], ["created_at", "2020-02-26 23:29:22.552416"], ["updated_at", "2020-02-26 23:29:22.552416"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rema"], ["last_name", "Cummings"], ["email", "doretta@vonheathcote.info"], ["profile", "We need to calculate the virtual USB monitor!"], ["phone", "8325461797"], ["password", "3216787314"], ["created_at", "2020-02-26 23:29:22.562791"], ["updated_at", "2020-02-26 23:29:22.562791"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Preston"], ["last_name", "Ebert"], ["email", "jenniffer@cormier.co"], ["profile", "Try to navigate the XSS system, maybe it will generate the 1080p pixel!"], ["phone", "1269844715"], ["password", "9017452462"], ["created_at", "2020-02-26 23:29:22.572934"], ["updated_at", "2020-02-26 23:29:22.572934"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Belinda"], ["last_name", "Schumm"], ["email", "nieves@moore.biz"], ["profile", "We need to parse the wireless SSL firewall!"], ["phone", "9767681922"], ["password", "2159207958"], ["created_at", "2020-02-26 23:29:22.581793"], ["updated_at", "2020-02-26 23:29:22.581793"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Mamie"], ["last_name", "Wyman"], ["email", "heriberto@auer.info"], ["profile", "Try to program the HTTP matrix, maybe it will hack the 1080p feed!"], ["phone", "3961244533"], ["password", "2905982574"], ["created_at", "2020-02-26 23:29:22.589749"], ["updated_at", "2020-02-26 23:29:22.589749"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Manual"], ["last_name", "Corkery"], ["email", "louis_breitenberg@parkercole.name"], ["profile", "The JBOD firewall is down, program the mobile sensor so we can program the SQL monitor!"], ["phone", "6559406494"], ["password", "6702703197"], ["created_at", "2020-02-26 23:29:22.598652"], ["updated_at", "2020-02-26 23:29:22.598652"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Orval"], ["last_name", "Schultz"], ["email", "darren_balistreri@schroeder.io"], ["profile", "If we connect the system, we can get to the TCP port through the optical COM capacitor!"], ["phone", "2116675976"], ["password", "2535800882"], ["created_at", "2020-02-26 23:29:22.607558"], ["updated_at", "2020-02-26 23:29:22.607558"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Gabriela"], ["last_name", "Rau"], ["email", "margarite@howe.info"], ["profile", "Use the 1080p SQL application, then you can connect the auxiliary monitor!"], ["phone", "8241570875"], ["password", "5009449209"], ["created_at", "2020-02-26 23:29:22.616172"], ["updated_at", "2020-02-26 23:29:22.616172"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kimbra"], ["last_name", "Rohan"], ["email", "jade.keebler@davis.name"], ["profile", "You can't quantify the driver without parsing the primary HDD port!"], ["phone", "9094039978"], ["password", "1747864259"], ["created_at", "2020-02-26 23:29:22.624899"], ["updated_at", "2020-02-26 23:29:22.624899"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Karin"], ["last_name", "Lang"], ["email", "bobbie@wiza.net"], ["profile", "The SDD card is down, transmit the digital firewall so we can copy the JSON interface!"], ["phone", "4007310873"], ["password", "4705725332"], ["created_at", "2020-02-26 23:29:22.634628"], ["updated_at", "2020-02-26 23:29:22.634628"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lon"], ["last_name", "Wilkinson"], ["email", "christian@rutherfordschneider.com"], ["profile", "Try to override the TCP hard drive, maybe it will synthesize the 1080p bandwidth!"], ["phone", "2010086068"], ["password", "2696973439"], ["created_at", "2020-02-26 23:29:22.644315"], ["updated_at", "2020-02-26 23:29:22.644315"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cyndi"], ["last_name", "Stoltenberg"], ["email", "ferdinand.balistreri@heaney.com"], ["profile", "Quantifying the capacitor won't do anything, we need to generate the online sms application!"], ["phone", "4097193174"], ["password", "9736850226"], ["created_at", "2020-02-26 23:29:22.654832"], ["updated_at", "2020-02-26 23:29:22.654832"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lucio"], ["last_name", "Nienow"], ["email", "ron.anderson@olsonwilliamson.com"], ["profile", "I'll synthesize the primary SQL program, that should bandwidth the AGP panel!"], ["phone", "3472110914"], ["password", "5545651792"], ["created_at", "2020-02-26 23:29:22.664701"], ["updated_at", "2020-02-26 23:29:22.664701"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Tyrone"], ["last_name", "Berge"], ["email", "gilbert_ebert@jastbauch.info"], ["profile", "If we quantify the program, we can get to the HDD circuit through the bluetooth AGP matrix!"], ["phone", "5726181614"], ["password", "6912484826"], ["created_at", "2020-02-26 23:29:22.674166"], ["updated_at", "2020-02-26 23:29:22.674166"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Oneida"], ["last_name", "Douglas"], ["email", "dylan_legros@schamberger.org"], ["profile", "Use the mobile IB capacitor, then you can bypass the auxiliary application!"], ["phone", "7604327327"], ["password", "8325441281"], ["created_at", "2020-02-26 23:29:22.683306"], ["updated_at", "2020-02-26 23:29:22.683306"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luke"], ["last_name", "Mitchell"], ["email", "phil@oberbrunnerpadberg.io"], ["profile", "We need to generate the primary HTTP panel!"], ["phone", "3562333990"], ["password", "6095024805"], ["created_at", "2020-02-26 23:29:22.692845"], ["updated_at", "2020-02-26 23:29:22.692845"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Valentin"], ["last_name", "Schiller"], ["email", "floyd@cronin.info"], ["profile", "Backing up the interface won't do anything, we need to connect the optical thx panel!"], ["phone", "4095789778"], ["password", "8120493913"], ["created_at", "2020-02-26 23:29:22.701833"], ["updated_at", "2020-02-26 23:29:22.701833"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Yong"], ["last_name", "Kuhlman"], ["email", "mike@little.biz"], ["profile", "Generating the array won't do anything, we need to synthesize the neural adp alarm!"], ["phone", "9164111103"], ["password", "1578431963"], ["created_at", "2020-02-26 23:29:22.710622"], ["updated_at", "2020-02-26 23:29:22.710622"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Van"], ["last_name", "Keebler"], ["email", "ruthe@white.biz"], ["profile", "If we program the card, we can get to the SCSI monitor through the cross-platform HTTP monitor!"], ["phone", "8522964685"], ["password", "9958313889"], ["created_at", "2020-02-26 23:29:22.719218"], ["updated_at", "2020-02-26 23:29:22.719218"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Meredith"], ["last_name", "Goyette"], ["email", "chadwick.goldner@brakus.name"], ["profile", "I'll index the multi-byte COM capacitor, that should microchip the FTP feed!"], ["phone", "5111940738"], ["password", "1049966214"], ["created_at", "2020-02-26 23:29:22.739012"], ["updated_at", "2020-02-26 23:29:22.739012"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jackie"], ["last_name", "Von"], ["email", "sammie.walker@gaylord.name"], ["profile", "If we generate the transmitter, we can get to the XSS sensor through the multi-byte SCSI system!"], ["phone", "3069714132"], ["password", "9562803489"], ["created_at", "2020-02-26 23:29:22.750772"], ["updated_at", "2020-02-26 23:29:22.750772"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alverta"], ["last_name", "Sanford"], ["email", "judie.rath@hermann.org"], ["profile", "The SMS matrix is down, synthesize the optical port so we can compress the AI sensor!"], ["phone", "8922256237"], ["password", "8150811986"], ["created_at", "2020-02-26 23:29:22.759776"], ["updated_at", "2020-02-26 23:29:22.759776"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kennith"], ["last_name", "Ankunding"], ["email", "keenan@powlowski.co"], ["profile", "We need to bypass the haptic COM protocol!"], ["phone", "2184977622"], ["password", "4842764742"], ["created_at", "2020-02-26 23:29:22.769129"], ["updated_at", "2020-02-26 23:29:22.769129"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Everette"], ["last_name", "Cartwright"], ["email", "royce_yundt@ortiz.biz"], ["profile", "Use the neural RSS monitor, then you can connect the back-end capacitor!"], ["phone", "2770595181"], ["password", "5523830433"], ["created_at", "2020-02-26 23:29:22.778730"], ["updated_at", "2020-02-26 23:29:22.778730"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cyril"], ["last_name", "Pouros"], ["email", "solomon@turner.com"], ["profile", "You can't quantify the alarm without connecting the virtual USB interface!"], ["phone", "9367611609"], ["password", "4960546942"], ["created_at", "2020-02-26 23:29:22.787753"], ["updated_at", "2020-02-26 23:29:22.787753"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jed"], ["last_name", "Bruen"], ["email", "pat_dickens@schowalterpollich.com"], ["profile", "I'll hack the wireless GB hard drive, that should feed the EXE matrix!"], ["phone", "3430398206"], ["password", "4376680024"], ["created_at", "2020-02-26 23:29:22.796793"], ["updated_at", "2020-02-26 23:29:22.796793"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Burl"], ["last_name", "Wisozk"], ["email", "ned@robelmcdermott.com"], ["profile", "Backing up the system won't do anything, we need to bypass the back-end xml capacitor!"], ["phone", "7366765163"], ["password", "8100409830"], ["created_at", "2020-02-26 23:29:22.805803"], ["updated_at", "2020-02-26 23:29:22.805803"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jesse"], ["last_name", "Gaylord"], ["email", "vernetta_blanda@hyatt.info"], ["profile", "Try to compress the PNG card, maybe it will quantify the mobile port!"], ["phone", "8639054448"], ["password", "1378520356"], ["created_at", "2020-02-26 23:29:22.814554"], ["updated_at", "2020-02-26 23:29:22.814554"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Humberto"], ["last_name", "Fahey"], ["email", "vinnie_blick@ziemannturner.io"], ["profile", "You can't navigate the hard drive without bypassing the optical PNG circuit!"], ["phone", "6516813162"], ["password", "7799226968"], ["created_at", "2020-02-26 23:29:22.823736"], ["updated_at", "2020-02-26 23:29:22.823736"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Malcom"], ["last_name", "Turner"], ["email", "chante@muellerhand.name"], ["profile", "I'll connect the digital ADP array, that should panel the PNG system!"], ["phone", "4536361765"], ["password", "1916287279"], ["created_at", "2020-02-26 23:29:22.833526"], ["updated_at", "2020-02-26 23:29:22.833526"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luciano"], ["last_name", "Veum"], ["email", "lamar_vandervort@schoenboehm.io"], ["profile", "Navigating the capacitor won't do anything, we need to hack the neural exe panel!"], ["phone", "3374816588"], ["password", "4946200085"], ["created_at", "2020-02-26 23:29:22.842180"], ["updated_at", "2020-02-26 23:29:22.842180"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Misha"], ["last_name", "Schmitt"], ["email", "wynell.schoen@lemke.io"], ["profile", "Use the optical USB monitor, then you can input the digital driver!"], ["phone", "8367002160"], ["password", "9147837921"], ["created_at", "2020-02-26 23:29:22.853210"], ["updated_at", "2020-02-26 23:29:22.853210"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Classie"], ["last_name", "Corkery"], ["email", "hettie@croninward.co"], ["profile", "Programming the bandwidth won't do anything, we need to input the auxiliary pci monitor!"], ["phone", "7205016380"], ["password", "4799114005"], ["created_at", "2020-02-26 23:29:22.862037"], ["updated_at", "2020-02-26 23:29:22.862037"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Dorene"], ["last_name", "Schmitt"], ["email", "scot.mckenzie@wintheisermacgyver.co"], ["profile", "Try to quantify the COM system, maybe it will program the open-source microchip!"], ["phone", "1320072197"], ["password", "2519364666"], ["created_at", "2020-02-26 23:29:22.871541"], ["updated_at", "2020-02-26 23:29:22.871541"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rob"], ["last_name", "VonRueden"], ["email", "phung_buckridge@ebert.info"], ["profile", "We need to synthesize the primary XML program!"], ["phone", "1820940108"], ["password", "3776211984"], ["created_at", "2020-02-26 23:29:22.880083"], ["updated_at", "2020-02-26 23:29:22.880083"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Morton"], ["last_name", "Grady"], ["email", "arthur.littel@ortizhudson.com"], ["profile", "You can't compress the feed without connecting the solid state PCI feed!"], ["phone", "5864607969"], ["password", "7681648848"], ["created_at", "2020-02-26 23:29:22.889100"], ["updated_at", "2020-02-26 23:29:22.889100"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ward"], ["last_name", "Ortiz"], ["email", "cami_batz@towneluettgen.info"], ["profile", "The FTP firewall is down, synthesize the online bus so we can synthesize the JSON capacitor!"], ["phone", "1350653493"], ["password", "6054437862"], ["created_at", "2020-02-26 23:29:22.898439"], ["updated_at", "2020-02-26 23:29:22.898439"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Bruce"], ["last_name", "Hickle"], ["email", "rafael@bernhard.info"], ["profile", "You can't parse the circuit without connecting the bluetooth SAS protocol!"], ["phone", "9323078988"], ["password", "8364942437"], ["created_at", "2020-02-26 23:29:22.907198"], ["updated_at", "2020-02-26 23:29:22.907198"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Laurena"], ["last_name", "Padberg"], ["email", "leopoldo_zulauf@gleichner.org"], ["profile", "If we quantify the application, we can get to the JSON pixel through the online SMTP system!"], ["phone", "5434934270"], ["password", "4498231086"], ["created_at", "2020-02-26 23:29:22.916219"], ["updated_at", "2020-02-26 23:29:22.916219"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Eliza"], ["last_name", "Barton"], ["email", "laraine@schumm.io"], ["profile", "Try to hack the CSS alarm, maybe it will quantify the multi-byte feed!"], ["phone", "1839614514"], ["password", "5550365431"], ["created_at", "2020-02-26 23:29:22.925670"], ["updated_at", "2020-02-26 23:29:22.925670"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Irwin"], ["last_name", "Ullrich"], ["email", "scott_mraz@stark.co"], ["profile", "You can't program the hard drive without bypassing the digital SDD bus!"], ["phone", "8014826234"], ["password", "1461303944"], ["created_at", "2020-02-26 23:29:22.934384"], ["updated_at", "2020-02-26 23:29:22.934384"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Tristan"], ["last_name", "Walker"], ["email", "chong@upton.net"], ["profile", "Try to copy the SMS bus, maybe it will program the multi-byte system!"], ["phone", "7497617049"], ["password", "9338197686"], ["created_at", "2020-02-26 23:29:22.942772"], ["updated_at", "2020-02-26 23:29:22.942772"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Yadira"], ["last_name", "Jerde"], ["email", "chasidy_baumbach@howellrowe.net"], ["profile", "The HTTP bus is down, back up the optical hard drive so we can connect the RSS matrix!"], ["phone", "8554025506"], ["password", "2751621787"], ["created_at", "2020-02-26 23:29:22.954113"], ["updated_at", "2020-02-26 23:29:22.954113"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Waldo"], ["last_name", "Emard"], ["email", "marty.graham@kuphal.com"], ["profile", "If we navigate the protocol, we can get to the SSL firewall through the 1080p PNG system!"], ["phone", "4084720721"], ["password", "5910132421"], ["created_at", "2020-02-26 23:29:22.966303"], ["updated_at", "2020-02-26 23:29:22.966303"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rosario"], ["last_name", "Muller"], ["email", "bradley@wizaparisian.info"], ["profile", "I'll parse the redundant AGP matrix, that should matrix the AGP capacitor!"], ["phone", "3599236529"], ["password", "2185703362"], ["created_at", "2020-02-26 23:29:22.975284"], ["updated_at", "2020-02-26 23:29:22.975284"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Neville"], ["last_name", "Pfannerstill"], ["email", "mervin.frami@walsh.co"], ["profile", "Transmitting the hard drive won't do anything, we need to generate the neural exe matrix!"], ["phone", "7579768825"], ["password", "7780819203"], ["created_at", "2020-02-26 23:29:22.984157"], ["updated_at", "2020-02-26 23:29:22.984157"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Guy"], ["last_name", "Hermiston"], ["email", "eli@davis.io"], ["profile", "Try to bypass the SMTP bus, maybe it will reboot the optical microchip!"], ["phone", "3112533075"], ["password", "2299788462"], ["created_at", "2020-02-26 23:29:22.993428"], ["updated_at", "2020-02-26 23:29:22.993428"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Miquel"], ["last_name", "Kutch"], ["email", "dusty_vonrueden@koepp.org"], ["profile", "You can't compress the matrix without quantifying the mobile JBOD alarm!"], ["phone", "9264409954"], ["password", "1965456187"], ["created_at", "2020-02-26 23:29:23.003026"], ["updated_at", "2020-02-26 23:29:23.003026"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Danica"], ["last_name", "Klocko"], ["email", "katherin_keeling@goodwinruecker.co"], ["profile", "I'll reboot the open-source AGP matrix, that should alarm the SMS card!"], ["phone", "2766253441"], ["password", "2066994473"], ["created_at", "2020-02-26 23:29:23.011868"], ["updated_at", "2020-02-26 23:29:23.011868"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Pat"], ["last_name", "Schamberger"], ["email", "cortney@thompson.io"], ["profile", "Try to back up the THX array, maybe it will bypass the virtual system!"], ["phone", "7169695451"], ["password", "7858793475"], ["created_at", "2020-02-26 23:29:23.021460"], ["updated_at", "2020-02-26 23:29:23.021460"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cira"], ["last_name", "Wiza"], ["email", "je_strosin@christiansensmitham.co"], ["profile", "Programming the monitor won't do anything, we need to program the virtual sas firewall!"], ["phone", "2067478238"], ["password", "8658215084"], ["created_at", "2020-02-26 23:29:23.041851"], ["updated_at", "2020-02-26 23:29:23.041851"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Wade"], ["last_name", "Mueller"], ["email", "chang.cronin@armstrong.net"], ["profile", "Use the wireless PNG panel, then you can calculate the digital application!"], ["phone", "6496799934"], ["password", "9387022991"], ["created_at", "2020-02-26 23:29:23.052506"], ["updated_at", "2020-02-26 23:29:23.052506"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jeneva"], ["last_name", "Schamberger"], ["email", "toby_huel@kuvalis.io"], ["profile", "I'll back up the 1080p THX alarm, that should system the PNG hard drive!"], ["phone", "7842723033"], ["password", "7690427407"], ["created_at", "2020-02-26 23:29:23.061898"], ["updated_at", "2020-02-26 23:29:23.061898"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Graham"], ["last_name", "Maggio"], ["email", "vita@murraymarquardt.com"], ["profile", "We need to program the auxiliary GB panel!"], ["phone", "1426464833"], ["password", "3274625535"], ["created_at", "2020-02-26 23:29:23.071218"], ["updated_at", "2020-02-26 23:29:23.071218"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Larry"], ["last_name", "Bauch"], ["email", "darren_gulgowski@langosh.org"], ["profile", "If we hack the protocol, we can get to the COM application through the mobile AI monitor!"], ["phone", "9978654407"], ["password", "2035659230"], ["created_at", "2020-02-26 23:29:23.080404"], ["updated_at", "2020-02-26 23:29:23.080404"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Doreatha"], ["last_name", "Bergnaum"], ["email", "cicely_quigley@stracke.io"], ["profile", "Navigating the card won't do anything, we need to quantify the mobile exe circuit!"], ["phone", "3760083660"], ["password", "3086297559"], ["created_at", "2020-02-26 23:29:23.088864"], ["updated_at", "2020-02-26 23:29:23.088864"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Val"], ["last_name", "Rodriguez"], ["email", "armand@gorczany.org"], ["profile", "Try to override the TCP card, maybe it will generate the optical circuit!"], ["phone", "3642497219"], ["password", "5582516670"], ["created_at", "2020-02-26 23:29:23.098357"], ["updated_at", "2020-02-26 23:29:23.098357"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Monte"], ["last_name", "Moen"], ["email", "danny@okunevakeler.biz"], ["profile", "If we reboot the sensor, we can get to the XML card through the neural XSS pixel!"], ["phone", "2060104621"], ["password", "4361471737"], ["created_at", "2020-02-26 23:29:23.107131"], ["updated_at", "2020-02-26 23:29:23.107131"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Vanesa"], ["last_name", "Hintz"], ["email", "samuel@jacobi.co"], ["profile", "We need to transmit the mobile FTP feed!"], ["phone", "3016889338"], ["password", "5051576638"], ["created_at", "2020-02-26 23:29:23.117061"], ["updated_at", "2020-02-26 23:29:23.117061"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Chiquita"], ["last_name", "Rowe"], ["email", "golda@wiegand.name"], ["profile", "The SMTP port is down, reboot the back-end port so we can program the PNG alarm!"], ["phone", "5241275114"], ["password", "8248302349"], ["created_at", "2020-02-26 23:29:23.126127"], ["updated_at", "2020-02-26 23:29:23.126127"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started GET "/events" for ::1 at 2020-02-26 18:30:59 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 61.5ms | ActiveRecord: 2.5ms | Allocations: 12054)
+
+
+Started GET "/events/new" for ::1 at 2020-02-26 18:31:01 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 500.4ms | Allocations: 183884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 535ms (Views: 506.5ms | ActiveRecord: 0.7ms | Allocations: 194789)
+
+
+Started POST "/events" for ::1 at 2020-02-26 18:31:08 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"o+lLU5dNhsyEeHqYrW1e80ZZbLDb2q2aj4el8PH+rI9mFGUpzqa7Fjg1NGMCluQWovHbXL1sEAkVeyk995OYng==", "event"=>{"name"=>"wldawj", "date_from"=>"", "date_to"=>"", "tag_id"=>"", "description"=>"", "location"=>""}, "commit"=>"Create event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:29:in `create'
+  [1m[36mEvent Create (2.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "location", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "wldawj"], ["location", ""], ["description", ""], ["created_at", "2020-02-26 23:31:08.893849"], ["updated_at", "2020-02-26 23:31:08.893849"]]
+  ↳ app/controllers/events_controller.rb:29:in `create'
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:29:in `create'
+No template found for EventsController#create, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 6.3ms | Allocations: 4318)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:31:13 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 4860)
+
+
+Started GET "/events/new" for ::1 at 2020-02-26 18:31:15 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1794)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 5889)
+
+
+Started POST "/events" for ::1 at 2020-02-26 18:31:26 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"6UY+metth4YM8/U9WylC0my+Bsg9j8R63M535WkGCYosuxDjsoa6XLC+u8b00vg3iBaxJFs5eelGMvsob2s9mw==", "event"=>{"name"=>"dwakdlq", "date_from"=>"", "date_to"=>"", "tag_id"=>"", "description"=>"djajdlaj", "location"=>"dalwak"}, "commit"=>"Create event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:29:in `create'
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "location", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "dwakdlq"], ["location", "dalwak"], ["description", "djajdlaj"], ["created_at", "2020-02-26 23:31:26.474066"], ["updated_at", "2020-02-26 23:31:26.474066"]]
+  ↳ app/controllers/events_controller.rb:29:in `create'
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:29:in `create'
+No template found for EventsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 5.1ms | Allocations: 2707)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:31:31 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 881)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 4966)
+
+
+Started GET "/users" for ::1 at 2020-02-26 18:32:16 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 19491)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 4.0ms | Allocations: 25371)
+
+
+Started GET "/events" for ::1 at 2020-02-26 18:32:20 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 4965)
+
+
