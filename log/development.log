@@ -2074,3 +2074,1100 @@ Migrating to CreateMapMarkers (20200207205709)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_event_relationships" ON "users"."id" = "user_event_relationships"."user_id" WHERE "user_event_relationships"."event_id" = ? LIMIT ?[0m  [["event_id", 11], ["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-02-24 21:00:16 -0500
+Started GET "/" for ::1 at 2020-02-24 21:00:16 -0500
+  [1m[35m (56.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (54.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 5)
+  Rendered html template (Duration: 0.0ms | Allocations: 3)
+Completed 200 OK in 134ms (Views: 123.2ms | ActiveRecord: 0.0ms | Allocations: 2188)
+
+
+Completed 200 OK in 121ms (Views: 120.8ms | ActiveRecord: 0.0ms | Allocations: 1650)
+
+
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (9.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mEvent Destroy (7.3ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[36mUserEventRelationship Destroy (49.6ms)[0m  [1m[31mDELETE FROM "user_event_relationships"[0m
+  [1m[36mMapMarker Destroy (15.5ms)[0m  [1m[31mDELETE FROM "map_markers"[0m
+  [1m[36mRoleTypePermission Destroy (12.0ms)[0m  [1m[31mDELETE FROM "role_type_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Maia"], ["last_name", "Runte"], ["email", "adolph_powlowski@hirthe.info"], ["profile", "Programming the port won't do anything, we need to copy the haptic smtp card!"], ["phone", "3576193172"], ["password", "5089569139"], ["created_at", "2020-02-25 02:09:11.948806"], ["updated_at", "2020-02-25 02:09:11.948806"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Yasuko"], ["last_name", "Nitzsche"], ["email", "roana@stark.io"], ["profile", "You can't input the transmitter without hacking the mobile RAM sensor!"], ["phone", "7753768862"], ["password", "6738867832"], ["created_at", "2020-02-25 02:09:11.960243"], ["updated_at", "2020-02-25 02:09:11.960243"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Patricia"], ["last_name", "Ruecker"], ["email", "scott@braun.biz"], ["profile", "I'll connect the bluetooth AI circuit, that should circuit the SCSI firewall!"], ["phone", "8419278646"], ["password", "4051008343"], ["created_at", "2020-02-25 02:09:11.971947"], ["updated_at", "2020-02-25 02:09:11.971947"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joe"], ["last_name", "Schimmel"], ["email", "alpha_kertzmann@wunsch.name"], ["profile", "The XML bandwidth is down, bypass the open-source circuit so we can program the SDD firewall!"], ["phone", "4532173412"], ["password", "2242477612"], ["created_at", "2020-02-25 02:09:11.989181"], ["updated_at", "2020-02-25 02:09:11.989181"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ann"], ["last_name", "Rau"], ["email", "camilla@herman.name"], ["profile", "You can't parse the bandwidth without copying the auxiliary SAS circuit!"], ["phone", "8587523189"], ["password", "2721009812"], ["created_at", "2020-02-25 02:09:11.998686"], ["updated_at", "2020-02-25 02:09:11.998686"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jona"], ["last_name", "Lowe"], ["email", "tam@luettgen.io"], ["profile", "You can't copy the bandwidth without connecting the cross-platform RSS matrix!"], ["phone", "6389937533"], ["password", "2357966504"], ["created_at", "2020-02-25 02:09:12.009349"], ["updated_at", "2020-02-25 02:09:12.009349"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Armand"], ["last_name", "Barton"], ["email", "melodee@rosenbaumheaney.info"], ["profile", "I'll navigate the open-source RSS sensor, that should firewall the THX program!"], ["phone", "6268704786"], ["password", "9089429797"], ["created_at", "2020-02-25 02:09:12.018488"], ["updated_at", "2020-02-25 02:09:12.018488"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ervin"], ["last_name", "McCullough"], ["email", "leonore@funk.com"], ["profile", "Use the bluetooth THX circuit, then you can synthesize the back-end microchip!"], ["phone", "1498887664"], ["password", "7090346173"], ["created_at", "2020-02-25 02:09:12.028261"], ["updated_at", "2020-02-25 02:09:12.028261"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Bettina"], ["last_name", "Shields"], ["email", "ida.boyle@mertz.io"], ["profile", "We need to copy the neural IB array!"], ["phone", "6598227702"], ["password", "5013247512"], ["created_at", "2020-02-25 02:09:12.036762"], ["updated_at", "2020-02-25 02:09:12.036762"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sharita"], ["last_name", "Gottlieb"], ["email", "richard.hickle@cummerata.info"], ["profile", "Generating the firewall won't do anything, we need to back up the redundant ftp port!"], ["phone", "7190333697"], ["password", "4828254424"], ["created_at", "2020-02-25 02:09:12.045636"], ["updated_at", "2020-02-25 02:09:12.045636"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Anderson"], ["last_name", "Wilderman"], ["email", "misha@deckowrempel.org"], ["profile", "If we program the port, we can get to the PNG array through the open-source SDD matrix!"], ["phone", "3331534341"], ["password", "5050000704"], ["created_at", "2020-02-25 02:09:12.055195"], ["updated_at", "2020-02-25 02:09:12.055195"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Carey"], ["last_name", "Reichert"], ["email", "hilda.glover@feeney.info"], ["profile", "Use the bluetooth XSS panel, then you can bypass the bluetooth transmitter!"], ["phone", "7214057019"], ["password", "2971981651"], ["created_at", "2020-02-25 02:09:12.064825"], ["updated_at", "2020-02-25 02:09:12.064825"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Treena"], ["last_name", "Gottlieb"], ["email", "shandi_turcotte@torphy.com"], ["profile", "We need to calculate the auxiliary USB program!"], ["phone", "1916984532"], ["password", "2930669839"], ["created_at", "2020-02-25 02:09:12.074771"], ["updated_at", "2020-02-25 02:09:12.074771"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Gladis"], ["last_name", "Ward"], ["email", "dee@steuberhammes.biz"], ["profile", "If we parse the transmitter, we can get to the IB transmitter through the optical USB program!"], ["phone", "2594364333"], ["password", "5883881553"], ["created_at", "2020-02-25 02:09:12.090389"], ["updated_at", "2020-02-25 02:09:12.090389"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Marya"], ["last_name", "Romaguera"], ["email", "benny@parker.net"], ["profile", "Use the primary JSON protocol, then you can hack the primary matrix!"], ["phone", "9429123978"], ["password", "3133338706"], ["created_at", "2020-02-25 02:09:12.102017"], ["updated_at", "2020-02-25 02:09:12.102017"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jonas"], ["last_name", "Russel"], ["email", "roland@klein.org"], ["profile", "Navigating the panel won't do anything, we need to calculate the bluetooth ai bandwidth!"], ["phone", "3720893589"], ["password", "1805139274"], ["created_at", "2020-02-25 02:09:12.113319"], ["updated_at", "2020-02-25 02:09:12.113319"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Miles"], ["last_name", "Considine"], ["email", "mitchel.nader@casperroob.name"], ["profile", "You can't override the panel without transmitting the virtual PNG alarm!"], ["phone", "3079665530"], ["password", "1342010474"], ["created_at", "2020-02-25 02:09:12.122519"], ["updated_at", "2020-02-25 02:09:12.122519"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Anastacia"], ["last_name", "Blanda"], ["email", "patria_wiza@pagac.net"], ["profile", "We need to copy the cross-platform ADP interface!"], ["phone", "9845360041"], ["password", "6365661703"], ["created_at", "2020-02-25 02:09:12.132095"], ["updated_at", "2020-02-25 02:09:12.132095"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hortencia"], ["last_name", "Wiza"], ["email", "zina@oconnellstanton.name"], ["profile", "You can't input the capacitor without connecting the redundant EXE bus!"], ["phone", "8410852910"], ["password", "2740147672"], ["created_at", "2020-02-25 02:09:12.141011"], ["updated_at", "2020-02-25 02:09:12.141011"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kazuko"], ["last_name", "Runolfsson"], ["email", "dania@collier.com"], ["profile", "We need to bypass the mobile SSL system!"], ["phone", "7529034183"], ["password", "6589871382"], ["created_at", "2020-02-25 02:09:12.150979"], ["updated_at", "2020-02-25 02:09:12.150979"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Avery"], ["last_name", "Wolf"], ["email", "britt@bernier.biz"], ["profile", "Use the virtual AI capacitor, then you can copy the cross-platform firewall!"], ["phone", "6776332066"], ["password", "1062316416"], ["created_at", "2020-02-25 02:09:12.161181"], ["updated_at", "2020-02-25 02:09:12.161181"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Homer"], ["last_name", "Kirlin"], ["email", "wilford_reinger@turcotte.info"], ["profile", "The TCP bandwidth is down, generate the optical alarm so we can copy the EXE alarm!"], ["phone", "6089488449"], ["password", "1692958522"], ["created_at", "2020-02-25 02:09:12.170215"], ["updated_at", "2020-02-25 02:09:12.170215"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Gia"], ["last_name", "Bradtke"], ["email", "rayford@ondrickawalker.name"], ["profile", "Try to generate the SSL feed, maybe it will generate the virtual hard drive!"], ["phone", "4569292821"], ["password", "9932121941"], ["created_at", "2020-02-25 02:09:12.188735"], ["updated_at", "2020-02-25 02:09:12.188735"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Marget"], ["last_name", "Spencer"], ["email", "trevor_gislason@altenwerth.co"], ["profile", "If we transmit the transmitter, we can get to the PCI transmitter through the auxiliary IB feed!"], ["phone", "3436617318"], ["password", "2289732045"], ["created_at", "2020-02-25 02:09:12.198077"], ["updated_at", "2020-02-25 02:09:12.198077"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Allegra"], ["last_name", "Kling"], ["email", "leslie@grady.biz"], ["profile", "I'll quantify the cross-platform IB program, that should port the JSON interface!"], ["phone", "9253810962"], ["password", "4543682024"], ["created_at", "2020-02-25 02:09:12.206981"], ["updated_at", "2020-02-25 02:09:12.206981"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lanita"], ["last_name", "Fritsch"], ["email", "delsie_dietrich@lehnermayert.org"], ["profile", "We need to parse the online SDD circuit!"], ["phone", "6828030174"], ["password", "9122251079"], ["created_at", "2020-02-25 02:09:12.216458"], ["updated_at", "2020-02-25 02:09:12.216458"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Vincent"], ["last_name", "Torp"], ["email", "elmira@steuber.org"], ["profile", "We need to bypass the auxiliary XML pixel!"], ["phone", "1307613839"], ["password", "4941954777"], ["created_at", "2020-02-25 02:09:12.226041"], ["updated_at", "2020-02-25 02:09:12.226041"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Beulah"], ["last_name", "Rath"], ["email", "phuong.ko@lueilwitzwillms.org"], ["profile", "If we parse the program, we can get to the USB monitor through the redundant SCSI bus!"], ["phone", "4516999608"], ["password", "5540128175"], ["created_at", "2020-02-25 02:09:12.235499"], ["updated_at", "2020-02-25 02:09:12.235499"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Amanda"], ["last_name", "Rohan"], ["email", "beau.johnson@veumboehm.info"], ["profile", "Hacking the hard drive won't do anything, we need to connect the primary exe alarm!"], ["phone", "8997868326"], ["password", "3049317221"], ["created_at", "2020-02-25 02:09:12.244355"], ["updated_at", "2020-02-25 02:09:12.244355"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Dudley"], ["last_name", "Strosin"], ["email", "rhett@wehnerrice.biz"], ["profile", "You can't copy the alarm without hacking the bluetooth IB interface!"], ["phone", "7244696645"], ["password", "3007922537"], ["created_at", "2020-02-25 02:09:12.252844"], ["updated_at", "2020-02-25 02:09:12.252844"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Harvey"], ["last_name", "Krajcik"], ["email", "creola@skiles.org"], ["profile", "Try to reboot the COM card, maybe it will input the bluetooth microchip!"], ["phone", "8432106781"], ["password", "7499002358"], ["created_at", "2020-02-25 02:09:12.261054"], ["updated_at", "2020-02-25 02:09:12.261054"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Pasquale"], ["last_name", "Huels"], ["email", "rachell_zieme@koch.org"], ["profile", "We need to calculate the open-source AI transmitter!"], ["phone", "2160658025"], ["password", "7556924455"], ["created_at", "2020-02-25 02:09:12.269380"], ["updated_at", "2020-02-25 02:09:12.269380"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rubin"], ["last_name", "Cormier"], ["email", "faviola.wisoky@swift.org"], ["profile", "We need to quantify the redundant SCSI feed!"], ["phone", "9790049790"], ["password", "1722336504"], ["created_at", "2020-02-25 02:09:12.278554"], ["updated_at", "2020-02-25 02:09:12.278554"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ambrose"], ["last_name", "Luettgen"], ["email", "everette_roberts@fisherbeatty.org"], ["profile", "Try to back up the SSL transmitter, maybe it will bypass the mobile microchip!"], ["phone", "8705245652"], ["password", "1778188059"], ["created_at", "2020-02-25 02:09:12.289006"], ["updated_at", "2020-02-25 02:09:12.289006"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hyun"], ["last_name", "DuBuque"], ["email", "marguerite_mcglynn@lang.io"], ["profile", "We need to transmit the auxiliary SAS bus!"], ["phone", "6026630672"], ["password", "6076311114"], ["created_at", "2020-02-25 02:09:12.298532"], ["updated_at", "2020-02-25 02:09:12.298532"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rupert"], ["last_name", "Gleason"], ["email", "hershel@cummerata.org"], ["profile", "Use the cross-platform HTTP card, then you can connect the digital panel!"], ["phone", "1109403040"], ["password", "9416268232"], ["created_at", "2020-02-25 02:09:12.307334"], ["updated_at", "2020-02-25 02:09:12.307334"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Mandie"], ["last_name", "Towne"], ["email", "tari@dare.biz"], ["profile", "You can't copy the matrix without hacking the wireless USB protocol!"], ["phone", "3716107353"], ["password", "5659598572"], ["created_at", "2020-02-25 02:09:12.316694"], ["updated_at", "2020-02-25 02:09:12.316694"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Courtney"], ["last_name", "Nikolaus"], ["email", "shelley@hahn.org"], ["profile", "We need to program the open-source TCP bus!"], ["phone", "3536760784"], ["password", "8906035726"], ["created_at", "2020-02-25 02:09:12.325378"], ["updated_at", "2020-02-25 02:09:12.325378"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Trent"], ["last_name", "Haag"], ["email", "jeane.dicki@quigley.biz"], ["profile", "Try to compress the SDD bandwidth, maybe it will override the wireless card!"], ["phone", "6990840011"], ["password", "1996183586"], ["created_at", "2020-02-25 02:09:12.334392"], ["updated_at", "2020-02-25 02:09:12.334392"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joey"], ["last_name", "Collins"], ["email", "wei@metzdickinson.io"], ["profile", "Quantifying the alarm won't do anything, we need to calculate the redundant xss bus!"], ["phone", "7551784255"], ["password", "2288999699"], ["created_at", "2020-02-25 02:09:12.343655"], ["updated_at", "2020-02-25 02:09:12.343655"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Erica"], ["last_name", "Toy"], ["email", "virgil@steuber.name"], ["profile", "We need to navigate the cross-platform HTTP panel!"], ["phone", "6897530054"], ["password", "2653074238"], ["created_at", "2020-02-25 02:09:12.359837"], ["updated_at", "2020-02-25 02:09:12.359837"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nelda"], ["last_name", "Glover"], ["email", "clifton_mohr@kuhic.info"], ["profile", "The RSS driver is down, program the back-end bus so we can parse the JBOD monitor!"], ["phone", "2620861165"], ["password", "3500590161"], ["created_at", "2020-02-25 02:09:12.369395"], ["updated_at", "2020-02-25 02:09:12.369395"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hong"], ["last_name", "Tremblay"], ["email", "eli@bailey.biz"], ["profile", "Try to quantify the SDD monitor, maybe it will generate the primary pixel!"], ["phone", "6771034862"], ["password", "3249809632"], ["created_at", "2020-02-25 02:09:12.378529"], ["updated_at", "2020-02-25 02:09:12.378529"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Tommy"], ["last_name", "Kunde"], ["email", "desmond.parker@wiza.com"], ["profile", "Use the cross-platform COM interface, then you can bypass the wireless driver!"], ["phone", "1856543097"], ["password", "9001085466"], ["created_at", "2020-02-25 02:09:12.388076"], ["updated_at", "2020-02-25 02:09:12.388076"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Emilio"], ["last_name", "Rippin"], ["email", "tasia.bernier@gaylord.biz"], ["profile", "Use the back-end TCP system, then you can calculate the primary firewall!"], ["phone", "7773807510"], ["password", "4473598583"], ["created_at", "2020-02-25 02:09:12.396886"], ["updated_at", "2020-02-25 02:09:12.396886"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Irving"], ["last_name", "Muller"], ["email", "tinisha@ko.net"], ["profile", "Try to calculate the AGP array, maybe it will calculate the bluetooth capacitor!"], ["phone", "2677409220"], ["password", "8386202517"], ["created_at", "2020-02-25 02:09:12.405740"], ["updated_at", "2020-02-25 02:09:12.405740"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Dominique"], ["last_name", "Kassulke"], ["email", "lera@bradtkestroman.co"], ["profile", "The COM monitor is down, synthesize the wireless array so we can override the SMS alarm!"], ["phone", "3262446299"], ["password", "8373255492"], ["created_at", "2020-02-25 02:09:12.415006"], ["updated_at", "2020-02-25 02:09:12.415006"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jimmy"], ["last_name", "Erdman"], ["email", "derrick@vandervort.net"], ["profile", "The HTTP array is down, index the haptic hard drive so we can synthesize the RAM capacitor!"], ["phone", "6728745634"], ["password", "2798456561"], ["created_at", "2020-02-25 02:09:12.424716"], ["updated_at", "2020-02-25 02:09:12.424716"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Raphael"], ["last_name", "Haag"], ["email", "taylor_schulist@dickens.io"], ["profile", "Try to copy the SMS system, maybe it will compress the primary alarm!"], ["phone", "9918625517"], ["password", "9688641363"], ["created_at", "2020-02-25 02:09:12.433684"], ["updated_at", "2020-02-25 02:09:12.433684"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cornelius"], ["last_name", "Rowe"], ["email", "young@marquardt.com"], ["profile", "I'll bypass the online COM matrix, that should capacitor the SCSI microchip!"], ["phone", "3322380601"], ["password", "8451727857"], ["created_at", "2020-02-25 02:09:12.443136"], ["updated_at", "2020-02-25 02:09:12.443136"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Alba"], ["last_name", "Brown"], ["email", "krishna@mclaughlin.name"], ["profile", "You can't bypass the monitor without calculating the auxiliary HTTP system!"], ["phone", "2584729145"], ["password", "6327161745"], ["created_at", "2020-02-25 02:09:12.451175"], ["updated_at", "2020-02-25 02:09:12.451175"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lenard"], ["last_name", "Douglas"], ["email", "boyd.bogisich@hoppedicki.name"], ["profile", "Hacking the port won't do anything, we need to reboot the open-source ftp circuit!"], ["phone", "5947948333"], ["password", "6145735247"], ["created_at", "2020-02-25 02:09:12.460272"], ["updated_at", "2020-02-25 02:09:12.460272"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ronny"], ["last_name", "Rath"], ["email", "audrea.lind@kundemedhurst.biz"], ["profile", "I'll synthesize the neural GB circuit, that should driver the AGP system!"], ["phone", "6037386817"], ["password", "6787268365"], ["created_at", "2020-02-25 02:09:12.469344"], ["updated_at", "2020-02-25 02:09:12.469344"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Carmelita"], ["last_name", "Murphy"], ["email", "sulema.ondricka@hand.io"], ["profile", "The SSL circuit is down, parse the neural alarm so we can navigate the HTTP feed!"], ["phone", "9681363825"], ["password", "5071003827"], ["created_at", "2020-02-25 02:09:12.478225"], ["updated_at", "2020-02-25 02:09:12.478225"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Norman"], ["last_name", "Kuvalis"], ["email", "kristofer_swift@kub.name"], ["profile", "Try to parse the SMTP hard drive, maybe it will override the haptic port!"], ["phone", "8391364945"], ["password", "5695900954"], ["created_at", "2020-02-25 02:09:12.486481"], ["updated_at", "2020-02-25 02:09:12.486481"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joslyn"], ["last_name", "Cassin"], ["email", "thurman_abernathy@blandawisoky.co"], ["profile", "Use the back-end SDD feed, then you can back up the neural program!"], ["phone", "4521318604"], ["password", "7986055146"], ["created_at", "2020-02-25 02:09:12.495582"], ["updated_at", "2020-02-25 02:09:12.495582"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Arie"], ["last_name", "Wilkinson"], ["email", "franklin.koch@ryan.io"], ["profile", "I'll hack the 1080p IB array, that should alarm the PCI bus!"], ["phone", "7090541666"], ["password", "5578056829"], ["created_at", "2020-02-25 02:09:12.503925"], ["updated_at", "2020-02-25 02:09:12.503925"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hector"], ["last_name", "Dickinson"], ["email", "madaline@cummings.biz"], ["profile", "Try to calculate the SAS panel, maybe it will hack the cross-platform microchip!"], ["phone", "7962377925"], ["password", "2582625183"], ["created_at", "2020-02-25 02:09:12.514320"], ["updated_at", "2020-02-25 02:09:12.514320"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lamont"], ["last_name", "Harber"], ["email", "lee@white.net"], ["profile", "We need to navigate the haptic EXE bus!"], ["phone", "7822698904"], ["password", "6999143053"], ["created_at", "2020-02-25 02:09:12.523670"], ["updated_at", "2020-02-25 02:09:12.523670"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hershel"], ["last_name", "Schmitt"], ["email", "cleo.swift@lebsackromaguera.org"], ["profile", "We need to program the 1080p CSS pixel!"], ["phone", "1170057427"], ["password", "2627637658"], ["created_at", "2020-02-25 02:09:12.540031"], ["updated_at", "2020-02-25 02:09:12.540031"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Tomas"], ["last_name", "O'Keefe"], ["email", "nikia@hilpert.net"], ["profile", "Use the solid state SDD bus, then you can parse the redundant capacitor!"], ["phone", "3587955456"], ["password", "6113935858"], ["created_at", "2020-02-25 02:09:12.549091"], ["updated_at", "2020-02-25 02:09:12.549091"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kayleigh"], ["last_name", "Schmeler"], ["email", "carson@heidenreich.com"], ["profile", "You can't back up the microchip without transmitting the optical THX array!"], ["phone", "5023190803"], ["password", "7802786602"], ["created_at", "2020-02-25 02:09:12.557641"], ["updated_at", "2020-02-25 02:09:12.557641"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joan"], ["last_name", "Hayes"], ["email", "trent@klingwhite.org"], ["profile", "If we synthesize the protocol, we can get to the HDD panel through the primary HDD feed!"], ["phone", "5151881896"], ["password", "1218937395"], ["created_at", "2020-02-25 02:09:12.566294"], ["updated_at", "2020-02-25 02:09:12.566294"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rashad"], ["last_name", "Fahey"], ["email", "carin_gutkowski@wisozk.com"], ["profile", "Parsing the hard drive won't do anything, we need to override the redundant sas firewall!"], ["phone", "4682803772"], ["password", "9659279201"], ["created_at", "2020-02-25 02:09:12.576987"], ["updated_at", "2020-02-25 02:09:12.576987"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Brandon"], ["last_name", "Stroman"], ["email", "cody@blick.net"], ["profile", "Try to program the RAM circuit, maybe it will transmit the neural interface!"], ["phone", "5929122980"], ["password", "1296403547"], ["created_at", "2020-02-25 02:09:12.585919"], ["updated_at", "2020-02-25 02:09:12.585919"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Tonia"], ["last_name", "Robel"], ["email", "kip.donnelly@krajcik.info"], ["profile", "Calculating the capacitor won't do anything, we need to copy the back-end thx program!"], ["phone", "5364965731"], ["password", "5531805009"], ["created_at", "2020-02-25 02:09:12.595249"], ["updated_at", "2020-02-25 02:09:12.595249"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Gigi"], ["last_name", "Altenwerth"], ["email", "gabriel@haag.info"], ["profile", "Use the virtual IB card, then you can synthesize the neural array!"], ["phone", "7350301067"], ["password", "3666246298"], ["created_at", "2020-02-25 02:09:12.605199"], ["updated_at", "2020-02-25 02:09:12.605199"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ronald"], ["last_name", "Cremin"], ["email", "nobuko@leuschke.name"], ["profile", "Try to generate the CSS matrix, maybe it will quantify the haptic capacitor!"], ["phone", "4460392623"], ["password", "8100485093"], ["created_at", "2020-02-25 02:09:12.614011"], ["updated_at", "2020-02-25 02:09:12.614011"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Marty"], ["last_name", "Kunze"], ["email", "lasonya@harber.info"], ["profile", "If we navigate the firewall, we can get to the XML matrix through the 1080p SAS system!"], ["phone", "9257347633"], ["password", "9837197462"], ["created_at", "2020-02-25 02:09:12.623758"], ["updated_at", "2020-02-25 02:09:12.623758"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Thad"], ["last_name", "Barrows"], ["email", "marcelene.beier@lueilwitz.com"], ["profile", "You can't calculate the firewall without copying the wireless JSON port!"], ["phone", "3386369934"], ["password", "9493777921"], ["created_at", "2020-02-25 02:09:12.635278"], ["updated_at", "2020-02-25 02:09:12.635278"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Randy"], ["last_name", "Casper"], ["email", "celia@wintheiserswift.info"], ["profile", "Use the digital PNG port, then you can navigate the bluetooth monitor!"], ["phone", "6056856075"], ["password", "2387652765"], ["created_at", "2020-02-25 02:09:12.644626"], ["updated_at", "2020-02-25 02:09:12.644626"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Roseanna"], ["last_name", "Wiegand"], ["email", "ozzie@schinnerkoepp.io"], ["profile", "We need to index the primary CSS alarm!"], ["phone", "9716646576"], ["password", "3950925163"], ["created_at", "2020-02-25 02:09:12.652533"], ["updated_at", "2020-02-25 02:09:12.652533"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Leandro"], ["last_name", "Keebler"], ["email", "lowell@toygutmann.net"], ["profile", "You can't reboot the matrix without bypassing the bluetooth SCSI card!"], ["phone", "8998202482"], ["password", "8200811006"], ["created_at", "2020-02-25 02:09:12.661211"], ["updated_at", "2020-02-25 02:09:12.661211"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Letisha"], ["last_name", "Simonis"], ["email", "mallory@kautzerpollich.info"], ["profile", "I'll back up the primary IB sensor, that should microchip the RAM pixel!"], ["phone", "1689101498"], ["password", "1106510314"], ["created_at", "2020-02-25 02:09:12.669660"], ["updated_at", "2020-02-25 02:09:12.669660"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Kertzmann"], ["email", "robbie@mitchellflatley.com"], ["profile", "Use the haptic JBOD microchip, then you can program the redundant program!"], ["phone", "6229521366"], ["password", "3118611679"], ["created_at", "2020-02-25 02:09:12.678616"], ["updated_at", "2020-02-25 02:09:12.678616"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kirby"], ["last_name", "Mohr"], ["email", "kenya.ankunding@steuber.org"], ["profile", "If we calculate the matrix, we can get to the RAM application through the cross-platform AGP sensor!"], ["phone", "1022204241"], ["password", "3203539706"], ["created_at", "2020-02-25 02:09:12.687784"], ["updated_at", "2020-02-25 02:09:12.687784"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jerrod"], ["last_name", "Zemlak"], ["email", "joel.labadie@armstrong.info"], ["profile", "We need to synthesize the online SQL firewall!"], ["phone", "9375745477"], ["password", "5142522130"], ["created_at", "2020-02-25 02:09:12.698224"], ["updated_at", "2020-02-25 02:09:12.698224"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nanci"], ["last_name", "Mayer"], ["email", "samual.kihn@kovacek.name"], ["profile", "Try to quantify the CSS firewall, maybe it will navigate the neural transmitter!"], ["phone", "8063103965"], ["password", "3552540062"], ["created_at", "2020-02-25 02:09:12.707785"], ["updated_at", "2020-02-25 02:09:12.707785"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Elinor"], ["last_name", "Reichel"], ["email", "kris_schmeler@muellerheel.biz"], ["profile", "You can't back up the matrix without connecting the mobile JSON microchip!"], ["phone", "5272758662"], ["password", "1259051593"], ["created_at", "2020-02-25 02:09:12.725741"], ["updated_at", "2020-02-25 02:09:12.725741"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Shari"], ["last_name", "Adams"], ["email", "collette_swaniawski@gaylord.net"], ["profile", "I'll index the cross-platform SAS port, that should port the IB sensor!"], ["phone", "9410006691"], ["password", "7725782902"], ["created_at", "2020-02-25 02:09:12.734567"], ["updated_at", "2020-02-25 02:09:12.734567"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Merrill"], ["last_name", "Bartoletti"], ["email", "danny_wiegand@simonis.org"], ["profile", "If we quantify the feed, we can get to the GB card through the digital PNG protocol!"], ["phone", "3576430231"], ["password", "6131874033"], ["created_at", "2020-02-25 02:09:12.744270"], ["updated_at", "2020-02-25 02:09:12.744270"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Guillermo"], ["last_name", "Schuster"], ["email", "trevor@paucek.name"], ["profile", "Use the neural GB circuit, then you can override the 1080p monitor!"], ["phone", "1785142722"], ["password", "9039322419"], ["created_at", "2020-02-25 02:09:12.754201"], ["updated_at", "2020-02-25 02:09:12.754201"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jaye"], ["last_name", "Schuster"], ["email", "dino@lind.name"], ["profile", "You can't input the protocol without navigating the back-end RAM alarm!"], ["phone", "8610061527"], ["password", "1921209189"], ["created_at", "2020-02-25 02:09:12.763664"], ["updated_at", "2020-02-25 02:09:12.763664"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jeffrey"], ["last_name", "Predovic"], ["email", "nestor@hoppe.info"], ["profile", "You can't hack the interface without generating the optical AGP monitor!"], ["phone", "1310242620"], ["password", "2147184700"], ["created_at", "2020-02-25 02:09:12.772949"], ["updated_at", "2020-02-25 02:09:12.772949"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rogelio"], ["last_name", "Koepp"], ["email", "maria.quitzon@heidenreichharvey.com"], ["profile", "Use the open-source PCI matrix, then you can copy the 1080p capacitor!"], ["phone", "9009785714"], ["password", "2429948215"], ["created_at", "2020-02-25 02:09:12.781286"], ["updated_at", "2020-02-25 02:09:12.781286"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Verena"], ["last_name", "Green"], ["email", "alida@morarrempel.info"], ["profile", "I'll input the neural SMS microchip, that should microchip the SCSI array!"], ["phone", "1302261326"], ["password", "2061433117"], ["created_at", "2020-02-25 02:09:12.790085"], ["updated_at", "2020-02-25 02:09:12.790085"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Clint"], ["last_name", "Harvey"], ["email", "lawrence@connkuhlman.org"], ["profile", "Try to connect the XSS interface, maybe it will parse the 1080p firewall!"], ["phone", "7483706731"], ["password", "8878349605"], ["created_at", "2020-02-25 02:09:12.799433"], ["updated_at", "2020-02-25 02:09:12.799433"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Francesco"], ["last_name", "Barrows"], ["email", "brant@beerroob.io"], ["profile", "You can't generate the circuit without overriding the neural AGP driver!"], ["phone", "9780014451"], ["password", "9669377461"], ["created_at", "2020-02-25 02:09:12.810212"], ["updated_at", "2020-02-25 02:09:12.810212"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Donn"], ["last_name", "Roob"], ["email", "tula@kuhic.info"], ["profile", "I'll reboot the online COM feed, that should array the USB hard drive!"], ["phone", "8500429704"], ["password", "1605416774"], ["created_at", "2020-02-25 02:09:12.819444"], ["updated_at", "2020-02-25 02:09:12.819444"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ramon"], ["last_name", "Wolf"], ["email", "rubie@turner.info"], ["profile", "The ADP application is down, parse the redundant capacitor so we can copy the GB program!"], ["phone", "6601469977"], ["password", "6427647018"], ["created_at", "2020-02-25 02:09:12.830390"], ["updated_at", "2020-02-25 02:09:12.830390"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lenny"], ["last_name", "West"], ["email", "lachelle.halvorson@oreillykuhn.net"], ["profile", "The XSS pixel is down, program the cross-platform panel so we can generate the THX bandwidth!"], ["phone", "3944999366"], ["password", "6306761816"], ["created_at", "2020-02-25 02:09:12.838618"], ["updated_at", "2020-02-25 02:09:12.838618"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kendrick"], ["last_name", "Kautzer"], ["email", "kennith@wiegand.co"], ["profile", "Try to connect the AGP circuit, maybe it will transmit the neural bus!"], ["phone", "2489788117"], ["password", "9349492079"], ["created_at", "2020-02-25 02:09:12.847639"], ["updated_at", "2020-02-25 02:09:12.847639"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Marget"], ["last_name", "Volkman"], ["email", "edwin_kris@gleichnerernser.name"], ["profile", "Use the online JSON microchip, then you can hack the solid state protocol!"], ["phone", "4735557660"], ["password", "2789482709"], ["created_at", "2020-02-25 02:09:12.857085"], ["updated_at", "2020-02-25 02:09:12.857085"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Earl"], ["last_name", "Brakus"], ["email", "kary@kerluke.co"], ["profile", "I'll connect the digital SMS port, that should monitor the AGP feed!"], ["phone", "2555602758"], ["password", "8755928668"], ["created_at", "2020-02-25 02:09:12.867334"], ["updated_at", "2020-02-25 02:09:12.867334"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Claudia"], ["last_name", "Abshire"], ["email", "joel.dubuque@mann.io"], ["profile", "Try to override the ADP transmitter, maybe it will reboot the wireless transmitter!"], ["phone", "4872069186"], ["password", "1081574124"], ["created_at", "2020-02-25 02:09:12.876985"], ["updated_at", "2020-02-25 02:09:12.876985"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nicholas"], ["last_name", "Sawayn"], ["email", "roscoe@windlerlittle.com"], ["profile", "You can't navigate the feed without parsing the optical PNG array!"], ["phone", "3710708521"], ["password", "5824791628"], ["created_at", "2020-02-25 02:09:12.885899"], ["updated_at", "2020-02-25 02:09:12.885899"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jerrod"], ["last_name", "Lang"], ["email", "darrel@hackett.co"], ["profile", "You can't navigate the system without synthesizing the redundant AI card!"], ["phone", "9866150360"], ["password", "3164242740"], ["created_at", "2020-02-25 02:09:12.902289"], ["updated_at", "2020-02-25 02:09:12.902289"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Meryl"], ["last_name", "Windler"], ["email", "paul@keler.info"], ["profile", "Hacking the card won't do anything, we need to generate the bluetooth gb transmitter!"], ["phone", "8347452879"], ["password", "2762450927"], ["created_at", "2020-02-25 02:09:12.911100"], ["updated_at", "2020-02-25 02:09:12.911100"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Taisha"], ["last_name", "Rice"], ["email", "lavinia.paucek@kunze.biz"], ["profile", "I'll program the redundant TCP firewall, that should program the FTP bandwidth!"], ["phone", "7183125098"], ["password", "1167342241"], ["created_at", "2020-02-25 02:09:12.919601"], ["updated_at", "2020-02-25 02:09:12.919601"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Wilfredo"], ["last_name", "Terry"], ["email", "cornelius.lockman@cummerata.com"], ["profile", "If we navigate the matrix, we can get to the HTTP hard drive through the back-end FTP port!"], ["phone", "8164051775"], ["password", "3742814411"], ["created_at", "2020-02-25 02:09:12.929222"], ["updated_at", "2020-02-25 02:09:12.929222"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fasten your seatbelts. It's going to be a bumpy night."], ["tag_id", 1], ["date_from", "2020-02-23"], ["date_to", "2020-02-25"], ["location", "25500 Lino Spur, Christytown, VA 70394"], ["location_lat", -41.29283376949967], ["location_long", -110.98869772650062], ["description", "May the Force be with you."], ["created_at", "2020-02-25 02:09:12.950093"], ["updated_at", "2020-02-25 02:09:12.950093"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fasten your seatbelts. It's going to be a bumpy night."], ["tag_id", 9], ["date_from", "2020-02-16"], ["date_to", "2020-02-25"], ["location", "Apt. 871 632 Rempel Canyon, North Evonneshire, IL 14493-7491"], ["location_lat", 80.6644266450975], ["location_long", 4.46573675307215], ["description", "May the Force be with you."], ["created_at", "2020-02-25 02:09:12.961968"], ["updated_at", "2020-02-25 02:09:12.961968"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "What we've got here is failure to communicate."], ["tag_id", 8], ["date_from", "2020-02-11"], ["date_to", "2020-02-25"], ["location", "8276 Glayds Parks, Giuseppechester, IL 71389-7451"], ["location_lat", 19.94087766131642], ["location_long", -175.6428545078249], ["description", "Here's looking at you, kid."], ["created_at", "2020-02-25 02:09:12.970367"], ["updated_at", "2020-02-25 02:09:12.970367"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "I love the smell of napalm in the morning."], ["tag_id", 1], ["date_from", "2020-02-14"], ["date_to", "2020-02-25"], ["location", "389 Gulgowski Rue, North Williemaeshire, AL 14973"], ["location_lat", 34.648975075330526], ["location_long", -103.04929147875949], ["description", "You talking to me?"], ["created_at", "2020-02-25 02:09:12.979108"], ["updated_at", "2020-02-25 02:09:12.979108"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "All right, Mr. DeMille, I'm ready for my closeup."], ["tag_id", 10], ["date_from", "2020-02-23"], ["date_to", "2020-02-25"], ["location", "Suite 816 3179 Jast Underpass, South Lorriburgh, NY 93336"], ["location_lat", 89.67246683291447], ["location_long", -72.21828173892636], ["description", "May the Force be with you."], ["created_at", "2020-02-25 02:09:12.988050"], ["updated_at", "2020-02-25 02:09:12.988050"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 576], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (2.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 576], ["role_type_id", 1], ["created_at", "2020-02-25 02:09:13.195699"], ["updated_at", "2020-02-25 02:09:13.195699"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 586], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 586], ["role_type_id", 1], ["created_at", "2020-02-25 02:09:13.213607"], ["updated_at", "2020-02-25 02:09:13.213607"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 590], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 590], ["role_type_id", 1], ["created_at", "2020-02-25 02:09:13.226668"], ["updated_at", "2020-02-25 02:09:13.226668"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 546], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 546], ["role_type_id", 1], ["created_at", "2020-02-25 02:09:13.250187"], ["updated_at", "2020-02-25 02:09:13.250187"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 520], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 520], ["role_type_id", 1], ["created_at", "2020-02-25 02:09:13.263707"], ["updated_at", "2020-02-25 02:09:13.263707"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 573], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 573], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.276649"], ["updated_at", "2020-02-25 02:09:13.276649"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 552], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 552], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.289778"], ["updated_at", "2020-02-25 02:09:13.289778"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 590], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 590], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.304394"], ["updated_at", "2020-02-25 02:09:13.304394"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 575], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 575], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.328622"], ["updated_at", "2020-02-25 02:09:13.328622"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 586], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 586], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.354665"], ["updated_at", "2020-02-25 02:09:13.354665"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 559], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 559], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.371059"], ["updated_at", "2020-02-25 02:09:13.371059"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 555], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 555], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.386542"], ["updated_at", "2020-02-25 02:09:13.386542"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 532], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 532], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.428000"], ["updated_at", "2020-02-25 02:09:13.428000"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 507], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 507], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.441141"], ["updated_at", "2020-02-25 02:09:13.441141"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 564], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 564], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.454573"], ["updated_at", "2020-02-25 02:09:13.454573"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 557], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 557], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.467439"], ["updated_at", "2020-02-25 02:09:13.467439"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 562], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 562], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.480740"], ["updated_at", "2020-02-25 02:09:13.480740"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 504], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 504], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.492682"], ["updated_at", "2020-02-25 02:09:13.492682"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 571], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 571], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.504616"], ["updated_at", "2020-02-25 02:09:13.504616"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 516], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 516], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.517948"], ["updated_at", "2020-02-25 02:09:13.517948"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 542], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 542], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.531628"], ["updated_at", "2020-02-25 02:09:13.531628"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 554], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 554], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.544706"], ["updated_at", "2020-02-25 02:09:13.544706"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 600], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 600], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.558091"], ["updated_at", "2020-02-25 02:09:13.558091"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 582], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 582], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.569571"], ["updated_at", "2020-02-25 02:09:13.569571"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 539], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 539], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.583989"], ["updated_at", "2020-02-25 02:09:13.583989"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 514], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 514], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.597814"], ["updated_at", "2020-02-25 02:09:13.597814"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 538], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 538], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.611906"], ["updated_at", "2020-02-25 02:09:13.611906"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 509], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.6ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 509], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.659730"], ["updated_at", "2020-02-25 02:09:13.659730"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 540], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 540], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.675659"], ["updated_at", "2020-02-25 02:09:13.675659"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 501], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 501], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.690150"], ["updated_at", "2020-02-25 02:09:13.690150"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 574], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 574], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.704457"], ["updated_at", "2020-02-25 02:09:13.704457"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 530], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 530], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.720379"], ["updated_at", "2020-02-25 02:09:13.720379"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 563], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.5ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 563], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.739271"], ["updated_at", "2020-02-25 02:09:13.739271"]]
+  [1m[35m (30.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 522], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 522], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.785457"], ["updated_at", "2020-02-25 02:09:13.785457"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 543], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 543], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.798080"], ["updated_at", "2020-02-25 02:09:13.798080"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 553], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 553], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.810260"], ["updated_at", "2020-02-25 02:09:13.810260"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 565], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 565], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.824094"], ["updated_at", "2020-02-25 02:09:13.824094"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 578], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 578], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.837570"], ["updated_at", "2020-02-25 02:09:13.837570"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 501], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 501], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.869811"], ["updated_at", "2020-02-25 02:09:13.869811"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 538], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 538], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.883405"], ["updated_at", "2020-02-25 02:09:13.883405"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 538], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 538], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.895575"], ["updated_at", "2020-02-25 02:09:13.895575"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 522], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 522], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.906638"], ["updated_at", "2020-02-25 02:09:13.906638"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 523], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.5ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 523], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.919412"], ["updated_at", "2020-02-25 02:09:13.919412"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 552], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 552], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.932891"], ["updated_at", "2020-02-25 02:09:13.932891"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 503], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 503], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.946399"], ["updated_at", "2020-02-25 02:09:13.946399"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 502], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 502], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.958775"], ["updated_at", "2020-02-25 02:09:13.958775"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 526], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 526], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.970395"], ["updated_at", "2020-02-25 02:09:13.970395"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 505], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 505], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.981835"], ["updated_at", "2020-02-25 02:09:13.981835"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 532], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.6ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 532], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:13.993317"], ["updated_at", "2020-02-25 02:09:13.993317"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 573], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 573], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.006396"], ["updated_at", "2020-02-25 02:09:14.006396"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 513], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 513], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.018710"], ["updated_at", "2020-02-25 02:09:14.018710"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 596], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 596], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.031749"], ["updated_at", "2020-02-25 02:09:14.031749"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 524], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 524], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.044745"], ["updated_at", "2020-02-25 02:09:14.044745"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 527], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 527], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.057726"], ["updated_at", "2020-02-25 02:09:14.057726"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 594], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 594], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.070236"], ["updated_at", "2020-02-25 02:09:14.070236"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 599], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 599], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.083301"], ["updated_at", "2020-02-25 02:09:14.083301"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 575], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 575], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.096753"], ["updated_at", "2020-02-25 02:09:14.096753"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 586], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 586], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.108441"], ["updated_at", "2020-02-25 02:09:14.108441"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 551], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 551], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.121195"], ["updated_at", "2020-02-25 02:09:14.121195"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 503], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 503], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.138197"], ["updated_at", "2020-02-25 02:09:14.138197"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 520], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 520], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.150857"], ["updated_at", "2020-02-25 02:09:14.150857"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 534], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 534], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.162328"], ["updated_at", "2020-02-25 02:09:14.162328"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 528], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 528], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.174443"], ["updated_at", "2020-02-25 02:09:14.174443"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 524], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 524], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.185684"], ["updated_at", "2020-02-25 02:09:14.185684"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 504], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.5ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 504], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.218900"], ["updated_at", "2020-02-25 02:09:14.218900"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 548], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 548], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.236819"], ["updated_at", "2020-02-25 02:09:14.236819"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 529], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 529], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.251564"], ["updated_at", "2020-02-25 02:09:14.251564"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 511], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 511], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.270841"], ["updated_at", "2020-02-25 02:09:14.270841"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 575], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 575], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.286416"], ["updated_at", "2020-02-25 02:09:14.286416"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 545], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 545], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.299328"], ["updated_at", "2020-02-25 02:09:14.299328"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 523], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 523], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.311698"], ["updated_at", "2020-02-25 02:09:14.311698"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 526], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 526], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.323991"], ["updated_at", "2020-02-25 02:09:14.323991"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 506], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 506], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.340109"], ["updated_at", "2020-02-25 02:09:14.340109"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 549], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 549], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.352918"], ["updated_at", "2020-02-25 02:09:14.352918"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 509], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 509], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.366256"], ["updated_at", "2020-02-25 02:09:14.366256"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 509], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 509], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.379172"], ["updated_at", "2020-02-25 02:09:14.379172"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 505], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 505], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.390826"], ["updated_at", "2020-02-25 02:09:14.390826"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 548], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.5ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 548], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.401933"], ["updated_at", "2020-02-25 02:09:14.401933"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 561], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 561], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.413282"], ["updated_at", "2020-02-25 02:09:14.413282"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 538], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 538], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.426454"], ["updated_at", "2020-02-25 02:09:14.426454"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 600], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 600], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.439837"], ["updated_at", "2020-02-25 02:09:14.439837"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 562], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 562], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.452705"], ["updated_at", "2020-02-25 02:09:14.452705"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 574], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 574], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.465114"], ["updated_at", "2020-02-25 02:09:14.465114"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 526], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 526], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.476583"], ["updated_at", "2020-02-25 02:09:14.476583"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 527], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 527], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.488782"], ["updated_at", "2020-02-25 02:09:14.488782"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 511], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 511], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.501983"], ["updated_at", "2020-02-25 02:09:14.501983"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 547], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 547], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.513424"], ["updated_at", "2020-02-25 02:09:14.513424"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 600], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 600], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.526973"], ["updated_at", "2020-02-25 02:09:14.526973"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 563], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 563], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.540654"], ["updated_at", "2020-02-25 02:09:14.540654"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 584], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 584], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.553310"], ["updated_at", "2020-02-25 02:09:14.553310"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 585], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 585], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.586118"], ["updated_at", "2020-02-25 02:09:14.586118"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 590], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 590], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.599196"], ["updated_at", "2020-02-25 02:09:14.599196"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 543], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 543], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.610576"], ["updated_at", "2020-02-25 02:09:14.610576"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 554], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (2.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 554], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.638949"], ["updated_at", "2020-02-25 02:09:14.638949"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 577], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 577], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.654008"], ["updated_at", "2020-02-25 02:09:14.654008"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 583], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 583], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.665725"], ["updated_at", "2020-02-25 02:09:14.665725"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 588], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 588], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.677059"], ["updated_at", "2020-02-25 02:09:14.677059"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 509], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.5ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 509], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.688369"], ["updated_at", "2020-02-25 02:09:14.688369"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 531], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 531], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.700822"], ["updated_at", "2020-02-25 02:09:14.700822"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 577], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 577], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.714951"], ["updated_at", "2020-02-25 02:09:14.714951"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 514], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 18], ["user_id", 514], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.728289"], ["updated_at", "2020-02-25 02:09:14.728289"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 583], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 17], ["user_id", 583], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.741613"], ["updated_at", "2020-02-25 02:09:14.741613"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 561], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 20], ["user_id", 561], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.757731"], ["updated_at", "2020-02-25 02:09:14.757731"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 573], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 19], ["user_id", 573], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.770750"], ["updated_at", "2020-02-25 02:09:14.770750"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 557], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 16], ["user_id", 557], ["role_type_id", 0], ["created_at", "2020-02-25 02:09:14.781967"], ["updated_at", "2020-02-25 02:09:14.781967"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUserEventRelationship Load (3.6ms)[0m  [1m[34mSELECT "user_event_relationships".* FROM "user_event_relationships" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUserEventRelationship Load (2.7ms)[0m  [1m[34mSELECT "user_event_relationships".* FROM "user_event_relationships" LIMIT ?[0m  [["LIMIT", 11]]
