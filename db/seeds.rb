@@ -12,7 +12,7 @@ MapMarker.delete_all
 RoleTypePermission.delete_all
 
 
-100.times do
+10.times do
     User.create(
                 first_name: Faker::Name.first_name,
                   last_name: Faker::Name.last_name,
@@ -23,24 +23,24 @@ RoleTypePermission.delete_all
     )
 end
 
-# 5.times do
-#   Event.create(
-#       name: Faker::Movie.quote,
-#       tag_id: Faker::Number.within(range: 1..10),
-#       date_from: Faker::Date.backward(days: 14),
-#       date_to: Faker::Date.forward(days: 1),
-#       location: Faker::Address.full_address,
-#       location_long: Faker::Address.longitude,
-#       location_lat: Faker::Address.latitude,
-#       description: Faker::Movie.quote
-#   )
-# end
-#
-# 5.times do
-#   UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)
-# end
+5.times do
+  Event.create(
+      name: Faker::Movie.quote,
+      tag_id: Faker::Number.within(range: 1..10),
+      date_from: Faker::Date.backward(days: 14),
+      date_to: Faker::Date.forward(days: 1),
+      location: Faker::Address.full_address,
+      location_long: Faker::Address.longitude,
+      location_lat: Faker::Address.latitude,
+      description: Faker::Movie.quote
+  )
+end
 
-100.times do
+5.times do
+  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)
+end
+
+5.times do
   UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 0)
 end
 

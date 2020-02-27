@@ -3514,3 +3514,1127 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 1.2ms | Allocations: 17316)
 
 
+Started GET "/users" for ::1 at 2020-02-26 16:01:34 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (46.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 290.0ms | Allocations: 18628)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 415ms (Views: 338.0ms | ActiveRecord: 49.4ms | Allocations: 28286)
+
+
+Started GET "/events" for ::1 at 2020-02-26 16:01:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/events"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events" for ::1 at 2020-02-26 16:02:46 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 70.9ms | Allocations: 1611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 176ms (Views: 132.1ms | ActiveRecord: 4.3ms | Allocations: 11375)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (3.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mEvent Destroy (1.2ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[36mUserEventRelationship Destroy (1.3ms)[0m  [1m[31mDELETE FROM "user_event_relationships"[0m
+  [1m[36mMapMarker Destroy (1.2ms)[0m  [1m[31mDELETE FROM "map_markers"[0m
+  [1m[36mRoleTypePermission Destroy (1.4ms)[0m  [1m[31mDELETE FROM "role_type_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ethyl"], ["last_name", "Wunsch"], ["email", "noble@leannon.co"], ["profile", "We need to copy the multi-byte USB bandwidth!"], ["phone", "8572643790"], ["password", "9364702739"], ["created_at", "2020-02-26 21:04:04.832429"], ["updated_at", "2020-02-26 21:04:04.832429"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Johnathan"], ["last_name", "Zulauf"], ["email", "crysta.reynolds@predovicrath.co"], ["profile", "Try to synthesize the RAM system, maybe it will navigate the solid state matrix!"], ["phone", "8864902733"], ["password", "7795439803"], ["created_at", "2020-02-26 21:04:04.839241"], ["updated_at", "2020-02-26 21:04:04.839241"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Melva"], ["last_name", "Dare"], ["email", "janel@herzog.co"], ["profile", "Try to generate the SDD hard drive, maybe it will parse the 1080p application!"], ["phone", "7646614867"], ["password", "7289812904"], ["created_at", "2020-02-26 21:04:04.846723"], ["updated_at", "2020-02-26 21:04:04.846723"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rafael"], ["last_name", "Jakubowski"], ["email", "karri_emard@bednar.co"], ["profile", "We need to navigate the multi-byte SQL transmitter!"], ["phone", "2195063346"], ["password", "1339255683"], ["created_at", "2020-02-26 21:04:04.903249"], ["updated_at", "2020-02-26 21:04:04.903249"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Hans"], ["last_name", "Borer"], ["email", "gita@hahn.info"], ["profile", "If we index the microchip, we can get to the PCI matrix through the bluetooth SMTP microchip!"], ["phone", "2910080035"], ["password", "1519702287"], ["created_at", "2020-02-26 21:04:04.910175"], ["updated_at", "2020-02-26 21:04:04.910175"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lonnie"], ["last_name", "Gerhold"], ["email", "felisha@gorczanyboehm.info"], ["profile", "If we program the system, we can get to the ADP hard drive through the auxiliary SMTP driver!"], ["phone", "1168250416"], ["password", "4453451588"], ["created_at", "2020-02-26 21:04:04.915694"], ["updated_at", "2020-02-26 21:04:04.915694"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Makeda"], ["last_name", "McGlynn"], ["email", "kristopher@turnerreynolds.name"], ["profile", "I'll program the neural SDD system, that should matrix the JSON bandwidth!"], ["phone", "4157982528"], ["password", "1973237128"], ["created_at", "2020-02-26 21:04:04.921336"], ["updated_at", "2020-02-26 21:04:04.921336"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sharie"], ["last_name", "Kunde"], ["email", "isaac_feil@kochullrich.com"], ["profile", "Hacking the card won't do anything, we need to connect the mobile exe firewall!"], ["phone", "8762606327"], ["password", "8936836791"], ["created_at", "2020-02-26 21:04:04.927164"], ["updated_at", "2020-02-26 21:04:04.927164"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Arron"], ["last_name", "Bode"], ["email", "clemencia@greenfelderabernathy.name"], ["profile", "If we compress the driver, we can get to the PCI monitor through the primary SAS sensor!"], ["phone", "7495179321"], ["password", "6412707164"], ["created_at", "2020-02-26 21:04:04.934250"], ["updated_at", "2020-02-26 21:04:04.934250"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rosendo"], ["last_name", "Hahn"], ["email", "emmanuel@funk.name"], ["profile", "If we hack the panel, we can get to the COM protocol through the neural SDD pixel!"], ["phone", "4888102651"], ["password", "5370317104"], ["created_at", "2020-02-26 21:04:04.939959"], ["updated_at", "2020-02-26 21:04:04.939959"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Toto, I've got a feeling we're not in Kansas anymore."], ["tag_id", 9], ["date_from", "2020-02-24"], ["date_to", "2020-02-27"], ["location", "395 Ratke Mountain, Strosinborough, NC 55643-6807"], ["location_lat", 19.634774102804727], ["location_long", 29.250260174556985], ["description", "Here's looking at you, kid."], ["created_at", "2020-02-26 21:04:04.957417"], ["updated_at", "2020-02-26 21:04:04.957417"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "I love the smell of napalm in the morning."], ["tag_id", 9], ["date_from", "2020-02-13"], ["date_to", "2020-02-27"], ["location", "Apt. 553 77387 Welch Parks, North Myrl, CO 31907"], ["location_lat", -88.49525754035601], ["location_long", 173.07288323223253], ["description", "Frankly, my dear, I don’t give a damn."], ["created_at", "2020-02-26 21:04:04.963838"], ["updated_at", "2020-02-26 21:04:04.963838"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Go ahead, make my day."], ["tag_id", 10], ["date_from", "2020-02-13"], ["date_to", "2020-02-27"], ["location", "Apt. 753 499 Blick Creek, South Odettebury, MN 28850-6398"], ["location_lat", 23.825138470709362], ["location_long", -77.84329405323393], ["description", "Fasten your seatbelts. It's going to be a bumpy night."], ["created_at", "2020-02-26 21:04:04.969141"], ["updated_at", "2020-02-26 21:04:04.969141"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Frankly, my dear, I don’t give a damn."], ["tag_id", 2], ["date_from", "2020-02-21"], ["date_to", "2020-02-27"], ["location", "41723 Stroman Heights, Zemlakbury, MO 88960-2467"], ["location_lat", -7.0676405732093315], ["location_long", 76.92964327457213], ["description", "All right, Mr. DeMille, I'm ready for my closeup."], ["created_at", "2020-02-26 21:04:04.974570"], ["updated_at", "2020-02-26 21:04:04.974570"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fasten your seatbelts. It's going to be a bumpy night."], ["tag_id", 10], ["date_from", "2020-02-20"], ["date_to", "2020-02-27"], ["location", "5226 Brown Mission, South Ginny, VA 96261"], ["location_lat", -58.76575906317031], ["location_long", 13.558786394020956], ["description", "You talking to me?"], ["created_at", "2020-02-26 21:04:04.979932"], ["updated_at", "2020-02-26 21:04:04.979932"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 106], ["role_type_id", 1], ["created_at", "2020-02-26 21:04:05.003738"], ["updated_at", "2020-02-26 21:04:05.003738"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 5], ["user_id", 105], ["role_type_id", 1], ["created_at", "2020-02-26 21:04:05.014165"], ["updated_at", "2020-02-26 21:04:05.014165"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 3], ["user_id", 105], ["role_type_id", 1], ["created_at", "2020-02-26 21:04:05.024425"], ["updated_at", "2020-02-26 21:04:05.024425"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 109], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 1], ["user_id", 109], ["role_type_id", 1], ["created_at", "2020-02-26 21:04:05.049426"], ["updated_at", "2020-02-26 21:04:05.049426"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 3], ["user_id", 105], ["role_type_id", 1], ["created_at", "2020-02-26 21:04:05.059091"], ["updated_at", "2020-02-26 21:04:05.059091"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 3], ["user_id", 104], ["role_type_id", 0], ["created_at", "2020-02-26 21:04:05.068177"], ["updated_at", "2020-02-26 21:04:05.068177"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 4], ["user_id", 106], ["role_type_id", 0], ["created_at", "2020-02-26 21:04:05.076553"], ["updated_at", "2020-02-26 21:04:05.076553"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 103], ["role_type_id", 0], ["created_at", "2020-02-26 21:04:05.085444"], ["updated_at", "2020-02-26 21:04:05.085444"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 105], ["role_type_id", 0], ["created_at", "2020-02-26 21:04:05.094572"], ["updated_at", "2020-02-26 21:04:05.094572"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 102], ["role_type_id", 0], ["created_at", "2020-02-26 21:04:05.102968"], ["updated_at", "2020-02-26 21:04:05.102968"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/events" for ::1 at 2020-02-26 16:04:14 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 217.3ms | Allocations: 7607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 632ms (Views: 484.3ms | ActiveRecord: 1.8ms | Allocations: 17314)
+
+
+Started GET "/events" for ::1 at 2020-02-26 16:05:52 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:13
+  Rendered events/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1473)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 56.3ms | ActiveRecord: 0.4ms | Allocations: 6337)
+
+
+Started GET "/events/new" for ::1 at 2020-02-26 16:05:58 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 243.7ms | Allocations: 181274)
+  Rendered events/new.html.erb within layouts/application (Duration: 246.2ms | Allocations: 181611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 257ms (Views: 255.5ms | ActiveRecord: 0.0ms | Allocations: 185729)
+
+
+Started GET "/user/new" for ::1 at 2020-02-26 16:06:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-02-26 16:06:16 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.9ms | Allocations: 645)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 968)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 33.2ms | ActiveRecord: 1.3ms | Allocations: 11298)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-26 16:38:16 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 1274)
+
+
+Started GET "/users" for ::1 at 2020-02-26 16:38:21 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 48.5ms | Allocations: 7179)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 97.1ms | ActiveRecord: 2.8ms | Allocations: 16647)
+
+
+Started GET "/users/new" for ::1 at 2020-02-26 16:38:29 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1198.6ms | Allocations: 533588)
+  Rendered users/new.html.erb within layouts/application (Duration: 1201.5ms | Allocations: 533925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1210ms (Views: 1208.6ms | ActiveRecord: 0.0ms | Allocations: 538037)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20200207204344)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "tag_id" integer, "date_from" date, "date_to" date, "location" varchar, "location_lat" float, "location_long" float, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207204344"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserEventRelationships (20200207204844)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "user_event_relationships" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "user_id" integer, "role_type_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207204844"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRoleTypePermissions (20200207205432)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "role_type_permissions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "role_type" varchar, "modify_event" boolean, "delete_event" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207205432"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMapMarkers (20200207205709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "map_markers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar, "location_lat" float, "location_long" float, "event_id" integer, "type" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207205709"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20200226202232)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200226202232)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "profile" varchar, "phone" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200226202232"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-26 21:51:58.754741"], ["updated_at", "2020-02-26 21:51:58.754741"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2020-02-26 16:52:13 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 256.3ms | Allocations: 182650)
+  Rendered users/new.html.erb within layouts/application (Duration: 260.8ms | Allocations: 183103)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 347ms (Views: 295.8ms | ActiveRecord: 1.6ms | Allocations: 197905)
+
+
+Started GET "/users" for ::1 at 2020-02-26 16:52:19 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 883)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.5ms | Allocations: 5036)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mEvent Destroy (1.4ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[36mUserEventRelationship Destroy (1.7ms)[0m  [1m[31mDELETE FROM "user_event_relationships"[0m
+  [1m[36mMapMarker Destroy (1.4ms)[0m  [1m[31mDELETE FROM "map_markers"[0m
+  [1m[36mRoleTypePermission Destroy (1.3ms)[0m  [1m[31mDELETE FROM "role_type_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "blair.walsh@hartmann.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Roscoe"], ["last_name", "Senger"], ["email", "blair.walsh@hartmann.info"], ["profile", "Use the auxiliary JBOD capacitor, then you can input the back-end bandwidth!"], ["phone", "5764821539"], ["password_digest", "$2a$12$y1oLFI.W3.wU/OwYsNgUdurZbQcWuNBSXSGWBWVBBNoFYrmz1KPx2"], ["created_at", "2020-02-26 21:53:39.973911"], ["updated_at", "2020-02-26 21:53:39.973911"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "chris.grady@lind.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Raymon"], ["last_name", "Kihn"], ["email", "chris.grady@lind.com"], ["profile", "The XML matrix is down, compress the auxiliary program so we can program the HTTP microchip!"], ["phone", "6222477127"], ["password_digest", "$2a$12$Sn6emSfZpV1xVnnu5QzoKOxW80uTqyFdNn/TSnEEtoS5mx9mi6Ox6"], ["created_at", "2020-02-26 21:53:40.246129"], ["updated_at", "2020-02-26 21:53:40.246129"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dougla.christiansen@kerluke.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Vickie"], ["last_name", "Willms"], ["email", "dougla.christiansen@kerluke.co"], ["profile", "You can't quantify the application without parsing the haptic EXE driver!"], ["phone", "1388138378"], ["password_digest", "$2a$12$UZZVdv8U.UJIMhjlPSPEJOc6cvxvo5eeOIANvztu692IaVXsOTUWa"], ["created_at", "2020-02-26 21:53:40.508495"], ["updated_at", "2020-02-26 21:53:40.508495"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hermina@kemmer.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Erline"], ["last_name", "McCullough"], ["email", "hermina@kemmer.info"], ["profile", "We need to bypass the optical COM driver!"], ["phone", "7848691604"], ["password_digest", "$2a$12$rxMtrdSParjZ7zlBZj1avugCOdD5H9AUUo38JQsVDzn.2AfBST9pS"], ["created_at", "2020-02-26 21:53:40.787103"], ["updated_at", "2020-02-26 21:53:40.787103"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "palmer@feest.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kent"], ["last_name", "Orn"], ["email", "palmer@feest.biz"], ["profile", "Try to parse the AI matrix, maybe it will back up the cross-platform bandwidth!"], ["phone", "3810781764"], ["password_digest", "$2a$12$5x7Vco2qYzdRvWbgvuT19uSaxWCsBPOdQegFtZNo92mED71KY7QNO"], ["created_at", "2020-02-26 21:53:41.050703"], ["updated_at", "2020-02-26 21:53:41.050703"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "charles_cummings@gislason.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rafaela"], ["last_name", "Kassulke"], ["email", "charles_cummings@gislason.net"], ["profile", "Use the 1080p THX driver, then you can program the wireless driver!"], ["phone", "2138386041"], ["password_digest", "$2a$12$w/ktr1IRedRHqOX177WNHOqvON1Bs6/qUhggt7.x7hYHZOfwN/73."], ["created_at", "2020-02-26 21:53:41.310122"], ["updated_at", "2020-02-26 21:53:41.310122"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bernadette@armstrongbogisich.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Li"], ["last_name", "Hermann"], ["email", "bernadette@armstrongbogisich.net"], ["profile", "Try to copy the CSS firewall, maybe it will hack the 1080p feed!"], ["phone", "4352233696"], ["password_digest", "$2a$12$b7q038XesoTGMM5syaW8uuIUHWZH7SQEWa9591CpqQi/PBupj.ebS"], ["created_at", "2020-02-26 21:53:41.590912"], ["updated_at", "2020-02-26 21:53:41.590912"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "marica@kuhic.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Loni"], ["last_name", "Spinka"], ["email", "marica@kuhic.biz"], ["profile", "You can't connect the interface without compressing the multi-byte SQL transmitter!"], ["phone", "4859279620"], ["password_digest", "$2a$12$8E2EiYwrSA7iauWgpkTxVu5UdIQh6gEKDgkCqdBQjpHrpPPXhun2u"], ["created_at", "2020-02-26 21:53:41.856096"], ["updated_at", "2020-02-26 21:53:41.856096"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "silas@walterdurgan.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Mohammad"], ["last_name", "Fritsch"], ["email", "silas@walterdurgan.co"], ["profile", "Use the auxiliary XML driver, then you can parse the open-source monitor!"], ["phone", "5632866684"], ["password_digest", "$2a$12$ovVD9ZNEE1XZBCOeO1JCPuP/ccVYn/eNrycKyyKcxhtmqd/S8ONe6"], ["created_at", "2020-02-26 21:53:42.144812"], ["updated_at", "2020-02-26 21:53:42.144812"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "royce_senger@baumbach.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "profile", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Neil"], ["last_name", "Roberts"], ["email", "royce_senger@baumbach.io"], ["profile", "The GB program is down, reboot the solid state alarm so we can synthesize the ADP hard drive!"], ["phone", "7002925569"], ["password_digest", "$2a$12$BN/2rV5k2JlQYO7VI//Sce4coFlDjiPiZ7mVn83agUSEbeEP0HAsm"], ["created_at", "2020-02-26 21:53:42.403291"], ["updated_at", "2020-02-26 21:53:42.403291"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Frankly, my dear, I don’t give a damn."], ["tag_id", 9], ["date_from", "2020-02-13"], ["date_to", "2020-02-27"], ["location", "Apt. 813 461 William Estates, East Harlan, MT 04637-9244"], ["location_lat", 56.272612331224195], ["location_long", 30.09398426495423], ["description", "Toto, I've got a feeling we're not in Kansas anymore."], ["created_at", "2020-02-26 21:53:42.420992"], ["updated_at", "2020-02-26 21:53:42.420992"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Here's looking at you, kid."], ["tag_id", 5], ["date_from", "2020-02-16"], ["date_to", "2020-02-27"], ["location", "Suite 522 974 Bertha Ferry, West Geneburgh, ID 79177"], ["location_lat", -15.237841204285616], ["location_long", -34.92894860228108], ["description", "Go ahead, make my day."], ["created_at", "2020-02-26 21:53:42.426911"], ["updated_at", "2020-02-26 21:53:42.426911"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fasten your seatbelts. It's going to be a bumpy night."], ["tag_id", 5], ["date_from", "2020-02-12"], ["date_to", "2020-02-27"], ["location", "17753 Silas Light, Pfannerstilltown, MI 55229-8495"], ["location_lat", -42.74214509412723], ["location_long", -152.34817892989196], ["description", "Toto, I've got a feeling we're not in Kansas anymore."], ["created_at", "2020-02-26 21:53:42.432177"], ["updated_at", "2020-02-26 21:53:42.432177"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Here's looking at you, kid."], ["tag_id", 10], ["date_from", "2020-02-23"], ["date_to", "2020-02-27"], ["location", "Suite 851 42663 Jaskolski Bypass, Blairville, ND 19440"], ["location_lat", 61.663941934847855], ["location_long", 31.644013805794458], ["description", "Here's looking at you, kid."], ["created_at", "2020-02-26 21:53:42.438099"], ["updated_at", "2020-02-26 21:53:42.438099"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "tag_id", "date_from", "date_to", "location", "location_lat", "location_long", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "You talking to me?"], ["tag_id", 1], ["date_from", "2020-02-14"], ["date_to", "2020-02-27"], ["location", "Apt. 657 13357 Kautzer Center, Craigton, UT 33890"], ["location_lat", 6.152947660910044], ["location_long", -73.9549564993147], ["description", "May the Force be with you."], ["created_at", "2020-02-26 21:53:42.444783"], ["updated_at", "2020-02-26 21:53:42.444783"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 8], ["role_type_id", 1], ["created_at", "2020-02-26 21:53:42.468842"], ["updated_at", "2020-02-26 21:53:42.468842"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.3ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 6], ["role_type_id", 1], ["created_at", "2020-02-26 21:53:42.479261"], ["updated_at", "2020-02-26 21:53:42.479261"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 5], ["user_id", 9], ["role_type_id", 1], ["created_at", "2020-02-26 21:53:42.489504"], ["updated_at", "2020-02-26 21:53:42.489504"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 5], ["user_id", 1], ["role_type_id", 1], ["created_at", "2020-02-26 21:53:42.499886"], ["updated_at", "2020-02-26 21:53:42.499886"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 5], ["user_id", 1], ["role_type_id", 1], ["created_at", "2020-02-26 21:53:42.510679"], ["updated_at", "2020-02-26 21:53:42.510679"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.6ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 4], ["user_id", 1], ["role_type_id", 0], ["created_at", "2020-02-26 21:53:42.522479"], ["updated_at", "2020-02-26 21:53:42.522479"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.6ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 2], ["user_id", 10], ["role_type_id", 0], ["created_at", "2020-02-26 21:53:42.537896"], ["updated_at", "2020-02-26 21:53:42.537896"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (1.1ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 4], ["user_id", 10], ["role_type_id", 0], ["created_at", "2020-02-26 21:53:42.553934"], ["updated_at", "2020-02-26 21:53:42.553934"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 3], ["user_id", 7], ["role_type_id", 0], ["created_at", "2020-02-26 21:53:42.566319"], ["updated_at", "2020-02-26 21:53:42.566319"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserEventRelationship Create (0.4ms)[0m  [1m[32mINSERT INTO "user_event_relationships" ("event_id", "user_id", "role_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["event_id", 1], ["user_id", 4], ["role_type_id", 0], ["created_at", "2020-02-26 21:53:42.576806"], ["updated_at", "2020-02-26 21:53:42.576806"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for ::1 at 2020-02-26 16:53:57 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 7543)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 81.0ms | ActiveRecord: 2.9ms | Allocations: 17827)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2020-02-26 23:17:37 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1313)
+
+
+Started GET "/users" for ::1 at 2020-02-26 23:17:42 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 45.2ms | Allocations: 7186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 91.7ms | ActiveRecord: 5.0ms | Allocations: 16658)
+
+
+Started GET "/users/new" for ::1 at 2020-02-26 23:17:46 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 194.3ms | Allocations: 182521)
+  Rendered users/new.html.erb within layouts/application (Duration: 196.2ms | Allocations: 182858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 205ms (Views: 203.4ms | ActiveRecord: 0.0ms | Allocations: 187021)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:18:01 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"LnmCgHpUzO7b1AZXbVhBuJXCICJ1DlBp8ULjUJlytJbkdU0iNEQVuJjh1SPqGNoGLHqoVduicqFL/X58idJU7Q==", "user"=>{"email"=>"danielzhang@brandeis.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameters: :email, :password, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 6.2ms | Allocations: 1146)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 66.0ms | ActiveRecord: 0.8ms | Allocations: 9149)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:18:17 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"bEtZphqzXbJbbIJOAW/sjKaU7rdAfAVjcEVnX6XUYYKPWC/zYoiRrtOJo5nGygt92bt/niW0IlHeNg55wi6Beg==", "user"=>{"email"=>"danielzhang@brandeis.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameters: :email, :password, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.9ms | Allocations: 1134)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 23.5ms | ActiveRecord: 0.6ms | Allocations: 8472)
+
+
+Started GET "/users" for ::1 at 2020-02-26 23:18:20 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1879)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms | Allocations: 5871)
+
+
+Started GET "/" for ::1 at 2020-02-26 23:26:34 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 179ms (Views: 164.8ms | ActiveRecord: 0.0ms | Allocations: 27387)
+
+
+Started GET "/login" for ::1 at 2020-02-26 23:26:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 532)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 5195)
+
+
+Started POST "/sessions" for ::1 at 2020-02-26 23:26:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RGcjL6BO10ssfCTcicf6/lHlujVPRX03t8DWeXlPRvH0uv54JF4G0u4Xx5O02zQhbA0nTwtV/dUXnIDnRkHXfg==", "email"=>"danielzhang@brandeis.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "danielzhang@brandeis.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 9.2ms | ActiveRecord: 1.2ms | Allocations: 7681)
+
+
+Started POST "/sessions" for ::1 at 2020-02-26 23:26:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"qXypj5lQhl54d0AIYQVIjcE+uX/CxDuGduZMRFBEW25Kb9/a4WtKQvCSYd+moK98vhEoVqcMHLTYlSViN767lg==", "email"=>"danielzhang@brandeis.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "danielzhang@brandeis.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.1ms | Allocations: 4855)
+
+
+Started POST "/sessions" for ::1 at 2020-02-26 23:27:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"bwEL5w+ciNZgkkzXUjGKZaL94d4q1uyVnZpkln9ARjuMEn2yd6dEyuh3bQCVlG2U3dJw908ey6cz6Q2wGLqmww==", "email"=>"danielzhang@brandeis.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "danielzhang@brandeis.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.2ms | Allocations: 4871)
+
+
+Started GET "/sessions" for ::1 at 2020-02-26 23:27:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-26 23:29:41 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 92.1ms | ActiveRecord: 0.0ms | Allocations: 10648)
+
+
+Started GET "/signup" for ::1 at 2020-02-26 23:29:42 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 195.0ms | Allocations: 182583)
+  Rendered users/new.html.erb within layouts/application (Duration: 196.6ms | Allocations: 182920)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 285ms (Views: 226.7ms | ActiveRecord: 2.8ms | Allocations: 194316)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:29:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"3ZRGkUyXBA4uNvtQUiMlTo+4TZk0QqtM0sf05In791cXmIkzAofdWG0DKCTVY77wNgDF7pruiYRoeGnImVsXLA==", "user"=>{"email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameters: :email, :password, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.6ms | Allocations: 1146)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 30.3ms | ActiveRecord: 0.7ms | Allocations: 9288)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:30:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"D8Lg4bMi8m497tbSsHW/wOTCZzOyS+dA1k/sBfxqlFbs0Za0yxk+crUL9wV30Fgxm+32GteDwHJ4PIUjm5B0rg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameters: :email, :password, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.3ms | Allocations: 1134)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 16.4ms | ActiveRecord: 1.1ms | Allocations: 8599)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:30:17 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"9eL66ccqPHHBSxpX7yWkcoWSdpJkKjH1HeQwKQxoUycW8Yy8vxHwbUmuO4AogEOD+r3nuwHiFsezl1kPa5Kz3w==", "user"=>{"email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameters: :email, :password, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 1134)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 36.1ms | ActiveRecord: 0.9ms | Allocations: 8570)
+
+
+Started GET "/users/new" for ::1 at 2020-02-26 23:31:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.1ms | Allocations: 869)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5065)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:31:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"vY0/YfA6VajMnUbCnqDa94ZuBC8bo+C2wqUvVu1fnVdenkk0iAGZtER4ZxVZBT0G+UGVBn5rx4Rs1kZwiqV9rw==", "user"=>{"email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+[31mUnpermitted parameters: :email, :password, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 15.3ms | Allocations: 1134)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 28.6ms | ActiveRecord: 0.4ms | Allocations: 8563)
+
+
+Started GET "/users" for ::1 at 2020-02-26 23:31:29 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.6ms | Allocations: 6402)
+
+
+Started GET "/" for ::1 at 2020-02-26 23:31:34 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4170)
+
+
+Started GET "/login" for ::1 at 2020-02-26 23:31:36 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 511)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5130)
+
+
+Started POST "/sessions" for ::1 at 2020-02-26 23:31:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"sSY507ws8gZelEp21Qbog9dHs/HNLRcTpAdaNl68938B++SEODwjn5z/qTnoGiZc6q8ui4k9l/EEWwyoYbJm8A==", "email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kunz5@uci.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.4ms | Allocations: 5059)
+
+
+Started POST "/sessions" for ::1 at 2020-02-26 23:31:49 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"padPigz/TV/K09ym5//nW6MnZh0EyrgRd4acb7jra9FGtDnfdMSBQ0I2/XEgWgCq3Aj3NGECnyPZ9fVJ3xGLKQ==", "email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kunz5@uci.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.3ms | Allocations: 4872)
+
+
+Started GET "/" for ::1 at 2020-02-26 23:38:38 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 120.5ms | ActiveRecord: 0.0ms | Allocations: 22685)
+
+
+Started GET "/" for ::1 at 2020-02-26 23:39:03 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 212)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 5156)
+
+
+Started GET "/users" for ::1 at 2020-02-26 23:40:59 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-02-26 23:41:01 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20200207204344)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "tag_id" integer, "date_from" date, "date_to" date, "location" varchar, "location_lat" float, "location_long" float, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207204344"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserEventRelationships (20200207204844)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "user_event_relationships" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "user_id" integer, "role_type_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207204844"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRoleTypePermissions (20200207205432)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "role_type_permissions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "role_type" varchar, "modify_event" boolean, "delete_event" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207205432"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMapMarkers (20200207205709)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "map_markers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar, "location_lat" float, "location_long" float, "event_id" integer, "type" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200207205709"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20200227043929)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "password_digest" varchar, "profile" varchar, "phone" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200227043929"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-27 04:41:38.593977"], ["updated_at", "2020-02-27 04:41:38.593977"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2020-02-26 23:41:49 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 825.1ms | Allocations: 182613)
+  Rendered users/new.html.erb within layouts/application (Duration: 831.8ms | Allocations: 183066)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1232ms (Views: 946.6ms | ActiveRecord: 7.3ms | Allocations: 199815)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:42:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"4Xe3MtzyZJaC5S7omDbmsIkLLNUKfDXsW6Va/hmBYV8CZMFnpMmoigoADz9fkwFB9iS9/G+0Et711jPYfnuBpw==", "user"=>{"email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "kunz5@uci.edu"], ["password_digest", "$2a$12$62exEcdyj7le81/zZWHwD.wXB3B0YH/exEYhlBzlbpq5Mwii8NsaC"], ["created_at", "2020-02-27 04:42:00.370598"], ["updated_at", "2020-02-27 04:42:00.370598"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 276ms (ActiveRecord: 1.5ms | Allocations: 3059)
+
+
+Started GET "/users/1" for ::1 at 2020-02-26 23:42:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 21.1ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.8ms | Allocations: 5408)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-02-26 23:42:05 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 938)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1182)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 5938)
+
+
+Started GET "/users" for ::1 at 2020-02-26 23:42:08 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 57.6ms | ActiveRecord: 0.4ms | Allocations: 5252)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-02-26 23:44:52 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 92.4ms | ActiveRecord: 0.0ms | Allocations: 10263)
+
+
+Started GET "/login" for ::1 at 2020-02-26 23:45:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 532)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 5194)
+
+
+Started POST "/sessions" for ::1 at 2020-02-26 23:45:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"dGp1JYMuCP/7bnqZp2L8MzI0e91vHTa3yq0Ug1x4x9bEt6hyBz7ZZjkFmdaafjLsD9zmpysNtlVq8UIdY3ZWWQ==", "email"=>"kunz5@uci.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kunz5@uci.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 311ms (ActiveRecord: 3.3ms | Allocations: 7971)
+
+
+Started GET "/" for ::1 at 2020-02-26 23:45:06 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 720)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 4821)
+
+
+Started GET "/logout" for ::1 at 2020-02-26 23:45:12 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/" for ::1 at 2020-02-26 23:45:12 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 4179)
+
+
+Started GET "/signup" for ::1 at 2020-02-26 23:45:16 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 246.2ms | Allocations: 182557)
+  Rendered users/new.html.erb within layouts/application (Duration: 247.6ms | Allocations: 182893)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 260ms (Views: 257.8ms | ActiveRecord: 0.0ms | Allocations: 187612)
+
+
+Started POST "/users" for ::1 at 2020-02-26 23:45:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"DFMM+Td6QHcr/20fDopRrGENyp2U5qPJaSthj9ON3i/GX8NbeWqZIWjKvmuJysoS2LVC6jpKgQHTlPyjwy0+VA==", "user"=>{"email"=>"danielzhang@brandeis.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "danielzhang@brandeis.edu"], ["password_digest", "$2a$12$Q/FKPEQ0OZU.VKuUMYP6xurghj1vZmVBtrU/upqTzPZgfb2oCY09O"], ["created_at", "2020-02-27 04:45:27.510928"], ["updated_at", "2020-02-27 04:45:27.510928"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 267ms (ActiveRecord: 3.2ms | Allocations: 3036)
+
+
+Started GET "/users/2" for ::1 at 2020-02-26 23:45:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.1ms | Allocations: 4984)
+
+
+Started GET "/users" for ::1 at 2020-02-26 23:45:30 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.4ms | Allocations: 5347)
+
+

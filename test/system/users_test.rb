@@ -14,7 +14,9 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New User"
 
-    fill_in "Name", with: @user.name
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: 'secret'
+    fill_in "Password confirmation", with: 'secret'
     click_on "Create User"
 
     assert_text "User was successfully created"
@@ -25,7 +27,9 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "Edit", match: :first
 
-    fill_in "Name", with: @user.name
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: 'secret'
+    fill_in "Password confirmation", with: 'secret'
     click_on "Update User"
 
     assert_text "User was successfully updated"
