@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   def hello
     render html: "Hello Protest Planner!"
+  
   end
 
   def current_user

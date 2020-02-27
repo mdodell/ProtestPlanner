@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find(params[:id])
   end
 
   # GET /events/new
@@ -25,20 +26,19 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
-      else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
+    if @event.save
+      # Handle a successful save.
+    else
+      render 'new'
     end
   end
+ 
 
-  # PATCH/PUT /events/1
-  # PATCH/PUT /events/1.json
+
+  # private
+
+  # # PATCH/PUT /events/1
+  # # PATCH/PUT /events/1.json
   def update
     respond_to do |format|
       if @event.update(event_params)
@@ -68,7 +68,11 @@ class EventsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
+   private
+
     def event_params
-      params.fetch(:event, {})
+      params.require(:event).permit(:name, :tag_id, :date_from, 
+      :location, :location_long, :location_lat, :date_to, :description) 
+            
     end
 end
