@@ -1,15 +1,18 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+  protect_from_forgery with: :exception
+  include SessionsHelper
+  before_action :require_login
+
+  def require_login
+    unless logged_in?
+      # flash[:error] = "You must be logged in to access this section"
+      redirect_to login_path# halts request cycle
+    end
+  end
+
   def hello
     render html: "Hello Protest Planner!"
   
   end
 
-  def current_user
-    if session[:user_id]
-      @current_user ||= User.find(session[:user_id])
-    else
-      @current_user = nil
-    end
-  end
 end

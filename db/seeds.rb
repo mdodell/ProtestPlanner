@@ -14,8 +14,7 @@ RoleTypePermission.delete_all
 
 10.times do
     User.create(
-                first_name: Faker::Name.first_name,
-                  last_name: Faker::Name.last_name,
+        user_name: Faker::Name.name,
                   email: Faker::Internet.email,
                   profile: Faker::Hacker.say_something_smart,
                   phone: Faker::Number.number(digits:10),
