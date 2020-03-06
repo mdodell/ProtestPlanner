@@ -1,21 +1,26 @@
 class SessionsController < ApplicationController
+  include SessionsHelper
+  skip_before_action :require_login, only: [:new, :create]
+
   def new
   end
 
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to root_url, notice: "Logged in!"
+    user = User.find_by(email: params[:session][:email].downcase)
+    if user && user.authenticate(params[:session][:password])
+      # Log the user in and redirect to the user's show page.
+      log_in user
+      redirect_to user
     else
-      flash.now[:alert] = "Email or password is invalid"
-      render "new"
+      # Create an error message.
+      flash.now[:danger] = 'Invalid email/password combination'
+      render 'new'
     end
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to root_url, notice: "Logged out!"
+    log_out
+    redirect_to root_url
   end
 
 end
