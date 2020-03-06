@@ -13,4 +13,19 @@
  /**= require_tree .*/
  /**= require_self*/
  /**!*/
+$theme-colors: (
+        primary: #77D353
+);
+
+.primary {
+  background-color: $primary!important;
+}
+
+body {
+  background-color: red!important;
+}
+
+@import "~bootstrap";
 @import '@fortawesome/fontawesome-free';
+
+

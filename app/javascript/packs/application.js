@@ -16,7 +16,6 @@ import "./custom";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+import "../../assets/stylesheets/application.scss"
 import "bootstrap";
-import "../../assets/stylesheets/custom"
 import "@fortawesome/fontawesome-free/js/all";

@@ -1,3 +1,4 @@
+<%= render 'layouts/primaryheader' %>
 <% if current_user %>
   Logged in as <%= current_user.email %>
   <%= link_to "Log Out", logout_path %>
@@ -5,7 +6,6 @@
   <%= link_to "Sign Up", signup_path %> or
   <%= link_to "Log In", login_path %>
 <% end %>
-
 <p id="notice"><%= notice %></p>
 
 <h1>
@@ -13,3 +13,4 @@
 </h1>
 <p class="lead text-uppercase"><mark>Testing</mark> 123 this is a paragraph</p>
 <i class="far fa-calendar-times"></i>
+<button class="btn btn-primary">Test</button>
