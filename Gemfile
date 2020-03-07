@@ -6,7 +6,6 @@ ruby '2.7.0'
 
 gem 'rails_12factor', group: :production
 gem 'sqlite3', group: :development
-gem 'pg', group: :production
 gem 'faker'
 gem "geocoder"
 gem "bcrypt"
@@ -70,3 +69,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pg", "~> 1.2"
