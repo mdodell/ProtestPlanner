@@ -15,6 +15,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'better_errors'
 gem 'awesome_print'
+gem 'bootstrap',  '~>4.3.1'
+gem 'font_awesome5_rails'
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

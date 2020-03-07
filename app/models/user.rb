@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   before_save { self.email = email.downcase }
-  validates :first_name, presence: true, length: { maximum: 26 }
-  validates :last_name, presence: true, length: { maximum: 26 }
+  validates :user_name, presence: true, length: { maximum: 26 }
 
   has_many :user_event_relationships
   has_many :events, through: :user_event_relationships
