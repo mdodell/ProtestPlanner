@@ -1,5 +1,33 @@
+$primary-green: #77D353;
+$dark-primary: #5A6978;
+
+$bg-dark: red;
+
 $theme-colors: (
-        "primary":red,
-        "secondary": #0c8f22,
-        "danger": #ff00bf
+        "primary": $primary-green,
+        "dark-primary": $dark-primary
 );
+
+.primary-green {
+  color: $primary-green
+}
+
+.dark-primary {
+  color: $dark-primary
+}
+
+.bg-dark {
+  background-color: $dark-primary!important;
+}
+
+hr {
+  border-top: 2px solid rgba(0, 0, 0, 0.1)
+}
+
+//.primary {
+//  color: $primary
+//}
+//
+//.dark-primary {
+//  color: $dark-primary
+//}

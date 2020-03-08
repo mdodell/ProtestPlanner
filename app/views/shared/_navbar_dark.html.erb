@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><%= render 'shared/logo_light', logo_text: "Rise Up" %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text-white"></span>
+  </button>
+
+  <div class="collapse navbar-collapse row justify-content-between" id="navbarTogglerDemo02">
+    <form class="form-inline my-2 my-lg-0 ml-2 d-none d-xl-block">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#"><h4 class="text-white">Browse Events<i class="fas fa-street-view ml-1 primary-green"></i></h4><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#"><h4 class="text-white">Create Events<i class="fas fa-plus-circle ml-1 primary-green"></i></h4></a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#"><h4 class="text-white">My Events<i class="fas fa-calendar-week ml-1 primary-green"></i></h4></a>
+      </li>
+    </ul>
+  </div>
+</nav>

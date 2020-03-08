@@ -1,51 +1,67 @@
 <%= provide(:title, 'new event') %>
-<h1> New Event </h1>
-<p>Create a new event here</p>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<%= render 'shared/navbar_dark' %>
+<div class="row justify-content-center no-gutters">
+  <div class="container-xl mt-5">
     <%= form_for(@event) do |f| %>
-      
-    <%= f.label :name %>
-    <%= f.text_field :name %>
 
+      <!--Basic Information Section-->
+      <h1 class="display-4"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
+      <h3 class="font-weight-light">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</h3>
+      <div class="input-group input-group-lg">
+        <%= f.text_field :name, placeholder: "Event Name", class: "form-control"%>
+      </div>
+      <br>
+      <div class="input-group input-group-lg">
+        <%= f.text_area :description, placeholder: "Event Description", class: "form-control"%>
+      </div>
+      <br>
+      <div class="input-group input-group-lg">
+        <%= f.number_field :tag_id, placeholder: "Tag Id", class: "form-control"%>
+      </div>
+
+      <hr class="col-xs-12"/>
+
+      <!--Location Section-->
+      <h1 class="display-4"><i class="fas fa-map-marker-alt mr-2 primary-green"></i>Location</h1>
+      <h3 class="font-weight-light">Help people in the area discover your event and let attendees know where to show up.</h3>
+
+      <div class="input-group input-group-lg">
+        <%= f.text_field :location_lat, placeholder: "Latitude", class: "form-control"%>
+      </div>
+      <br>
+      <div class="input-group input-group-lg">
+        <%= f.text_field :location_long, placeholder: "Longitude", class: "form-control"%>
+      </div>
+
+      <hr class="col-xs-12"/>
+
+      <!--Date and Time Section-->
+      <h1 class="display-4"><i class="far fa-clock mr-2 primary-green"></i>Date & Time</h1>
+      <h3 class="font-weight-light">Tell event-goers when your event starts and ends so they can make plans to attend.</h3>
+
+      <div class="row no-gutters align-items-center justify-content-between">
+        <div class="col-md-5">
+          <br>
+          <div class="row no-gutters justify-content-center">
+            <div class="input-group input-group-lg">
+              <%= f.datetime_field :date_from, class: "form-control"%>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col-md-5">
+          <br>
+          <div class="row no-gutters justify-content-center">
+            <div class="input-group input-group-lg">
+              <%= f.datetime_field :date_to, class: "form-control"%>
+            </div>
+          </div>
+        </div>
+      </div>
     <br>
-
-    <%= f.label :date_from%>
-    <%= f.date_field :date_from %>
-
-    <br>
-
-    <%= f.label :date_to %>
-    <%= f.date_field :date_to %>
-
-    <br>
-
-    <%= f.label :tag_id %>
-    <%= f.number_field :tag_id %>
-    <br>
-
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-
-    <br>
-
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-
-    <br>
-
-    <%= f.label :location_lat %>
-    <%= f.text_field :location %>
-
-    <br>
-
-    <%= f.label :location_long %>
-    <%= f.text_field :location %>
-
-    <br>
-
-    <%= f.submit "Create event", class: "btn btn-primary" %>
-    <%= link_to 'Back', events_path %>
-    <% end %>
+      <div class="row no-gutters justify-content-end mb-5">
+        <%= f.submit "Create event", class: "btn btn-primary btn-lg text-white" %>
+        <% end %>
+      </div>
   </div>
 </div>
