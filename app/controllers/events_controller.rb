@@ -28,9 +28,18 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       # Handle a successful save.
+      Event.updateCoordinates(@event.location)
     else
       render 'new'
     end
+  end
+
+  
+  #update the coordinates
+  def updateCoordinates(loc)
+      results = Geocoder.search(loc)
+      lat, long = results.first.coordinates
+      @event
   end
  
 
@@ -72,7 +81,8 @@ class EventsController < ApplicationController
 
     def event_params
       params.require(:event).permit(:name, :tag_id, :date_from, 
-      :location, :location_long, :location_lat, :date_to, :description) 
+      :location, :date_to, :description) 
             
     end
 end
+
