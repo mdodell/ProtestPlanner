@@ -15,20 +15,17 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
-        <td><%= event.description %></td>
         <td><%= event.location %></td>
         <td><%= event.location_lat %></td>
         <td><%= event.location_long%></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Sign up', signup_for_event_path, method: :post, params: {this_event: event}, class: "btn btn-sm btn-block"%><td>
+        <td><p> map </p></td>
+       
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Event', new_event_path %>
 
 
