@@ -4,12 +4,21 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 # ruby '2.6.5'
 
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'sqlite3', group: :development
-gem 'pg', group: :production
 gem 'faker'
 gem "geocoder"
 gem "bcrypt"
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'better_errors'
+gem 'awesome_print'
+gem 'bootstrap',  '~>4.3.1'
+gem 'font_awesome5_rails'
+gem 'bootstrap-sass'
+gem 'binding_of_caller'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
@@ -62,3 +71,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pg", "~> 1.2"

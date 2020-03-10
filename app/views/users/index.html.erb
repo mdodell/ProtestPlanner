@@ -1,27 +1,52 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<%= provide(:title, 'my events') %>
+<%= render 'shared/navbar_dark' %>
+
+
+<h1>My Events</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
+    <% current_user.events.each do |event| %>
       <tr>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=event.name %></td>
+        <td><p>map </p></td>
+        <td><p>event page </p></td>
       </tr>
     <% end %>
   </tbody>
+
+
 </table>
+
+<h1>Events that I am attending</h1>
+<% UserEventRelationship.all.each do |event| %>
+  <% if event.role_type_id == 1 and event.user_id == current_user.id %>
+    <tr>
+      <td><%=Event.find(event.event_id).name %></td>
+      <td><p>map </p></td>
+      <td><p>event page </p></td>
+    </tr>
+  <%end%>
+<% end %>
+
+<h1>Events that I am an organizer for</h1>
+<% UserEventRelationship.all.each do |event| %>
+  <% if event.role_type_id == 0 and event.user_id == current_user.id %>
+    <tr>
+      <td><%=Event.find(event.event_id).name %></td>
+      <td><p>map </p></td>
+      <td><p>event page </p></td>
+    </tr>
+  <% end %>
+<% end %>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+

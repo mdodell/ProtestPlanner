@@ -22,16 +22,25 @@ class EventsController < ApplicationController
   def edit
   end
 
+
+
   # POST /events
   # POST /events.json
   def create
     @event = Event.new(event_params)
     if @event.save
-      # Handle a successful save.
+      results = Geocoder.search(@event.location)
+      lat, long = results.first.coordinates
+      @event.location_lat = lat
+      @event.location_long = long
+      @event.save
+      UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
     else
       render 'new'
     end
   end
+
+
  
 
 
@@ -72,7 +81,8 @@ class EventsController < ApplicationController
 
     def event_params
       params.require(:event).permit(:name, :tag_id, :date_from, 
-      :location, :location_long, :location_lat, :date_to, :description) 
+      :location, :date_to, :description) 
             
     end
 end
+

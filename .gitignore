@@ -6,4 +6,8 @@ db/*.sqlite3
 
 log/*
 
+.bundle/*
+
 node_modules/*
+
+*.env
