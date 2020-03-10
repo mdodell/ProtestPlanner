@@ -22,25 +22,24 @@ class EventsController < ApplicationController
   def edit
   end
 
+
+
   # POST /events
   # POST /events.json
   def create
     @event = Event.new(event_params)
     if @event.save
-      # Handle a successful save.
-      Event.updateCoordinates(@event.location)
+      results = Geocoder.search(@event.location)
+      lat, long = results.first.coordinates
+      @event.location_lat = lat
+      @event.location_long = long
+      @event.save
     else
       render 'new'
     end
   end
 
-  
-  #update the coordinates
-  def updateCoordinates(loc)
-      results = Geocoder.search(loc)
-      lat, long = results.first.coordinates
-      @event
-  end
+
  
 
 
