@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get  '/events/new',  to: 'events#new'
   get  '/browse',  to: 'events#index'
   get '/home', to: 'home#index'
-  # get '/my_events', to: ''
+  get '/my_events', to: 'users#index'
   post '/signup_for_event' => 'users#signup_for_event'
   root 'home#index'
 
