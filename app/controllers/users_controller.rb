@@ -64,7 +64,9 @@ class UsersController < ApplicationController
   def signup_for_event
     @my_event = Event.find(params[:this_event])
     @user = current_user
-    UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1)
+    unless current_user.events.exists?(params[:this_event])
+      UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1) 
+    end
   end
 
 
