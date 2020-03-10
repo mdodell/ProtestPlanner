@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :events
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get  '/events/new',  to: 'events#new'
+  get  '/browse',  to: 'events#index'
+  get '/home', to: 'home#index'
   root 'home#index'
 
   get 'sessions/new'

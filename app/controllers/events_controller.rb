@@ -33,6 +33,7 @@ class EventsController < ApplicationController
       lat, long = results.first.coordinates
       @event.location_lat = lat
       @event.location_long = long
+      UserEventRelationship.create(event_id: @event.id, user_id: @current_user, role_type_id: 1)
       @event.save
     else
       render 'new'
