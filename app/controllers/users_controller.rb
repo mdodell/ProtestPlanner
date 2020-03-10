@@ -59,6 +59,8 @@ class UsersController < ApplicationController
     end
   end
 
+  
+
   def signup_for_event
     @my_event = Event.find(params[:this_event])
     @user = @current_user
