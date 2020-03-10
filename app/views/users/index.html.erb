@@ -25,11 +25,22 @@
 
 </table>
 
-<h1>Events that I am an organizer for</h1>
-<% UserEventRelationship.all do |event| %>
-  <% if event.role_type_id == 0 %>
+<h1>Events that I am attending</h1>
+<% UserEventRelationship.all.each do |event| %>
+  <% if event.role_type_id == 1 and event.user_id == current_user.id %>
     <tr>
-      <td><%=event.name %></td>
+      <td><%=Event.find(event.event_id).name %></td>
+      <td><p>map </p></td>
+      <td><p>event page </p></td>
+    </tr>
+  <%end%>
+<% end %>
+
+<h1>Events that I am an organizer for</h1>
+<% UserEventRelationship.all.each do |event| %>
+  <% if event.role_type_id == 0 and event.user_id == current_user.id %>
+    <tr>
+      <td><%=Event.find(event.event_id).name %></td>
       <td><p>map </p></td>
       <td><p>event page </p></td>
     </tr>
