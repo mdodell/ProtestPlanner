@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_043929) do
     t.string "user_name"
     t.string "email"
     t.string "password_digest"
+    t.string "remember_digest"
     t.string "profile"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
