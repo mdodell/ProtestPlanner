@@ -10,7 +10,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "field", "map", "latitude", "longitude" ];
+  static targets = [ "field", "map"];
 
   connect() {
     if(typeof(google) != "undefined"){
@@ -19,9 +19,11 @@ export default class extends Controller {
   }
 
   initMap(){
+    const { location_lat, location_long } = JSON.parse(this.data.get("event"));
+    // $.get('/events.json').then(data => console.log(data)); // This will let us fetch a list of events. This can be used to get mapmarkers for the current event
     this.map = new google.maps.Map(this.mapTarget, {
-      center: new google.maps.LatLng(this.data.get("latitude") || 39.5, this.data.get("longitude") || -98.35),
-      zoom: this.data.get("latitude") == null ? 4 : 17
+        center: new google.maps.LatLng(location_lat || 39.5, location_long || -98.35),
+        zoom: location_lat == null ? 4 : 17
     });
     this.autocomplete = new google.maps.places.Autocomplete(this.fieldTarget) // Grabs the DOM element
     this.autocomplete.bindTo('bounds', this.map);
@@ -38,7 +40,6 @@ export default class extends Controller {
       let place = this.autocomplete.getPlace();
       if(!place.geometry){
         window.alert(`No details available for input: ${place.name}`);
-        console.log(place);
         return null;
       }
 
@@ -51,11 +52,6 @@ export default class extends Controller {
 
       this.marker.setPosition(place.geometry.location);
       this.marker.setVisible(true);
-
-      this.latitudeTarget.value = place.geometry.location.lat();
-      this.longitudeTarget.value = place.geometry.location.long();
-
-
   }
 
   keydown(event){
