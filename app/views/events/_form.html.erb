@@ -6,15 +6,15 @@
       <h1 class="display-4"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
       <h3 class="font-weight-light">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</h3>
       <div class="input-group input-group-lg">
-        <%= f.text_field :name, placeholder: "Event Name", class: "form-control"%>
+        <%= f.text_field :name, required: true, placeholder: "Event Name", class: "form-control"%>
       </div>
       <br>
       <div class="input-group input-group-lg">
-        <%= f.text_area :description, placeholder: "Event Description", class: "form-control"%>
+        <%= f.text_area :description, required: true, placeholder: "Event Description", class: "form-control"%>
       </div>
       <br>
       <div class="input-group input-group-lg">
-        <%= f.number_field :tag_id, placeholder: "Tag Id", class: "form-control"%>
+        <%= f.number_field :tag_id, required: true, placeholder: "Tag Id", class: "form-control"%>
       </div>
 
       <hr class="col-xs-12"/>
@@ -25,7 +25,7 @@
 
 
       <div class="input-group input-group-lg">
-        <%= f.search_field :location, placeholder: "Location", class: "form-control", data: { target: "places.field", action: "keydown->places#keydown" }%>
+        <%= f.search_field :location, required: true, placeholder: "Location", class: "form-control", data: { target: "places.field", action: "keydown->places#keydown" }%>
       </div>
       <!--TODO: DELETE THIS, JUST TO TEST IF MAP WORKS-->
       <div data-target="places.map" style="height: 400px" class="mt-4">
@@ -45,7 +45,7 @@
           <br>
           <div class="row no-gutters justify-content-center">
             <div class="input-group input-group-lg">
-              <%= f.datetime_field :date_from, class: "form-control"%>
+              <%= f.datetime_field :date_from, required: true, class: "form-control"%>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
           <br>
           <div class="row no-gutters justify-content-center">
             <div class="input-group input-group-lg">
-              <%= f.datetime_field :date_to, class: "form-control"%>
+              <%= f.datetime_field :date_to, required: true, class: "form-control"%>
             </div>
           </div>
         </div>

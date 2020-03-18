@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 # ruby '2.6.5'
 
+gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'sqlite3', group: :development

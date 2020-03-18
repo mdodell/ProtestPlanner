@@ -65,11 +65,11 @@ class UsersController < ApplicationController
     @my_event = Event.find(params[:this_event])
     @user = current_user
     if current_user.events.exists?(params[:this_event])
-      format.html { redirect_to show_post_meta_url, notice: 'Post was successfully updated.' }
-      flash[:danger] = 'Sorry, you can\'t sign up because you are already part of this event'
-      redirect_to signup_for_event
+     
     else 
       UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1) 
+      flash[:alert] = 'You were successfully added as an attendee'
+      redirect_to '/my_events'
     end
   end
 
