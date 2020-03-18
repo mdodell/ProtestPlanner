@@ -64,8 +64,14 @@ class UsersController < ApplicationController
   def signup_for_event
     @my_event = Event.find(params[:this_event])
     @user = current_user
-    unless current_user.events.exists?(params[:this_event])
+    if current_user.events.exists?(params[:this_event])
+      flash[:alert] = 'Sorry, you can\'t join because you are already part of this event.'
+      redirect_to '/my_events'
+     
+    else 
       UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1) 
+      flash[:alert] = 'You were successfully added as an attendee'
+      redirect_to '/my_events'
     end
   end
 
