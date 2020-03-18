@@ -65,6 +65,8 @@ class UsersController < ApplicationController
     @my_event = Event.find(params[:this_event])
     @user = current_user
     if current_user.events.exists?(params[:this_event])
+      flash[:alert] = 'Sorry, you can\'t join because you are already part of this event.'
+      redirect_to '/my_events'
      
     else 
       UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1) 
