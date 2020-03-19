@@ -28,15 +28,19 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    if @event.save
-      results = Geocoder.search(@event.location)
-      lat, long = results.first.coordinates
-      @event.location_lat = lat
-      @event.location_long = long
-      @event.save
-      UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
-    else
-      render 'new'
+    respond_to do | format |
+      if @event.save
+        results = Geocoder.search(@event.location)
+        lat, long = results.first.coordinates
+        @event.location_lat = lat
+        @event.location_long = long
+        @event.save
+        UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
+      else
+        format.html {render 'new'}
+        format.json {render json: @event.errors, status: :unprocessable_entity }
+        format.js
+      end
     end
   end
 

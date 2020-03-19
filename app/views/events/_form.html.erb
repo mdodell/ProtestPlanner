@@ -1,36 +1,23 @@
 <div class="row justify-content-center no-gutters">
   <div class="container-xl mt-5">
-    <%= form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}) do |f| %>
-
+    <%= bootstrap_form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}) do |f| %>
       <!--Basic Information Section-->
       <h1 class="display-4"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
       <h3 class="font-weight-light">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</h3>
-      <div class="input-group input-group-lg">
-        <%= f.text_field :name, required: true, placeholder: "Event Name", label: false, class: "form-control"%>
-      </div>
+      <%= f.text_field :name, placeholder: "Event Name", hide_label: true, input_group_class: 'input-group-lg' %>
       <br>
-      <div class="input-group input-group-lg">
-        <%= f.text_area :description, required: true, placeholder: "Event Description", label: false, class: "form-control"%>
-      </div>
+      <%= f.text_area :description, placeholder: "Event Description", hide_label: true, input_group_class: 'input-group-lg' %>
       <br>
-      <div class="input-group input-group-lg">
-        <%= f.number_field :tag_id, required: true, placeholder: "Tag Id", label: false, class: "form-control"%>
-      </div>
+      <%= f.number_field :tag_id, placeholder: "Tag Id", hide_label: true, input_group_class: 'input-group-lg' %>
       <br>
-      <div class="input-group input-group-lg">
-        <%= f.file_field :picture, class: "form-control" %>
-      </div>
+      <%= f.file_field :picture, hide_label: true, input_group_class: 'input-group-lg' %>
 
       <hr class="col-xs-12"/>
 
       <!--Location Section-->
       <h1 class="display-4"><i class="fas fa-map-marker-alt mr-2 primary-green"></i>Location</h1>
       <h3 class="font-weight-light">Help people in the area discover your event and let attendees know where to show up.</h3>
-
-
-      <div class="input-group input-group-lg">
-        <%= f.search_field :location, placeholder: "Location", label: false, class: "form-control", data: { target: "places.field", action: "keydown->places#keydown" }%>
-      </div>
+      <%= f.search_field :location, placeholder: "Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "places.field", action: "keydown->places#keydown" }%>
       <!--TODO: DELETE THIS, JUST TO TEST IF MAP WORKS-->
       <div data-target="places.map" style="height: 400px" class="mt-4">
 
@@ -45,19 +32,17 @@
       <h3 class="font-weight-light">Tell event-goers when your event starts and ends so they can make plans to attend.</h3>
 
       <div class="row no-gutters align-items-center justify-content-between">
-        <div class="col-md-5">
+        <div class="col-md-5 col-xs-12">
           <br>
           <div class="row no-gutters justify-content-center">
-            <%= f.datetime_field :date_from, required: true, class: "form-control"%>
+            <%= f.datetime_field :date_from, input_group_class: 'input-group-lg'%>
           </div>
         </div>
         <br>
-        <div class="col-md-5">
+        <div class="col-md-5 col-xs-12">
           <br>
           <div class="row no-gutters justify-content-center">
-            <div class="input-group input-group-lg">
-              <%= f.datetime_field :date_to, required: true, class: "form-control"%>
-            </div>
+            <%= f.datetime_field :date_to, input_group_class: 'input-group-lg'%>
           </div>
         </div>
       </div>

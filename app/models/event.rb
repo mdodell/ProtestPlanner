@@ -2,6 +2,7 @@ class Event < ApplicationRecord
     has_many :user_event_relationships
     has_many :users, through: :user_event_relationships
     has_one_attached :picture
+    validates :name, presence: true
 
     #backend method to find the closest 5 (or less if there are not 5 close events)
     #events to user (in params)

@@ -20,6 +20,7 @@ gem 'font_awesome5_rails'
 gem 'bootstrap-sass'
 gem 'binding_of_caller'
 gem "google-cloud-storage", "~> 1.8", require: false
+gem "bootstrap_form", "~> 4.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
