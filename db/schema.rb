@@ -79,10 +79,14 @@ ActiveRecord::Schema.define(version: 2020_03_19_031523) do
     t.string "user_name"
     t.string "email"
     t.string "password_digest"
+    t.string "remember_digest"
     t.string "profile"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

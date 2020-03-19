@@ -2,12 +2,13 @@ class UsersController < ApplicationController
   include SessionsHelper
   before_action :set_user, only: [:edit, :update, :destroy]
   skip_before_action :require_login, only: [:new, :create, :set_user, :user_params]
+  before_action :correct_user,   only: [:edit, :update]
 
   # GET /users
   # GET /users.json
-  # def index
-  #   @users = User.all
-  # end
+  def index
+    @users = User.all
+  end
 
   # GET /users/1
   # GET /users/1.json
@@ -30,9 +31,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Course Registration App!"
-      redirect_to user_url(@user)
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
@@ -48,14 +49,13 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to user_url(@user)
+    else
+      flash[:error] = "Fail Update!"
+      render 'edit'
     end
   end
 
@@ -96,5 +96,10 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit( :user_name, :email, :password,
                                  :password_confirmation, :phone)
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless @user == current_user
   end
 end
