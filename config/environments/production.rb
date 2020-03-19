@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  host = 'https://obscure-sierra-75648.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
