@@ -1,26 +1,25 @@
 <div class="row justify-content-center no-gutters">
   <div class="container-xl mt-5">
-    <%= simple_form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}) do |f| %>
+    <%= form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}) do |f| %>
 
       <!--Basic Information Section-->
       <h1 class="display-4"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
       <h3 class="font-weight-light">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</h3>
       <div class="input-group input-group-lg">
-        <%= f.input :name, required: true, placeholder: "Event Name", label: false, class: "form-control"%>
+        <%= f.text_field :name, required: true, placeholder: "Event Name", label: false, class: "form-control" %>
       </div>
       <br>
       <div class="input-group input-group-lg">
-        <%= f.input :description, required: true, placeholder: "Event Description", label: false, class: "form-control"%>
+        <%= f.text_area :description, placeholder: "Event Description", label: false, class: "form-control"%>
       </div>
       <br>
       <div class="input-group input-group-lg">
-        <%= f.input :tag_id, required: true, placeholder: "Tag Id", label: false, class: "form-control"%>
+        <%= f.number_field :tag_id, required: true, placeholder: "Tag Id", label: false, class: "form-control"%>
       </div>
       <br>
       <div class="input-group input-group-lg">
         <%= f.file_field :picture, class: "form-control" %>
       </div>
-      .
 
       <hr class="col-xs-12"/>
 
@@ -30,7 +29,7 @@
 
 
       <div class="input-group input-group-lg">
-        <%= f.search_field :location, required: true, placeholder: "Location", label: false, class: "form-control", data: { target: "places.field", action: "keydown->places#keydown" }%>
+        <%= f.search_field :location, placeholder: "Location", label: false, class: "form-control", data: { target: "places.field", action: "keydown->places#keydown" }%>
       </div>
       <!--TODO: DELETE THIS, JUST TO TEST IF MAP WORKS-->
       <div data-target="places.map" style="height: 400px" class="mt-4">
@@ -49,22 +48,14 @@
         <div class="col-md-5">
           <br>
           <div class="row no-gutters justify-content-center">
-            <div class="input-group input-group-lg">
-              <%= f.input :date_from, as: :datetime, start_year: Date.today.year,
-              end_year: Date.today.year + 90, discard_day: false,
-              required: true, label: false, class: "form-control"%>
-            </div>
+            <%= f.datetime_field :date_from, required: true, class: "form-control"%>
           </div>
         </div>
         <br>
         <div class="col-md-5">
           <br>
           <div class="row no-gutters justify-content-center">
-            <div class="input-group input-group-lg">
-              <%= f.input :date_to, as: :datetime, start_year: Date.today.year,
-              end_year: Date.today.year + 90, discard_day: false,
-              required: true, label: false, class: "form-control"%>
-            </div>
+            <%= f.datetime_field :date_to, required: true, class: "form-control"%>
           </div>
         </div>
       </div>

@@ -1,27 +1,15 @@
 {
-<<<<<<< Updated upstream
   "application.js": "/packs/js/application-3527803a15da59b62b03.js",
   "application.js.map": "/packs/js/application-3527803a15da59b62b03.js.map",
-=======
-  "application.js": "/packs/js/application-b5b3eff2e22df979e028.js",
-  "application.js.map": "/packs/js/application-b5b3eff2e22df979e028.js.map",
->>>>>>> Stashed changes
   "custom.js": "/packs/js/custom-84f690b05c00fdaa6291.js",
   "custom.js.map": "/packs/js/custom-84f690b05c00fdaa6291.js.map",
   "entrypoints": {
     "application": {
       "js": [
-<<<<<<< Updated upstream
         "/packs/js/application-3527803a15da59b62b03.js"
       ],
       "js.map": [
         "/packs/js/application-3527803a15da59b62b03.js.map"
-=======
-        "/packs/js/application-b5b3eff2e22df979e028.js"
-      ],
-      "js.map": [
-        "/packs/js/application-b5b3eff2e22df979e028.js.map"
->>>>>>> Stashed changes
       ]
     },
     "custom": {
