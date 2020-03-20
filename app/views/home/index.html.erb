@@ -2,46 +2,12 @@
 <%= render 'shared/navbar_dark' %>
 
 <% if current_user %>
-
-
-  <h1>Welcome to Protest Planner</h1>
+  <h1>
+    Welcome to Protest Planner
+  </h1>
   Logged in as <%= current_user.user_name %>
   <%= link_to "Log Out", logout_path, method: :delete %>
-  <h3>Nearby Events</h3>
-   <% @near = Event.near('Boston') %>
-   
-   <p><%= @client_ip %></p>
-   <p><% puts @client_ip%></p>
-   <p><% puts @client_ip%></p>
-   <p><% puts @client_ip%></p>
-   <p><% puts @client_ip%></p>
- 
-
-  
-
-  <h2>My Events</h2>
-  <% if current_user.events.length > 0 %>
-    <h3>Events that I am attending</h4>
-
-    <% if UserEventRelationship.where(role_type_id: '1', user_id: current_user.id).length > 0 %>
-      <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id).each do |event| %>
-        <p><%=Event.find(event.event_id).name %> map event page </p>
-      <%end%>
-    <%else%>
-      <p>You have not signed up for any events yet...</p>
-    <%end%>
-
-    <h3>Events that I am an organizer for</h4>
-    <% if UserEventRelationship.where(role_type_id: '0', user_id: current_user.id).length > 0 %>
-      <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id).each do |event| %>
-        <p><%=Event.find(event.event_id).name %> map event page </p>
-      <%end%>
-    <%else %>
-      <p>You have not organized any events yet</p>
-    <%end%>
-  <%else%>
-    <p>You have not signed up or created for any events yet</p>
-  <% end %>
+  <h1>Nearby Events</h1>
 <% else %>
   <%= link_to "Sign Up", signup_path %> or
   <%= link_to "Log In", login_path %>

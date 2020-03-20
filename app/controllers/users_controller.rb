@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @client_ip = remote_ip()
   end
 
   # GET /users/1
