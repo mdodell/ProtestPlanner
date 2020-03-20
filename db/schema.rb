@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_182618) do
+ActiveRecord::Schema.define(version: 2020_03_20_060349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2020_03_19_182618) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.integer "tag_id"
-    t.date "date_from"
-    t.date "date_to"
+    t.datetime "date_from"
+    t.datetime "date_to"
     t.string "location"
     t.decimal "location_lat", precision: 10, scale: 6
     t.decimal "location_long", precision: 10, scale: 6
@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 2020_03_19_182618) do
     t.string "user_name"
     t.string "email"
     t.string "password_digest"
-    t.string "remember_digest"
     t.string "profile"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
@@ -87,7 +86,7 @@ ActiveRecord::Schema.define(version: 2020_03_19_182618) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
-    t.index ["user_name"], name: "index_users_on_user_name", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

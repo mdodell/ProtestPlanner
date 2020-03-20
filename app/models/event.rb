@@ -3,6 +3,14 @@ class Event < ApplicationRecord
     has_many :users, through: :user_event_relationships
     has_one_attached :picture
     validates :name, :location, :tag_id, :date_to, :date_from, presence: true
+    validate :valid_date_range_required
+
+
+    def valid_date_range_required
+        if (date_to.present? && date_from.present?) && (date_to < date_from)
+            errors.add(:date_to, "Must be later than the from date!")
+        end
+    end
 
     #backend method to find the closest 5 (or less if there are not 5 close events)
     #events to user (in params)

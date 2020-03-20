@@ -36,10 +36,11 @@ class EventsController < ApplicationController
         @event.location_long = long
         @event.save
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
+        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.json { render json: @event, status: :created, location: @event }
       else
         format.html {render 'new'}
         format.json {render json: @event.errors, status: :unprocessable_entity }
-        format.js
       end
     end
   end
