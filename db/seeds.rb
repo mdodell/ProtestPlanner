@@ -1,16 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+require 'active_record'
+require 'activerecord-import'
+
 User.delete_all
 Event.delete_all
 UserEventRelationship.delete_all
 MapMarker.delete_all
 RoleTypePermission.delete_all
+Tag.delete_all
 
+tags = []
+tag_columns = [:name, :photo_url]
+tags_file = File.read(Rails.root.join('db', 'json', 'tags.json'))
+tags_hash = JSON.parse(tags_file)
+tags_hash.each do |tag|
+  tags << {
+      name: tag['name'],
+      photo_url: tag['photo_url']
+  }
+end
+
+Tag.import tag_columns, tags, validate: false
 
 10.times do
     User.create(
@@ -25,7 +35,7 @@ end
 5.times do
   Event.create(
       name: Faker::Movie.quote,
-      tag_id: Faker::Number.within(range: 1..10),
+      tag_id: Tag.all.sample.id,
       date_from: Faker::Date.backward(days: 14),
       date_to: Faker::Date.forward(days: 1),
       location: Faker::Address.full_address,
