@@ -1,8 +1,9 @@
 class Event < ApplicationRecord
     has_many :user_event_relationships
     has_many :users, through: :user_event_relationships
+    has_and_belongs_to_many :tags
     has_one_attached :picture
-    validates :name, :location, :tag_id, :date_to, :date_from, presence: true
+    validates :name, :location, :date_to, :date_from, presence: true
     validate :valid_date_range_required
 
 

@@ -33,9 +33,9 @@ Tag.import tag_columns, tags, validate: false
 end
 
 5.times do
-  Event.create(
+  new_event = Event.create(
       name: Faker::Movie.quote,
-      tag_id: Tag.all.sample.id,
+      tags: [],
       date_from: Faker::Date.backward(days: 14),
       date_to: Faker::Date.forward(days: 1),
       location: Faker::Address.full_address,
@@ -43,6 +43,8 @@ end
       location_lat: Faker::Address.latitude,
       description: Faker::Movie.quote
   )
+
+  new_event.tags << Tag.all.sample
 end
 
 5.times do

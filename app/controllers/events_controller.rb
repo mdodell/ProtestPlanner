@@ -27,6 +27,8 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    tags = Tag.find(params.require(:event)['tags'])
+    #puts "Params: #{params}"
     @event = Event.new(event_params)
     respond_to do | format |
       if @event.save
@@ -34,7 +36,10 @@ class EventsController < ApplicationController
         lat, long = results.first.coordinates
         @event.location_lat = lat
         @event.location_long = long
-        @event.save
+        tags.each {|tag|
+          @event.tags << tag
+        }
+        #@event.save
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
@@ -85,9 +90,10 @@ class EventsController < ApplicationController
    private
 
     def event_params
-      params.require(:event).permit(:name, :tag_id, :date_from, 
+      #tags = Tag.find(params.require(:event)['tags'])
+      #puts "Params2: #{tags}"
+      params.require(:event).permit(:name, :date_from,
       :location, :date_to, :description, :picture)
-            
     end
 end
 

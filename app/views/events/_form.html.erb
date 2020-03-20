@@ -8,7 +8,7 @@
       <br>
       <%= f.text_area :description, placeholder: "Event Description", hide_label: true, input_group_class: 'input-group-lg' %>
       <br>
-      <%= f.number_field :tag_id, placeholder: "Tag Id", hide_label: true, input_group_class: 'input-group-lg' %>
+      <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", hide_label: true, include_hidden: false}, { multiple: true, class: "selectpicker" } %>
       <br>
       <%= f.file_field :picture, label: { text: "Event Photo (Optional)" }, input_group_class: 'input-group-lg' %>
 

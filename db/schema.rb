@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_062511) do
+ActiveRecord::Schema.define(version: 2020_03_20_172005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_062511) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.integer "tag_id"
+    t.integer "tags"
     t.datetime "date_from"
     t.datetime "date_to"
     t.string "location"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 2020_03_20_062511) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events_tags", id: false, force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.bigint "tag_id", null: false
+    t.index ["event_id", "tag_id"], name: "index_events_tags_on_event_id_and_tag_id"
+    t.index ["tag_id", "event_id"], name: "index_events_tags_on_tag_id_and_event_id"
   end
 
   create_table "map_markers", force: :cascade do |t|
@@ -86,6 +93,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_062511) do
     t.string "user_name"
     t.string "email"
     t.string "password_digest"
+    t.string "remember_digest"
     t.string "profile"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
@@ -93,7 +101,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_062511) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["user_name"], name: "index_users_on_user_name", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
