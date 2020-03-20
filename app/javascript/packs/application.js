@@ -21,6 +21,8 @@ import "../stylesheets/application";
 import "./custom";
 
 import "controllers"
+import bsCustomFileInput from 'bs-custom-file-input';
+
 
 
 window.initMap = function(...args) {
@@ -29,3 +31,7 @@ window.initMap = function(...args) {
     event.args = args;
     window.dispatchEvent(event);
 }
+
+$(document).on('ready turbolinks:load', function() {
+    bsCustomFileInput.init();
+})
