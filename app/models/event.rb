@@ -5,8 +5,7 @@ class Event < ApplicationRecord
     has_one_attached :picture
     validates :name, :location, :date_to, :date_from, presence: true
     validate :valid_date_range_required
-    geocoded_by :location_lat, location_long
-    reverse_geocoded_by :location_lat, :location_long
+
 
 
     def valid_date_range_required
