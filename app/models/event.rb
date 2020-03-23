@@ -5,11 +5,19 @@ class Event < ApplicationRecord
     has_one_attached :picture
     validates :name, :location, :date_to, :date_from, presence: true
     validate :valid_date_range_required
+    geocoded_by :location_lat, location_long
+    reverse_geocoded_by :location_lat, :location_long
 
 
     def valid_date_range_required
         if (date_to.present? && date_from.present?) && (date_to < date_from)
             errors.add(:date_to, "Must be later than the from date!")
+        end
+    end
+
+    def valid_date
+        if date_from.present? && (date_from < DateTime.current)
+            errors.add(:date_from, "Starting date cannot be in the past!")
         end
     end
 
