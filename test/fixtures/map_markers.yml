@@ -2,12 +2,14 @@
 
 one:
   message: MyString
-  location: MyString
+  location_lat: 1
+  location_long: 1
   event_id: 1
   type: 
 
 two:
   message: MyString
-  location: MyString
+  location_lat: 1
+  location_long: 1
   event_id: 1
   type: 
