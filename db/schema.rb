@@ -66,7 +66,8 @@ ActiveRecord::Schema.define(version: 2020_03_20_172005) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "role_type_permissions", force: :cascade do |t|
+  create_table "role_type_permissions", id: false, force: :cascade do |t|
+    t.integer "id"
     t.string "role_type"
     t.boolean "modify_event"
     t.boolean "delete_event"

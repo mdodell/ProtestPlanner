@@ -20,7 +20,13 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    if !correct_editor
+      flash[:error] = "Sorry, you don't have acces to edit"
+      redirect_to root_url
+    end
+
   end
+
 
 
 
@@ -95,5 +101,10 @@ class EventsController < ApplicationController
       params.require(:event).permit(:name, :date_from,
       :location, :date_to, :description, :picture)
     end
+
+  def correct_editor
+    @user = current_user
+    (@user.user_event_relationships.map{|x| x[:event_id]}.include? params[:id].to_i) && (RoleTypePermission.find_by(id: UserEventRelationship.find_by(user_id: @user.id, event_id: params[:id]).role_type_id).modify_event)
+  end
 end
 
