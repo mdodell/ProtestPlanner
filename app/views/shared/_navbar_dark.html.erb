@@ -11,13 +11,19 @@
     </form>
     <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item ml-3">
-      <a class="nav-link" href="/home"><h4 class="text-white">Home<i class="fas fa-street-view ml-1 primary-green"></i></h4><span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="/home"><h4 class="text-white">Home
+        <%= fa_icon('street-view', class: "primary-green ml-1") %>
+      </h4><span class="sr-only">(current)</span></a>
     </li>
       <li class="nav-item ml-3">
-        <a class="nav-link" href="/events/new"><h4 class="text-white">Create Events<i class="fas fa-plus-circle ml-1 primary-green"></i></h4></a>
+        <a class="nav-link" href="/events/new"><h4 class="text-white">Create Events
+          <%= fa_icon('plus-circle', class: "primary-green ml-1") %>
+        </h4></a>
       </li>
       <li class="nav-item ml-3">
-        <a class="nav-link" href="#"><h4 class="text-white">Profile<i class="fas fa-calendar-week ml-1 primary-green"></i></h4></a>
+        <a class="nav-link" href="#"><h4 class="text-white">Profile
+          <%= fa_icon('calendar-week', class: "primary-green ml-1") %>
+        </h4></a>
       </li>
     </ul>
   </div>
