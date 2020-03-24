@@ -58,6 +58,9 @@ end
   UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 0)
 end
 
+RoleTypePermission.create(id: 0, role_type: "organizor", modify_event: true, delete_event: true);
+RoleTypePermission.create(id: 1, role_type: "atendee", modify_event: false, delete_event: false);
+
 
 
 #5.times do
