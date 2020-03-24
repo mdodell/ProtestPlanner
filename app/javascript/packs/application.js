@@ -16,9 +16,8 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import "bootstrap";
-import "@fortawesome/fontawesome-free/js/all";
+import "@fortawesome/fontawesome-free/css/all.css"
 import "../stylesheets/application";
-import "./custom";
 
 import "controllers"
 import bsCustomFileInput from 'bs-custom-file-input';
@@ -32,6 +31,8 @@ window.initMap = function(...args) {
     window.dispatchEvent(event);
 }
 
-$(document).on('ready turbolinks:load', function() {
+$(document).on('ready turbolinks:load', () => {
     bsCustomFileInput.init();
-})
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+});
