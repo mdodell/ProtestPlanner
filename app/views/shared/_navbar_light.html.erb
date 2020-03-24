@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#"><%= render 'shared/logo_dark', logo_text: "Rise Up" %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text-dark"></span>
+  </button>
+
+  <div class="collapse navbar-collapse row justify-content-between" id="navbarTogglerDemo02">
+    <form class="form-inline my-2 my-lg-0 ml-2 d-none d-xl-block">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="/home"><h4 class="text-gray">Home
+          <%= fa_icon('street-view', class: "primary-green ml-1") %>
+        </h4><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="/events/new"><h4 class="text-gray">Create Events
+          <%= fa_icon('plus-circle', class: "primary-green ml-1") %>
+        </h4></a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="#"><h4 class="text-gray">Profile
+          <%= fa_icon('calendar-week', class: "primary-green ml-1") %>
+        </h4></a>
+      </li>
+    </ul>
+  </div>
+</nav>

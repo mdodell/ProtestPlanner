@@ -27,19 +27,22 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    tags = Tag.find(params.require(:event)['tags'])
-    #puts "Params: #{params}"
     @event = Event.new(event_params)
     respond_to do | format |
       if @event.save
+        tags = nil
+        if(params.require(:event).key?("tags"))
+          tags = Tag.find(params.require(:event)['tags'])
+        end
         results = Geocoder.search(@event.location)
         lat, long = results.first.coordinates
         @event.location_lat = lat
         @event.location_long = long
-        tags.each {|tag|
-          @event.tags << tag
-        }
-        #@event.save
+        if tags != nil
+          tags.each {|tag|
+            @event.tags << tag
+          }
+        end
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
@@ -93,7 +96,7 @@ class EventsController < ApplicationController
       #tags = Tag.find(params.require(:event)['tags'])
       #puts "Params2: #{tags}"
       params.require(:event).permit(:name, :date_from,
-      :location, :date_to, :description, :picture)
+      :location, :date_to, :description, :picture, :tags)
     end
 end
 

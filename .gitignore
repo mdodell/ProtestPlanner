@@ -10,8 +10,11 @@ log/*
 
 node_modules/*
 
+
 *.env
 
 config/secrets/*
 
 .byebug_history
+
+public/packs/*
