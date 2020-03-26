@@ -46,6 +46,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def setUserLocation
+    if params[:coordinates]
+      session[:coordinates] = params[:coordinates]
+    else
+      flash[:error] = "Could not find the user coordinates"
+    end
+  end
+
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

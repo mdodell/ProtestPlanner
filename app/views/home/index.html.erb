@@ -2,54 +2,54 @@
 <%= render 'shared/navbar_dark' %>
 
 
-
-<% if current_user %>
-  <h1>
-    Welcome to Protest Planner
-  </h1>
-  Logged in as <%= current_user.user_name %>
-  <%= link_to "Log Out", logout_path, method: :delete %>
-  <% if current_user.events.length > 0 %>
-  <h2>My Events</h2>
-  <h3>Events that I am attending</h3>
-  <% if UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).length > 0 %>
-    <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).each do |relationship| %>
-      <table>
-      <tr>
-          <td><p><%= relationship.event.name %></p></td>
-          <td><button name="button" type="page">Event Page</button></td>
-        </tr>
-      </table>
+<div data-controller="location">
+  <% if current_user %>
+    <h1>
+      Welcome to Protest Planner
+    </h1>
+    Logged in as <%= current_user.user_name %>
+    <%= link_to "Log Out", logout_path, method: :delete %>
+    <% if current_user.events.length > 0 %>
+    <h2>My Events</h2>
+    <h3>Events that I am attending</h3>
+    <% if UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).length > 0 %>
+      <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).each do |relationship| %>
+        <table>
+        <tr>
+            <td><p><%= relationship.event.name %></p></td>
+            <td><button name="button" type="page">Event Page</button></td>
+          </tr>
+        </table>
+      <% end %>
+    <% else %>
+        <p>You have not signed up to attend any events yet</p>
     <% end %>
+
+    <h2>Events that I am an organizer for</h2>
+    <% if UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).length > 0 %>
+      <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).each do |relationship| %>
+        <table>
+        <tr>
+            <td><p><%= relationship.event.name %></p></td>
+            <td><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></td>
+          </tr>
+        </table>
+      <% end %>
+    <% else %>
+      <p>You have not organized any events yet</p>
+    <% end %>
+
   <% else %>
-      <p>You have not signed up to attend any events yet</p>
+      <p>You have not signed up for or created any events yet</p>
   <% end %>
 
-  <h2>Events that I am an organizer for</h2>
-  <% if UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).length > 0 %>
-    <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).each do |relationship| %>
-      <table>
-      <tr>
-          <td><p><%= relationship.event.name %></p></td>
-          <td><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></td>
-        </tr>
-      </table>
-    <% end %>
+    <h1>Nearby Events</h1>
+
   <% else %>
-    <p>You have not organized any events yet</p>
+    <%= link_to "Sign Up", signup_path %> or
+    <%= link_to "Log In", login_path %>
   <% end %>
-  
-<% else %>
-    <p>You have not signed up for or created any events yet</p>
-<% end %>
 
-  <h1>Nearby Events</h1>
+  <p id="notice"><%= notice %></p>
 
-<% else %>
-  <%= link_to "Sign Up", signup_path %> or
-  <%= link_to "Log In", login_path %>
-<% end %>
-
-<p id="notice"><%= notice %></p>
-
-
+</div>
