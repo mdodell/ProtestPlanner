@@ -45,7 +45,7 @@
 
     <h1>Nearby Events</h1>
 
-    <% get_nearby_events_within_radius(5).each do |event| %>
+    <% get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
       <table>
         <tr>
           <td><p><%= event.name %></p></td>
