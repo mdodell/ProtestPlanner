@@ -1,8 +1,18 @@
+<%= render 'shared/navbar_light' %>
 <p id="notice"><%= notice %></p>
+<div class="flex-column w-100 align-content-center">
+  <div class="row" style="background-image: url(<%= get_event_image_or_default(@event) %>); height: 50vh; background-size: cover; filter: blur(2px) brightness(90%);
+      -webkit-filter: blur(8px) brightness(90%); background-position: center bottom">
+  </div>
 
-<h1><%= @event.name %></h1>
-<p>
-  <%= image_tag(@event.picture, width: 200) if @event.picture.attached? %>
-</p>
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <div class="container-sm">
+    <h1><%= @event.name %></h1>
+  </div>
+  <p>
+    <%= image_tag(get_event_image_or_default(@event), width: 200) %>
+  </p>
+
+  <div class="test">test</div>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+</div>

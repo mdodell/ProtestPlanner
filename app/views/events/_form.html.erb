@@ -8,7 +8,7 @@
       <br>
       <%= f.text_area :description, placeholder: "Event Description", hide_label: true, input_group_class: 'input-group-lg' %>
       <br>
-      <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", hide_label: true, include_hidden: false}, { multiple: true, class: "selectpicker" } %>
+      <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false}, { multiple: true, class: "selectpicker" } %>
       <br>
       <%= f.file_field :picture, label: { text: "Event Photo (Optional)" }, input_group_class: 'input-group-lg' %>
 
@@ -18,6 +18,9 @@
       <h1 class="display-4"><i class="fas fa-map-marker-alt mr-2 primary-green"></i>Location</h1>
       <h3 class="font-weight-light">Help people in the area discover your event and let attendees know where to show up.</h3>
       <%= f.search_field :location, placeholder: "Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "places.field", action: "keydown->places#keydown" }%>
+      <%= f.hidden_field :latitude, step: :any, data: { target: "places.latitude" }%>
+      <%= f.hidden_field :longitude, step: :any, data: { target: "places.longitude"} %>
+
       <!--TODO: DELETE THIS, JUST TO TEST IF MAP WORKS-->
       <div data-target="places.map" style="height: 400px" class="mt-4">
 

@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2020_03_20_172005) do
     t.datetime "date_from"
     t.datetime "date_to"
     t.string "location"
-    t.decimal "location_lat", precision: 10, scale: 6
-    t.decimal "location_long", precision: 10, scale: 6
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
