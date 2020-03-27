@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.6.5'
 
 gem 'json'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails_12factor', group: :production
-gem 'sqlite3', group: :development
+#gem 'sqlite3', group: :development
 gem 'faker'
 gem "geocoder"
 gem "bcrypt"
