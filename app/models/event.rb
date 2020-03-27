@@ -4,7 +4,7 @@ class Event < ApplicationRecord
     has_and_belongs_to_many :tags
     has_one_attached :picture
     validates :name, :location, :date_to, :date_from, presence: true
-    validate :valid_date_range_required
+    validate :valid_date_range_required, :valid_date
 
     geocoded_by :location
 
