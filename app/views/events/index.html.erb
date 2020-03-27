@@ -16,8 +16,8 @@
       <tr>
         <td><%= event.name %></td>
         <td><%= event.location %></td>
-        <td><%= event.location_lat %></td>
-        <td><%= event.location_long%></td>
+        <td><%= event.latitude %></td>
+        <td><%= event.longitude%></td>
         <td><%= button_to 'Sign up', signup_for_event_path, method: :post, params: {this_event: event}, class: "btn btn-sm btn-block"%><td>
         <td><p> event page </p></td>
         <td><p> map </p></td>

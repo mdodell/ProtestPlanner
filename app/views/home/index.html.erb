@@ -45,6 +45,15 @@
 
     <h1>Nearby Events</h1>
 
+    <% get_nearby_events_within_radius(5).each do |event| %>
+      <table>
+        <tr>
+          <td><p><%= event.name %></p></td>
+          <td><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></td>
+        </tr>
+      </table>
+    <% end %>
+
   <% else %>
     <%= link_to "Sign Up", signup_path %> or
     <%= link_to "Log In", login_path %>

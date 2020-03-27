@@ -39,8 +39,8 @@ end
       date_from: Faker::Date.backward(days: 14),
       date_to: Faker::Date.forward(days: 1),
       location: Faker::Address.full_address,
-      location_long: Faker::Address.longitude,
-      location_lat: Faker::Address.latitude,
+      longitude: Faker::Address.longitude,
+      latitude: Faker::Address.latitude,
       description: Faker::Movie.quote
   )
 

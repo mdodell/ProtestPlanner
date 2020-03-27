@@ -41,11 +41,6 @@ class EventsController < ApplicationController
         else
           tags = Tag.find_by(name: "Other") # Set default tag if none was selected
         end
-        debugger
-        results = Geocoder.search(@event.location)
-        lat, long = results.first.coordinates
-        @event.location_lat = lat
-        @event.location_long = long
         @event.tags << tags
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -100,7 +95,7 @@ class EventsController < ApplicationController
       #tags = Tag.find(params.require(:event)['tags'])
       #puts "Params2: #{tags}"
       params.require(:event).permit(:name, :date_from,
-      :location, :date_to, :description, :picture, :tags)
+      :location, :date_to, :description, :picture, :tags, :latitude, :longitude)
     end
 
   def correct_editor
