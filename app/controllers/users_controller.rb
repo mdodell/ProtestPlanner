@@ -74,12 +74,12 @@ class UsersController < ApplicationController
     @user = current_user
     if current_user.events.exists?(params[:this_event])
       flash[:alert] = 'Sorry, you can\'t join because you are already part of this event.'
-      redirect_to '/my_events'
+      redirect_to home_path
      
     else 
       UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1) 
       flash[:alert] = 'You were successfully added as an attendee'
-      redirect_to '/my_events'
+      redirect_to home_path
     end
   end
 
