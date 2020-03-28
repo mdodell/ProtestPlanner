@@ -13,7 +13,7 @@ module EventsHelper
     if UserEventRelationship.where(event_id: event.id, user_id: current_user.id).exists?
       link_to 'Unregister', unregister_path(event.id), method: :delete, class: 'btn-danger btn'
     else
-      link_to 'Register', register_path(event.id), class: 'btn-primary btn'
+      link_to 'Register', register_path(event.id), method: :post, class: 'btn-primary btn'
     end
   end
 
