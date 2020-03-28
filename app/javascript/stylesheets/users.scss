@@ -1,0 +1,17 @@
+@import "media_query_utils";
+
+.sign-up-container {
+  width: 75vw;
+}
+
+@include respond-above(md) {
+  .sign-up-container {
+    width: 50vw;
+  }
+}
+
+@include respond-above(lg) {
+  .sign-up-container {
+    width: 34vw;
+  }
+}
