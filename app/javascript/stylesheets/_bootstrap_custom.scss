@@ -1,11 +1,11 @@
+$enable-responsive-font-sizes: true;
+
 $primary-green: #77D353;
 $dark-primary: #5A6978;
 
-$bg-dark: red;
-
 $theme-colors: (
         "primary": $primary-green,
-        "dark-primary": $dark-primary
+        "dark-primary": $dark-primary,
 );
 
 .primary-green {

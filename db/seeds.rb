@@ -33,22 +33,18 @@ Tag.import tag_columns, tags, validate: false
 end
 
 5.times do
-  new_event = Event.new(
+  event = Event.create!(
       name: Faker::Movie.quote,
-      tags: [],
-      date_from: Faker::Date.backward(days: 14),
-      date_to: Faker::Date.forward(days: 1),
+      date_from: DateTime.current + 60 * 60 * 24,
+      date_to: DateTime.current + 60 * 60 * 48,
       location: Faker::Address.full_address,
       longitude: Faker::Address.longitude,
       latitude: Faker::Address.latitude,
       description: Faker::Movie.quote
   )
-
-  new_event.tags << Tag.all.sample
-  new_event.save
+  event.tags << Tag.all.sample
+  event.save
 end
-
-puts Event.all.sample.id
 
 5.times do
   UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)

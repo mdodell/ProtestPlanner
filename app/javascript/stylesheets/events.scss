@@ -1,0 +1,48 @@
+@import "bootstrap_custom";
+@import "media_query_utils";
+
+%event-image {
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.background-image {
+  height: 50vh;
+  width: 100vw;
+  filter: blur(8px) brightness(95%);
+  -webkit-filter: blur(8px) brightness(95%);
+  @extend %event-image;
+}
+
+.share-icon {
+  border-radius: 50%;
+  background-color: $primary-green;
+}
+
+.share-icon:hover {
+  cursor: pointer;
+}
+
+.container-image {
+  height: 300px;
+  @extend %event-image;
+}
+
+.background {
+  min-height: 50vh;
+}
+
+.event-container {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100vw;
+}
+
+@include respond-above(xs) {
+ .event-container {
+   top: 40px;
+   width: 75vw;
+ }
+}

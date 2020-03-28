@@ -39,13 +39,6 @@ class UsersController < ApplicationController
     end
   end
 
-  #current user
-  def current_user
-    if session[:user_id]
-      User.find_by(id: session[:user_id])
-    end
-  end
-
   def setUserLocation
     if params[:coordinates]
       session[:coordinates] = params[:coordinates]
@@ -66,23 +59,6 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-
-
-
-  def signup_for_event
-    @my_event = Event.find(params[:this_event])
-    @user = current_user
-    if current_user.events.exists?(params[:this_event])
-      flash[:alert] = 'Sorry, you can\'t join because you are already part of this event.'
-      redirect_to home_path
-     
-    else 
-      UserEventRelationship.create(event_id: @my_event.id, user_id: @user.id, role_type_id: 1) 
-      flash[:alert] = 'You were successfully added as an attendee'
-      redirect_to home_path
-    end
-  end
-
 
   # DELETE /users/1
   # DELETE /users/1.json

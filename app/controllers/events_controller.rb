@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    debugger
     @events = Event.all
   end
 
@@ -24,10 +25,34 @@ class EventsController < ApplicationController
       flash[:error] = "Sorry, you don't have acces to edit"
       redirect_to root_url
     end
-
   end
 
+  def unregister
+    event = Event.find(params[:id])
+    debugger
+    if current_user.events.exists?(params[:id])
+      UserEventRelationship.find_by(event_id: event.id, user_id: current_user.id).destroy
+    else
+      flash[:error] = 'Sorry, you can not unregister for an event you haven\'t signed up for!'
+    end
+  end
 
+  def register
+    @event = Event.find(params[:id])
+    unless @event.exists?
+      flash[:error] = 'Sorry, that event does not exist!'
+      redirect_to home_path
+    else
+      if current_user.events.exists?(params[:id])
+        flash[:error] = 'Sorry, you can\'t join because you are already part of this event.'
+        redirect_to home_path
+      else
+        UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 1)
+        flash[:alert] = 'You were successfully added as an attendee'
+        redirect_to home_path
+      end
+    end
+  end
 
 
   # POST /events
@@ -51,10 +76,6 @@ class EventsController < ApplicationController
       end
     end
   end
-
-
- 
-
 
   # private
 

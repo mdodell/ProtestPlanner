@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   resources :users
   resources :events
+  resources :account_activations, only: [:edit]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get  '/events/new',  to: 'events#new'
   get  '/browse',  to: 'events#index'
+  post '/events/:id/signup', to: 'events#register', as: 'register'
+  delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
   get '/home', to: 'home#index'
-  post '/signup_for_event' => 'users#signup_for_event'
-  root 'home#index'
 
   get 'sessions/new'
   get  '/signup',  to: 'users#new'
@@ -14,7 +15,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   post '/setUserLocation', to: 'users#setUserLocation'
-  resources :users
-  resources :account_activations, only: [:edit]
+
+  root 'home#index'
+
 
 end

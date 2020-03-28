@@ -10,9 +10,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def hello
-    render html: "Hello Protest Planner!"
-  
-  end
-
 end
