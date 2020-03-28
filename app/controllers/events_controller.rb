@@ -37,7 +37,6 @@ class EventsController < ApplicationController
 
   def register
     @event = Event.find(params[:id])
-    debugger
     if @event.nil?
       flash[:error] = 'Sorry, that event does not exist!'
       redirect_to home_path
