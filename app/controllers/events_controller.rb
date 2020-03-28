@@ -4,7 +4,6 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    debugger
     @events = Event.all
   end
 
@@ -29,7 +28,6 @@ class EventsController < ApplicationController
 
   def unregister
     event = Event.find(params[:id])
-    debugger
     if current_user.events.exists?(params[:id])
       UserEventRelationship.find_by(event_id: event.id, user_id: current_user.id).destroy
     else

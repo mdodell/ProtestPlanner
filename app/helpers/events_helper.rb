@@ -2,7 +2,6 @@ module EventsHelper
   include DatesHelper, UsersHelper
 
   def get_event_image_or_default(event)
-    debugger
     if event.picture.attached?
       url_for(@event.picture)
     else
