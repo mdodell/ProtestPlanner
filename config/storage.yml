@@ -16,16 +16,10 @@ local:
 
 # Remember not to checkin your GCS keyfile to a repository
 google:
-   service: GCS
-   project: ProtestPlanner
-   credentials: <%=ENV['GOOGLE_APPLICATION_CREDENTIALS'].as_json %>
-   bucket: protest_planner
-
-google_dev:
-   service: GCS
-   project: ProtestPlanner
-   credentials: <%= Rails.root.join("config/secrets/protestplanner.json") %>
-   bucket: protest_planner
+  service: GCS
+  project: ProtestPlanner
+  credentials: <%=ENV['GOOGLE_APPLICATION_CREDENTIALS'].as_json %>
+  bucket: protest_planner
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:

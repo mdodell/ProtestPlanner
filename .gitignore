@@ -18,3 +18,5 @@ config/secrets/*
 .byebug_history
 
 public/packs/*
+
+storage/*

@@ -57,6 +57,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    debugger
     respond_to do | format |
       if @event.save
         if(params.require(:event).key?("tags"))
@@ -65,6 +66,7 @@ class EventsController < ApplicationController
           tags = Tag.find_by(name: "Other") # Set default tag if none was selected
         end
         @event.tags << tags
+        debugger
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
