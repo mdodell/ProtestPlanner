@@ -30,6 +30,8 @@ class EventsController < ApplicationController
     event = Event.find(params[:id])
     if current_user.events.exists?(params[:id])
       UserEventRelationship.find_by(event_id: event.id, user_id: current_user.id).destroy
+      flash[:alert] = 'You have been removed from this event.'
+      redirect_to home_path
     else
       flash[:error] = 'Sorry, you can not unregister for an event you haven\'t signed up for!'
     end

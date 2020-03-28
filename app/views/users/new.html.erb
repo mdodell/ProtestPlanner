@@ -1,5 +1,58 @@
-<% provide(:title, 'Sign up') %>
+
+ 
+
+
+<% provide(:title, "Signup") %>
+<div class="new rounded-top">
+<div class='login_background'>
+<div class="new rounded-top">
+<div class='login_container'>
+<div class="container text-center">
+
+  <%= render 'shared/logo_dark', logo_text: "Sign Up" %>
+  <br>
+  <p>Sign up here and rise up with your <br>
+  fellow protestors!</p>
+
+  
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-md-offset-3">
+      <%= bootstrap_form_for(:session, url: login_path) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+   
+        <%= f.text_field :user_name, placeholder: "User name", hide_label: true, input_group_class: 'input-group-lg' %>
+        <%= f.telephone_field :phone, placeholder: "Phone Number", hide_label: true, input_group_class: 'input-group-lg' %>
+        <%= f.email_field :email, placeholder: "Email", hide_label: true, input_group_class: 'input-group-lg' %>
+        <%= f.password_field :password, placeholder: "Password", hide_label: true, input_group_class: 'input-group-lg' %>
+        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", hide_label: true, input_group_class: 'input-group-lg' %>
+
+       
+
+        <%= f.submit "Create my account", class: "btn btn-secondary" %>
+
+      <% end %>
+
+      <div class="t_and_c">
+        <p>By signing up here you agree to our<br>
+        Terms and Conditions.</p>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
 <style>
+  
+  .t_and_c {
+    font-size: 10px;
+  }
   input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
     width: 100%;
@@ -10,34 +63,31 @@
   input {
     height: auto !important;
   }
+
+  /*larger than tablet view general*/
+  @media only screen and (min-width: 600px) {
+   
+    .login_background {
+      padding: 100px;
+      width: 100%;
+      background-color: #77D353;
+      opacity: 0.8;
+      justify-content: center;
+     
+    }
+ 
+
+  .login_container {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        width: 600px;
+        height: 620.79px;
+        padding-top: 40px;
+  }
+
+}
+
+
+
 </style>
-
-
-<div class="container text-center">
-<h1>Sign up</h1>
-
-  <div class="row justify-content-center">
-    <div class="col-md-6 col-md-offset-3">
-      <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
-
-        <%= f.label :user_name %>
-        <%= f.text_field :user_name, class: 'form-control' %>
-
-        <%#= f.label :phone %>
-        <%#= f.telephone_field :phone, class: 'form-control' %>
-
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
-
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-        <%= f.submit "Create my account", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-  </div>
-</div>

@@ -7,8 +7,8 @@
     <h1>
       Welcome to Protest Planner
     </h1>
-    Logged in as <%= current_user.user_name %>
-    <%= link_to "Log Out", logout_path, method: :delete %>
+    <%= link_to "Log Out", logout_path, method: :delete, class: "btn-primary btn" %>
+    <%= link_to 'Browse Events', '/browse', class: "btn-primary btn" %>
     <% if current_user.events.length > 0 %>
     <h2>My Events</h2>
     <h3>Events that I am attending</h3>
@@ -17,7 +17,7 @@
         <table>
         <tr>
             <td><p><%= relationship.event.name %></p></td>
-            <td><button name="button" type="page">Event Page</button></td>
+            <td><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></td>
           </tr>
         </table>
       <% end %>
@@ -44,15 +44,22 @@
   <% end %>
 
     <h1>Nearby Events</h1>
+    <% if (get_nearby_events_within_radius(5) + get_nearby_events_within_radius(5)).length > 0 %>
 
-    <% get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
-      <table>
-        <tr>
-          <td><p><%= event.name %></p></td>
-          <td><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></td>
-        </tr>
-      </table>
+      <% get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
+        <table>
+          <tr>
+            <td><p><%= event.name %></p></td>
+            <td><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></td>
+          </tr>
+        </table>
+      <% end %>
+    <% else %>
+      <p>There are no nearby events currently</p>
     <% end %>
+    Logged in as <%= current_user.user_name %>
+
+    
 
   <% else %>
     <%= link_to "Sign Up", signup_path %> or
