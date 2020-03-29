@@ -4,11 +4,17 @@
     <span class="navbar-toggler-icon text-white"></span>
   </button>
 
+  
   <div class="collapse navbar-collapse row justify-content-between" id="navbarTogglerDemo02">
-    <form class="form-inline my-2 my-lg-0 ml-2 d-none d-xl-block">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <%= form_tag(search_page_path, :method => "get",  
+    class: "form-inline my-2 my-lg-0 ml-2 d-none d-xl-block") do %>  
+      <div class =  class="form-control mr-sm-2">
+        <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
+      </div>
+    <% end %>
+   
+
     <ul class="navbar-nav mt-2 mt-lg-0">
     <li class="nav-item ml-3">
       <a class="nav-link" href="/home"><h4 class="text-white">Home

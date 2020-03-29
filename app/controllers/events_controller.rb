@@ -7,6 +7,10 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def search
+
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
