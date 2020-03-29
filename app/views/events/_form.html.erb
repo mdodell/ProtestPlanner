@@ -1,6 +1,6 @@
 <div class="row justify-content-center no-gutters">
   <div class="container-xl mt-5">
-    <%= bootstrap_form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}) do |f| %>
+    <%= bootstrap_form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}, html: {novalidate: true}) do |f| %>
       <!--Basic Information Section-->
       <h1 class="display-4"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
       <h3 class="font-weight-light">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</h3>
@@ -37,12 +37,12 @@
       <div class="row no-gutters align-items-center justify-content-between">
         <div class="col-md-5 col-xs-12">
           <div class="flex-row no-gutters justify-content-lg-start justify-content-sm-center mt-1">
-            <%= f.datetime_field :date_from, input_group_class: 'input-group-lg', value: DateTime.now %>
+            <%= f.datetime_field :date_from, input_group_class: 'input-group-lg' %>
           </div>
         </div>
         <div class="col-md-5 col-xs-12">
           <div class="flex-row no-gutters justify-content-lg-end justify-content-sm-center mt-1">
-            <%= f.datetime_field :date_to, input_group_class: 'input-group-lg', value: DateTime.now %>
+            <%= f.datetime_field :date_to, input_group_class: 'input-group-lg' %>
           </div>
         </div>
       </div>
