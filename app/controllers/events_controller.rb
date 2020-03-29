@@ -113,8 +113,6 @@ class EventsController < ApplicationController
    private
 
     def event_params
-      #tags = Tag.find(params.require(:event)['tags'])
-      #puts "Params2: #{tags}"
       params.require(:event).permit(:name, :date_from,
       :location, :date_to, :description, :picture, :tags, :latitude, :longitude)
     end

@@ -1,9 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyString
+  email: "example@example.com"
+  user_name: 'example'
   password_digest: <%= BCrypt::Password.create('secret') %>
-
-two:
-  email: MyString
-  password_digest: <%= BCrypt::Password.create('secret') %>
+  activated: true
+  activated_at: <%= Time.now %>

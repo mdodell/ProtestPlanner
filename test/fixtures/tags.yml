@@ -2,7 +2,7 @@
 
 one:
   photo_url: MyString
-  name: MyString
+  name: "Other"
 
 two:
   photo_url: MyString
