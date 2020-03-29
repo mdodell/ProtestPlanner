@@ -1,0 +1,10 @@
+<%= render 'shared/navbar_dark' %>
+
+<h3>Search Result</h3>  
+<% if @results.length == 0 %>
+    <p>No matching results.</p>
+<% else %>
+    <% @results.each do |result| %>  
+        <%= result.name %><br>  
+    <% end %>
+<% end %>
