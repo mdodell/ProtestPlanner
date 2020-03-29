@@ -23,6 +23,6 @@
 @include respond-below(xs){
   // Fixes small issue on some mobile devices
   .full-page {
-    min-height: 105vh;
+    //min-height: 105vh;
   }
 }
