@@ -29,7 +29,7 @@ window.initMap = function(...args) {
     event.initEvent("google-maps-callback", true, true);
     event.args = args;
     window.dispatchEvent(event);
-}
+};
 
 $(document).on('ready turbolinks:load', () => {
     bsCustomFileInput.init();

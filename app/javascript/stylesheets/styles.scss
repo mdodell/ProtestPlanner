@@ -17,3 +17,10 @@
   min-height: 100vh;
   min-width: 100vw;
 }
+
+@include respond-below(xs){
+  // Fixes small issue on some mobile devices
+  .full-page {
+    min-height: 105vh;
+  }
+}
