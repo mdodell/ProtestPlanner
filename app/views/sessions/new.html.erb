@@ -1,87 +1,22 @@
-<% provide(:title, "Log in") %>
-<div class="new rounded-top">
-<div class='login_background'>
-<div class="new rounded-top">
-<div class='login_container'>
-<div class="container text-center">
+<% provide(:title, "Login") %>
+<div class="bg-primary full-page row justify-content-center align-items-center">
+  <div class="sign-up-container bg-white text-center p-3 m-5">
 
-  <%= render 'shared/logo_dark', logo_text: "RiseUp" %>
-  <br>
-  <p>Want to get together and join us in the fight <br>
-  for a free world? Sign in now and let's get started!</p>
+    <%= render 'shared/logo_dark', logo_text: "RiseUp" %>
+    <p>Want to get together and join us in the right for <br> a free world? Sign in now, and get started!</p>
 
-  
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <%= bootstrap_form_tag(url: login_path) do |f| %>
 
-  <div class="row justify-content-center">
-    <div class="col-md-6 col-md-offset-3">
-      <%= bootstrap_form_for(:session, url: login_path) do |f| %>
-        
-        <%= f.text_field :user_name, placeholder: "User name", hide_label: true, input_group_class: 'input-group-lg' %>
-        <%= f.password_field :password, placeholder: "Password", hide_label: true, input_group_class: 'input-group-lg' %>
-   
-        
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value=":remember_me" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-          Remember me on this device
-        </label>
-        </div>
-        <br>
-    
+          <%= f.text_field :user_name, placeholder: "User name", hide_label: true, input_group_class: 'input-group-lg' %>
+          <%= f.password_field :password, placeholder: "Password", hide_label: true, input_group_class: 'input-group-lg' %>
+          <%= f.check_box :remember_me, label: "Remember me on this device"%>
+          <%= f.submit "Log in", class: "btn btn-secondary btn-lg w-100 mt-1" %>
+        <% end %>
 
-        <%= f.submit "Log in", class: "btn btn-secondary" %>
-      <% end %>
-
-      <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+        <p class="mt-1">New user? <%= link_to "Sign up now!", signup_path %></p>
+      </div>
     </div>
   </div>
-  </div>
 </div>
-</div>
-</div>
-</div>
-
-
-<style>
-  input, textarea, select, .uneditable-input {
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
-  @include box_sizing;
-  }
-
-  input {
-    height: auto !important;
-  }
-
-  /*larger than tablet view general*/
-  @media only screen and (min-width: 600px) {
-   
-    .login_background {
-      padding: 100px;
-      width: 100%;
-      background-color: #53d36f;
-      opacity: 0.8;
-      justify-content: center;
-     
-    }
- 
-
-  .login_container {
-        margin-left: auto;
-        margin-right: auto;
-        background-color: white;
-        width: 600px;
-        height: 620.79px;
-        padding-top: 100px;
-  }
-
-}
-
-
-
-</style>
-
-
-
-
