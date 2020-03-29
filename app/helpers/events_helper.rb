@@ -11,9 +11,9 @@ module EventsHelper
 
   def display_register_or_unregister_button (event)
     if UserEventRelationship.where(event_id: event.id, user_id: current_user.id).exists?
-      link_to 'Unregister', unregister_path(event.id), method: :delete, class: 'btn-danger btn'
+      link_to 'Unregister', unregister_path(event.id), method: :delete, class: 'btn-danger btn registration-button'
     else
-      link_to 'Register', register_path(event.id), method: :post, class: 'btn-primary btn'
+      link_to 'Register', register_path(event.id), method: :post, class: 'btn-primary text-white btn registration-button'
     end
   end
 

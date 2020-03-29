@@ -27,7 +27,7 @@
         </div>
         <div class="col-sm row no-gutters align-items-center justify-content-end">
           <%= display_register_or_unregister_button(@event) %>
-          <%= link_to 'View Map', event_path(@event), class: "btn-info text-white btn ml-2" %>
+          <%= link_to 'View Map', event_path(@event), class: "btn-info btn ml-2" %>
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@
     </div>
     <div class="d-sm-none position-sticky mt-2 w-100" style="bottom: 0">
       <div class="d-flex flex-column no-gutters align-items-center border-top bg-light">
-        <%= link_to 'Unregister', event_path(@event), class: "btn-danger btn w-75 mt-2" %>
-        <%= link_to 'View Map', event_path(@event), class: "btn-primary text-white btn w-75 mb-2 mt-2" %>
+        <%= display_register_or_unregister_button(@event) %>
+        <%= link_to 'View Map', event_path(@event), class: "btn-info btn w-75 mb-2 mt-2" %>
       </div>
     </div>
   </div>
