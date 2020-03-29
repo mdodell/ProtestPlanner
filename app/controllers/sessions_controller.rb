@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(user_name: params[:session][:user_name].downcase)
-    if user && user.authenticate(params[:session][:password])
+    user = User.find_by(user_name: params[:user_name].downcase)
+    if user && user.authenticate(params[:password])
       # Log the user in and redirect to the user's show page.
       if user.activated?
         log_in user
@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
         redirect_to login_url
       end
     else
+      debugger
       # Create an error message.
       flash.now[:danger] = 'Invalid user_name/password combination'
       render 'new'
