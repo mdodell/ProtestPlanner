@@ -36,16 +36,13 @@
 
       <div class="row no-gutters align-items-center justify-content-between">
         <div class="col-md-5 col-xs-12">
-          <br>
-          <div class="flex-row no-gutters justify-content-lg-start justify-content-sm-center">
-            <%= f.datetime_field :date_from, input_group_class: 'input-group-lg'%>
+          <div class="flex-row no-gutters justify-content-lg-start justify-content-sm-center mt-1">
+            <%= f.datetime_field :date_from, input_group_class: 'input-group-lg', value: DateTime.now %>
           </div>
         </div>
-        <br>
         <div class="col-md-5 col-xs-12">
-          <br>
-          <div class="flex-row no-gutters justify-content-lg-end justify-content-sm-center">
-            <%= f.datetime_field :date_to, input_group_class: 'input-group-lg'%>
+          <div class="flex-row no-gutters justify-content-lg-end justify-content-sm-center mt-1">
+            <%= f.datetime_field :date_to, input_group_class: 'input-group-lg', value: DateTime.now %>
           </div>
         </div>
       </div>
