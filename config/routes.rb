@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get '/search' => 'pages#search', :as => 'search_page'
+  get '/search_events', to: 'events#search'
+  post '/search_events', to: 'events#search'
   post '/setUserLocation', to: 'users#setUserLocation'
   
 

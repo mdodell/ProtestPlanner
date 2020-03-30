@@ -1,0 +1,12 @@
+<%= provide(:title, 'search') %>
+<%= render 'shared/navbar_light' %>
+<p>Search results</p>
+<% @results.each do |event| %>
+    <p><%= event.name %></p>
+    <p><%= event.tags.ids %></p>
+<% end %>
+
+
+
+
+

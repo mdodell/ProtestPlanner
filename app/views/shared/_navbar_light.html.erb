@@ -29,6 +29,19 @@
           <%= fa_icon('calendar-week', class: "primary-green ml-1") %>
         </h4></a>
       </li>
+
+      <li class="nav-item ml-3">
+      <%= form_tag(logout_path, :method => 'delete',  
+      class: "form-inline my-2 my-lg-0 ml-2 d-none d-xl-block") do %>  
+        <div class =  class="form-control mr-sm-2">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button> 
+        </div>
+      <% end %>
+      </li>
+
+      
+      
+
     </ul>
   </div>
 </nav>

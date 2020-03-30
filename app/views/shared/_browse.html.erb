@@ -1,9 +1,38 @@
 
-<h1> BROWSE </h1>
 
-<% form_tag events_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
+
+
+<div class="w-100 bg-light position-relative">
+  <div class="background-image"></div>
+  <div class="bg-light background d-none d-sm-block" ></div>
+
+  <!--Event Details -->
+  <div class="p-0 bg-white event-container">
+    <!--Image and Title-->
+    <div class="row no-gutters h-25">
+      <div class="col-md-8">
+          <!--TO ADD IMAGE-->
+            
+      </div>
+      <div class="col-md-4 bg-light">
+        <div class="ml-2">
+        <%= bootstrap_form_tag url: '/search_events' do |f| %>
+          <h3>I'm looking for a protest in...</h3>
+          <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "places.field", action: "keydown->places#keydown" }%>
+          <h3>I want to rise up for...</h3>
+          <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false, hide_label: true, default: 'Other'}, { multiple: true, class: "selectpicker" } %>
+          <h3>The date which best suits me is...</h3>
+          <%= f.date_select :date, hide_label: true %>
+          <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white" %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+    
