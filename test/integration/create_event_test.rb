@@ -1,22 +1,20 @@
 require 'test_helper'
+require_relative '../helpers/sign_in_helper'
 
 class CreateEventTest < ActionDispatch::IntegrationTest
+  include SignInHelper
   fixtures :users
 
-  test "can login and create an event" do
-    get "/login"
-    assert_response :success
-
-    post "/login", params: {user_name: users(:one).user_name, password: 'secret'}
-    follow_redirect!
-    assert_equal 200, status
-    assert_equal "/", path
+  test "can create an event" do
+    sign_in_as(users(:one), 'secret')
 
     get "/events/new"
     assert_response :success
+    assert_equal "/events/new", path
     post '/events', params: { event: { name: "Event Title", description: "Description", location: "Search Results
 1600 Pennsylvania Ave NW, Washington, DC 20500", date_from: DateTime.now + 10, date_to: DateTime.now + 15, latitude: -35.000000, longitude: 100.000000}}
-    assert_response :redirect
+    assert_response :permanent_redirect
     follow_redirect!
+    assert_equal event_path, path
   end
 end
