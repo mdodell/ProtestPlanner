@@ -1,25 +1,13 @@
 {
-<<<<<<< Updated upstream
-  "application.js": "/packs/js/application-f0f0d179e0b7b914f225.js",
-  "application.js.map": "/packs/js/application-f0f0d179e0b7b914f225.js.map",
+  "application.js": "/packs/js/application-47abffdc5b16ea496157.js",
+  "application.js.map": "/packs/js/application-47abffdc5b16ea496157.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-f0f0d179e0b7b914f225.js"
+        "/packs/js/application-47abffdc5b16ea496157.js"
       ],
       "js.map": [
-        "/packs/js/application-f0f0d179e0b7b914f225.js.map"
-=======
-  "application.js": "/packs/js/application-024aa444fd788f3db396.js",
-  "application.js.map": "/packs/js/application-024aa444fd788f3db396.js.map",
-  "entrypoints": {
-    "application": {
-      "js": [
-        "/packs/js/application-024aa444fd788f3db396.js"
-      ],
-      "js.map": [
-        "/packs/js/application-024aa444fd788f3db396.js.map"
->>>>>>> Stashed changes
+        "/packs/js/application-47abffdc5b16ea496157.js.map"
       ]
     }
   },
