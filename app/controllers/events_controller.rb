@@ -8,14 +8,17 @@ class EventsController < ApplicationController
   end
 
   def search
-    #results1 is not working because date is not exact 
-      @date_results = Event.all.where('date_to >= ?', params[:date]).limit(3).order("date_to DESC")
+   
       @loc_results = Event.all.where(location: params[:location])
-      if params[:tags] == nil
-        @results = @date_results.all + @loc_results.all 
-      else
+      if !params[:tags].blank?  
         @tags = Tag.all.find(params[:tags][0]).events
-        @results = @date_results.all + @loc_results.all + @tags.all
+        d = params[:date].gsub("/", "-")
+        if params[:date] != ''
+          @date = Event.where("CAST(date(date_from) as TEXT) like ?", "%#{d}%") 
+          @results = @loc_results.all + @tags.all + @date.all
+        else
+          @results = @loc_results.all + @tags.all
+        end
       end
   end
 

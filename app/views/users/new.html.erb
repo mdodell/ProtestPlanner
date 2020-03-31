@@ -8,7 +8,11 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <%= bootstrap_form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+        
+        <div class='m-10'>
+     
+        </div'>
+
 
    
         <%= f.text_field :user_name, placeholder: "User name", hide_label: true, input_group_class: 'input-group-lg' %>

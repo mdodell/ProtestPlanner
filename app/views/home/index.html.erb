@@ -5,15 +5,16 @@
 <div data-controller="location">
   <% if current_user %>
   
-  
+    <div class='container mb-6'>
     <%= render 'shared/browse' %>
+    </div>
   
     <% if current_user.events.length > 0 %>
-    <div class='top-buffer' >
+    
     <div class='ml-3 mt-4 mb-3'>
       <h1>Events that I am attending</h1>
     </div>
-    </div>
+
     <% if UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).length > 0 %>
     <div class="card-deck">
       <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).each do |relationship| %>

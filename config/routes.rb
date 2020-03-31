@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get  '/events/new',  to: 'events#new'
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
-  get '/home', to: 'home#index'
+  get '/home', to: 'home#index', as: 'home'
 
   get 'sessions/new'
   get  '/signup',  to: 'users#new'
