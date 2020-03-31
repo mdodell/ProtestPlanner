@@ -11,8 +11,12 @@ class EventsController < ApplicationController
     #results1 is not working because date is not exact 
       @date_results = Event.all.where('date_to >= ?', params[:date]).limit(3).order("date_to DESC")
       @loc_results = Event.all.where(location: params[:location])
-      @tag_results = Tag.all.find(params[:tags][0]).events
-      @results = @date_results.all + @loc_results.all + @tag_results.all
+      if params[:tags] == nil
+        @results = @date_results.all + @loc_results.all 
+      else
+        @tags = Tag.all.find(params[:tags][0]).events
+        @results = @date_results.all + @loc_results.all + @tags.all
+      end
   end
 
   # GET /events/1

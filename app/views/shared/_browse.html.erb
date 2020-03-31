@@ -20,7 +20,7 @@
           <h3>I'm looking for a protest in...</h3>
           <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "places.field", action: "keydown->places#keydown" }%>
           <h3>I want to rise up for...</h3>
-          <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false, hide_label: true, default: 'Other'}, { multiple: true, class: "selectpicker" } %>
+          <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false, hide_label: true, required: true}, { multiple: false, class: "selectpicker" } %>
           <h3>The date which best suits me is...</h3>
           <%= f.date_select :date, hide_label: true %>
           <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white" %>

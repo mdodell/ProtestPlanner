@@ -1,11 +1,24 @@
 <%= provide(:title, 'search') %>
 <%= render 'shared/navbar_light' %>
-<p>Search results</p>
-<% @results.each do |event| %>
-    <p><%= event.name %></p>
-    <p><%= event.tags.ids %></p>
-<% end %>
-
+<div class='m-4'>
+    <h1>Search results</h1>
+</div>
+    <div class="card-deck">
+    <div class='col-sm-4 m-2' >
+  
+    <% @results.each do |event| %>
+      <div class="card text-black bg-light mb-3">
+      <img class="card-img-top" src = '' alt="TO DO: add image src" >
+      <div class="card-body">
+        <h2 class="card-title"><%= event.name %></h2>
+        <p class="card-text"><%= event.location %></p>
+        <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
+      </div>
+  
+    </div>
+    <% end %>
+    </div>
+    
 
 
 
