@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :map]
 
   # GET /events
   # GET /events.json
@@ -8,7 +8,6 @@ class EventsController < ApplicationController
   end
 
   def search
-   
       @loc_results = Event.all.where(location: params[:location])
       if !params[:tags].blank?  
         @tags = Tag.all.find(params[:tags][0]).events
@@ -20,6 +19,9 @@ class EventsController < ApplicationController
           @results = @loc_results.all + @tags.all
         end
       end
+  end
+
+  def map
   end
 
   # GET /events/1
@@ -83,7 +85,7 @@ class EventsController < ApplicationController
         end
         @event.tags << tags
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 0)
-        format.html { redirect_to @event, status: :permanent_redirect, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event }
         format.json { render json: @event, status: :created, location: @event }
       else
         format.html {render 'new'}
