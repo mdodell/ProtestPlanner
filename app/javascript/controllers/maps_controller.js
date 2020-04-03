@@ -20,7 +20,7 @@ export default class extends Controller {
     resizeMap(){
         const topNavHeight = $(this.topNavTarget).outerHeight();
         const bottomNavHeight = $(this.bottomNavTarget).outerHeight();
-        $(this.mapTarget).height(`calc(100vh - ${topNavHeight + bottomNavHeight}px)`);
+        $(this.mapTarget).height(`calc(${window.innerHeight}px - ${topNavHeight + bottomNavHeight}px)`);
     }
 
     addMarker(){
