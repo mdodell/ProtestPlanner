@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
     has_many :user_event_relationships
+    has_many :map_markers
     has_many :users, through: :user_event_relationships
     has_and_belongs_to_many :tags
     has_one_attached :picture

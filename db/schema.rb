@@ -58,10 +58,10 @@ ActiveRecord::Schema.define(version: 2020_03_20_172005) do
 
   create_table "map_markers", force: :cascade do |t|
     t.string "message"
-    t.float "location_lat"
-    t.float "location_long"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "event_id"
-    t.string "type"
+    t.integer "marker_type", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

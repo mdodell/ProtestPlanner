@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'markers/create'
+  get 'markers/show'
   resources :users
   resources :events
   resources :account_activations, only: [:edit]
