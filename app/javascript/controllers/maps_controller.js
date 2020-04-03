@@ -4,17 +4,10 @@ export default class extends Controller {
 
     static targets = ["map", "topNav", "bottomNav", "addMarkerButton"]
 
-    initialize(){
-
-    }
-
     connect(){
         if(typeof(google) != "undefined"){
             this.initMap();
         }
-        $("#loading_map").fadeOut(1, () => {
-            $("#loading_map").remove();
-        });
     }
 
     resizeMap(){
@@ -142,12 +135,6 @@ export default class extends Controller {
 
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title:"Hello World!",
-            icon: counterProtestor
-        });
-
-        var marker2 = new google.maps.Marker({
-            position: new google.maps.LatLng(39.9570276, -75.2016476),
             title:"Hello World!",
             icon: counterProtestor
         });

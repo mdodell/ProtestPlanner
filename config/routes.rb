@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
   get 'events/:id/map', to: 'events#map', as: 'map'
-  get '/home', to: 'home#index', as: 'home'
+  get '/home', to: 'events#index', as: 'home'
 
   get 'sessions/new'
   get  '/signup',  to: 'users#new'
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   post '/setUserLocation', to: 'users#setUserLocation'
   
 
-  root 'home#index'
+  root 'events#index'
 
 
 end
