@@ -75,11 +75,9 @@
     </div>
     </div>
 
-    
-    <% if get_nearby_events_within_radius(5).length > 0%>
 
     <div class="card-deck">
-    <% get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
+    <% if get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
       <div class='col-sm-3'>
       <div class="card text-black bg-light mb-3">
           <img class="card-img-top" src="..." alt="Card image cap">
