@@ -41,8 +41,8 @@
           </div>
           <div class="col-md-3">
             <h2>Date and Time</h2>
-            <p class="m-0"><%= get_full_date(@event.date_to) %></p>
-            <p class="m-0"><%= get_full_time(@event.date_to) %></p>
+            <p class="m-0"><%= get_full_date(@event.date_from) %></p>
+            <p class="m-0"><%= get_full_time(@event.date_from) %></p>
             <%= link_to 'Add to Calendar', event_path(@event), class: "text-info"%>
           </div>
           <div class="col-md-11">
