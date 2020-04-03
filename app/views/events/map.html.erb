@@ -1,5 +1,26 @@
 <%= content_tag :div, data: {controller: "maps", action: "google-maps-callback@window->maps#initMap", maps_event: @event} do %>
-  <div data-target="maps.map" style="height: 50vh">
-
+  <div data-target="maps.topNav">
+    <%= render 'shared/navbar_dark' %>
+  </div>
+  <div class="position-relative">
+    <div class="position-relative" data-target="maps.map" data-action="resize@window->maps#resizeMap" style="height: 10vh">
+    </div>
+    <div class="position-absolute border m-3 bg-primary d-flex justify-content-center align-items-center add-marker" data-action="click->maps#addMarker" data-target="maps.addMarkerButton">
+      <%= fa_icon('map-marker-alt', class: "text-white", size: '2x') %>
+    </div>
+  </div>
+  <div class="row no-gutters w-100 bg-primary justify-content-around" data-target="maps.bottomNav">
+    <div class="col-6 border-right text-center d-flex justify-content-center align-items-center">
+      <h2>
+        <%= link_to event_path(@event), class: "text-white text-decoration-none" do %>
+          <%= fa_icon('users', class: "text-white") %>
+          Event Details
+      <% end %>
+      </h2>
+    </div>
+    <div class="col-6 border-left text-center d-flex justify-content-center align-items-center">
+      <h2 class="text-white"><%= fa_icon('edit', class: "text-white") %>Edit Map</h2>
+    </div>
   </div>
 <% end %>
+<%= render 'loading_map' %>

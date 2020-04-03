@@ -41,24 +41,44 @@
 }
 
 @include respond-above(xs) {
- .event-container {
-   top: 40px;
-   width: 75vw;
- }
+  .event-container {
+    top: 40px;
+    width: 75vw;
+  }
 }
 
-
-//.top-buffer {
-//  margin-top:40px;
-//  margin-bottom:20px;
-//}
-//
-//.p-l-5 {
-//  margin-left: 15px; }
 
 @include respond-below(xs){
   .registration-button {
     width: 75%;
     margin-top: 0.5rem;
   }
+}
+
+// Maps Page
+.add-marker {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  border-width: 3px!important;
+  bottom: 0;
+  right: 0;
+}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+  display:none;
+}
+.gmnoprint div {
+  background:none !important;
+}
+
+.add-marker:hover {
+  cursor: pointer;
+}
+
+.map-loader {
+  height: 100vh;
+  top: 0;
+  z-index: 1021;
+  overflow: hidden;
 }

@@ -1,47 +1,34 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="#"><%= render 'shared/logo_dark', logo_text: "Rise Up" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon text-dark"></span>
+    <span class="navbar-toggler-icon text-white"></span>
   </button>
-
   <div class="collapse navbar-collapse row justify-content-between" id="navbarTogglerDemo02">
-  <%= form_tag(search_page_path, :method => "get",  
-  class: "form-inline my-2 my-lg-0 ml-2 d-none d-xl-block") do %>  
-    <div class =  class="form-control mr-sm-2">
-      <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
-    </div>
-  <% end %>
-  
+    <%= form_tag(search_page_path, :method => "get",
+                 class: "form-inline my-2 my-lg-0 ml-2 d-none d-xl-block") do %>
+      <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control mr-2" %>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <% end %>
+
     <ul class="navbar-nav mt-2 mt-lg-0">
-      <li class="nav-item ml-3">
-        <a class="nav-link" href="/home"><h4 class="text-gray">Home
+      <li class="nav-item d-flex justify-content-lg-center ml-3">
+        <a class="nav-link" href="/home"><h4 class="text-gray m-0">Home
           <%= fa_icon('street-view', class: "primary-green ml-1") %>
         </h4><span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item ml-3">
-        <a class="nav-link" href="/events/new"><h4 class="text-gray">Create Events
+      <li class="nav-item d-flex justify-content-lg-center ml-3">
+        <a class="nav-link" href="/events/new"><h4 class="text-gray m-0">Create Events
           <%= fa_icon('plus-circle', class: "primary-green ml-1") %>
         </h4></a>
       </li>
-      <li class="nav-item ml-3">
-        <a class="nav-link" href="/profile"><h4 class="text-gray">Profile
+      <li class="nav-item d-flex justify-content-lg-center ml-3">
+        <a class="nav-link" href="/profile"><h4 class="text-gray m-0">Profile
           <%= fa_icon('calendar-week', class: "primary-green ml-1") %>
         </h4></a>
       </li>
-
-      <li class="nav-item ml-3">
-      <%= form_tag(logout_path, :method => 'delete',  
-      class: "form-inline my-2 my-lg-0 ml-2 d-none d-xl-block") do %>  
-        <div class =  class="form-control mr-sm-2">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button> 
-        </div>
-      <% end %>
+      <li class="form-inline ml-3 mr-3">
+        <%= link_to "Log Out", logout_path, method: :delete, class: "btn btn-outline-primary pl-3 pr-3" %>
       </li>
-
-      
-      
-
     </ul>
   </div>
 </nav>

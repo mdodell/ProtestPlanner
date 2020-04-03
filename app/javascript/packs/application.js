@@ -23,6 +23,8 @@ import "controllers"
 import bsCustomFileInput from 'bs-custom-file-input';
 
 
+window.jQuery = $;
+window.$ = $;
 
 window.initMap = function(...args) {
     const event = document.createEvent("Events");
@@ -36,3 +38,5 @@ $(document).on('ready turbolinks:load', () => {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
 });
+
+

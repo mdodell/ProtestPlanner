@@ -2,12 +2,29 @@ import { Controller } from 'stimulus';
 
 export default class extends Controller {
 
-    static targets = ["map"]
+    static targets = ["map", "topNav", "bottomNav", "addMarkerButton"]
+
+    initialize(){
+
+    }
 
     connect(){
         if(typeof(google) != "undefined"){
             this.initMap();
         }
+        $("#loading_map").fadeOut(1, () => {
+            $("#loading_map").remove();
+        });
+    }
+
+    resizeMap(){
+        const topNavHeight = $(this.topNavTarget).outerHeight();
+        const bottomNavHeight = $(this.bottomNavTarget).outerHeight();
+        $(this.mapTarget).height(`calc(100vh - ${topNavHeight + bottomNavHeight}px)`);
+    }
+
+    addMarker(){
+        console.log("Adding marker");
     }
 
     initMap(){
@@ -21,6 +38,13 @@ export default class extends Controller {
             zoomControl: false,
             zoom: latitude == null ? 4 : 17,
             styles: [
+                {
+                    "featureType": "transit",
+                    "elementType": "labels",
+                    "stylers": [
+                        { "visibility": "off" }
+                    ]
+                },
                 {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
                 {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
                 {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
@@ -101,10 +125,31 @@ export default class extends Controller {
                 }
             ]
         });
+
+        // this.addMarkerButtonTarget.index = -4;
+        // this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(this.addMarkerButtonTarget);
+
+
         var myLatlng = new google.maps.LatLng(latitude || 39.5, longitude || -98.35);
+        var counterProtestor = {
+            path: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm33.8 189.7l80-48c11.6-6.9 24 7.7 15.4 18L343.6 208l33.6 40.3c8.7 10.4-3.9 24.8-15.4 18l-80-48c-7.7-4.7-7.7-15.9 0-20.6zm-163-30c-8.6-10.3 3.8-24.9 15.4-18l80 48c7.8 4.7 7.8 15.9 0 20.6l-80 48c-11.5 6.8-24-7.6-15.4-18l33.6-40.3-33.6-40.3zM248 288c51.9 0 115.3 43.8 123.2 106.7 1.7 13.6-8 24.6-17.7 20.4-25.9-11.1-64.4-17.4-105.5-17.4s-79.6 6.3-105.5 17.4c-9.8 4.2-19.4-7-17.7-20.4C132.7 331.8 196.1 288 248 288z",
+            fillColor: '#E32831',
+            fillOpacity: 1,
+            strokeWeight: 0,
+            scale: 0.1
+        };
+
+
         var marker = new google.maps.Marker({
             position: myLatlng,
             title:"Hello World!",
+            icon: counterProtestor
+        });
+
+        var marker2 = new google.maps.Marker({
+            position: new google.maps.LatLng(39.9570276, -75.2016476),
+            title:"Hello World!",
+            icon: counterProtestor
         });
 
         var infowindow = new google.maps.InfoWindow({
@@ -132,12 +177,8 @@ export default class extends Controller {
 
         marker.addListener('click', function() {
             infowindow.open(this.map, marker);
-        })
-
-
+        });
         marker.setMap(this.map);
-
-// To add the marker to the map, call setMap();
-//         marker.setMap(map);
+        this.resizeMap();
     }
 }
