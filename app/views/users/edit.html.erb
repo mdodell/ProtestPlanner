@@ -1,5 +1,6 @@
-<h1>Update your profile</h1>
 
+<div class="container py-5">
+  <h1>Update your profile</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
@@ -19,13 +20,14 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+      <br>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
-    <div class="gravatar_edit">
+    <div class="gravatar_edit py-5">
       <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
+      <a href="http://gravatar.com/emails" target="_blank">change your photo</a>
     </div>
   </div>
+</div>
 </div>
