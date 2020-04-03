@@ -1,7 +1,71 @@
 <%= render 'shared/navbar_light' %>
+<<<<<<< Updated upstream
 <p id="notice"><%= notice %></p>
 <div class="row test" style="background-image: url(<%= get_event_image_or_default(@event) %>); height: 50vh; background-size: cover; filter: blur(2px) brightness(90%);
     -webkit-filter: blur(8px) brightness(90%); background-position: center bottom">
+=======
+<div class="w-100 bg-light position-relative">
+  <div class="background-image" style="background-image: url(<%= get_event_image_or_default(@event) %>);"></div>
+  <div class="bg-light background d-none d-sm-block"></div>
+
+  <!--Event Details -->
+  <div class="p-0 bg-white event-container">
+    <!--Image and Title-->
+    <div class="row no-gutters h-25">
+      <div class="col-md-8">
+        <%= image_tag(get_event_image_or_default(@event), class: "w-100 container-image") %>
+      </div>
+      <div class="col-md-4 bg-light">
+        <div class="ml-2">
+          <h1 class="display-4 mt-1 mb-0"><%= get_date_month_short(@event.date_to, true) %></h1>
+          <h1 class="display-4 m-0"><%= get_date_day_number(@event.date_to) %></h1>
+          <h1 class="font-weight-bold"><%= @event.name %></h1>
+          <!--TODO: Display Organizer Name/organization here-->
+        </div> 
+      </div>
+    </div>
+    <!--Share, Map, and Register for Desktop & iPad-->
+    <div class="d-none d-sm-block">
+      <div class="row justify-content-around no-gutters border-top border-bottom p-2">
+        <div class="col-sm row no-gutters align-items-center">
+          <%= fa_icon('share', class: "share-icon p-2") %> <h4 class="mb-0 ml-1">Share Event</h4>
+        </div>
+        <div class="col-sm row no-gutters align-items-center justify-content-end">
+          <%= display_register_or_unregister_button(@event) %>
+          <%= link_to 'View Map', event_path(@event), class: "btn-info btn ml-2" %>
+        </div>
+      </div>
+    </div>
+
+    <!--Description, Date and Time, and Location-->
+    <div class="row no-gutters justify-content-center mt-3 mb-3">
+        <div class="row w-100 no-gutters justify-content-around ml-2 mr-2">
+          <div class="col-md-7">
+            <h2>Description</h2>
+            <p><%= !@event.description.blank? ? @event.description : generate_description(@event) %></p>
+          </div>
+          <div class="col-md-3">
+            <h2>Date and Time</h2>
+            <p class="m-0"><%= get_full_date(@event.date_to) %></p>
+            <p class="m-0"><%= get_full_time(@event.date_to) %></p>
+            <%= link_to 'Add to Calendar', event_path(@event), class: "text-info"%>
+          </div>
+          <div class="col-md-11">
+            <h2>Tags</h2>
+            <% get_tags(@event).each do |tag| %>
+              <span class="badge bagde-pill badge-primary text-white"><p class="m-0 font-weight-bolder"><%= tag %></p></span>
+            <% end %>
+          </div>
+        </div>
+    </div>
+    <div class="d-sm-none position-sticky mt-2 w-100" style="bottom: 0">
+      <div class="d-flex flex-column no-gutters align-items-center border-top bg-light">
+        <%= display_register_or_unregister_button(@event) %>
+        <%= link_to 'View Map', event_path(@event), class: "btn-info btn w-75 mb-2 mt-2" %>
+      </div>
+    </div>
+  </div>
+>>>>>>> Stashed changes
 </div>
 
 <h1><%= @event.name %></h1>
