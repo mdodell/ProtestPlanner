@@ -2,14 +2,14 @@
 
 one:
   message: MyString
-  location_lat: 1
-  location_long: 1
+  latitude: 1
+  longitude: 1
   event_id: 1
-  type: 
+  marker_type: 0
 
 two:
   message: MyString
-  location_lat: 1
-  location_long: 1
+  latitude: 1
+  longitude: 1
   event_id: 1
-  type: 
+  marker_type: 0
