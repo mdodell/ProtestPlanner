@@ -40,3 +40,12 @@
     .flaticon-policeman:before { content: "\f100"; }
     
     $font-Flaticon-policeman: "\f100";
+
+    .flaticon::before {
+      font-family: 'Flaticon';
+      font-weight: 400;
+    }
+
+    .flaticon-5x::before {
+      font-size: 5em;
+    }
