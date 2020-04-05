@@ -2,8 +2,12 @@
 <%= render 'shared/navbar_light' %>
 
 
+ 
+<div class="row justify-content-center no-gutters">
+<div class="container-xl mt-5">
+
 <div class='m-3'>
-    <h3>Search Results</h3>
+    <h1>Search Results</h1>
 </div>
 
 <% if @results.length > 0 %> 
@@ -26,6 +30,17 @@
 
 <% else %>
     <div class='m-3'>
-        <h6>No keywords matched your search...</h6>
+        <h3>No keywords matched your search...</h3>
     </div>
 <% end %>
+
+<div class='m-3'>
+    <br>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Search Events by filter</a>
+</div>
+
+</div>
+</div>
+
+
+

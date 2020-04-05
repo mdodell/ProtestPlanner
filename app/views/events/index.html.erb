@@ -1,22 +1,31 @@
 <%= provide(:title, 'home') %>
 
-<div data-controller="location">
+
+
   <% if current_user %>
+    
     <%= render 'shared/navbar_dark' %>
-    <% if current_user.events.length > 0 %>
-      <!-- find events user is an attending for -->
-      <%= render 'events/eventsattending' %>
-      <!-- find events user is an organizer for -->
-      <%= render 'events/eventsorganized' %>
-    <% else %>
-      <div class='container mb-6'>
-        <%= render 'shared/browse' %>
+    
+    <div class="row justify-content-center no-gutters">
+    <div class="container-xl mt-5">
+    <%= render 'shared/home_hero' %>
+    <!-- find events user is an attending for -->
+      <div id="attending">
+        <%= render 'events/eventsattending' %>
       </div>
-    <% end %>
-    <%= render 'events/nearbyevents' %>
+    <!-- find events user is an organizer for -->
+      <div id="organized">
+        <%= render 'events/eventsorganized' %>
+      </div>
+    <!-- find nearby events -->
+      <div id="nearby">
+        <%= render 'events/nearbyevents' %>
+      </div>
     <div class='ml-3 mt-3'>
       Logged in as <%= current_user.user_name %>
     </div>
+  </div>
+  </div>
 
   <% else %>
     <%= link_to "Sign Up", signup_path %> or

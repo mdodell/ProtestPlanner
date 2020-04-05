@@ -1,9 +1,10 @@
 
-
+<div class="card">
 <% if get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
-    <div class="m-3">
+    <div class="card-header">
         <h1>Nearby Events</h1>
     </div>
+    <div class="card-body">
     <div class="card-deck">
         <div class='col-sm-4'>
             <div class="card text-black bg-light mb-4">
@@ -18,5 +19,9 @@
     <% end %>
     </div>
 <%end%>
+</div>
+
+
+
 
 
