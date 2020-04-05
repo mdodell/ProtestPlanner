@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post '/search_events', to: 'events#search'
 
   get  '/signup',  to: 'users#new'
-  get    '/profile',   to: 'users#profile'
+
 
   get 'sessions/new'
   get    '/login',   to: 'sessions#new'
