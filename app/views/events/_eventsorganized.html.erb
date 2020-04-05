@@ -1,0 +1,26 @@
+<div class='m-3'>
+    <h1>Events that I am an organizer for</h1>
+</div>
+
+<% if UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).length > 0 %>
+
+        <div class="card-deck">
+            <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).each do |relationship| %>
+                <div class='col-sm-4'>
+                    <div class="card text-black bg-light mb-4">
+                        <img class="card-img-top" src = '' alt="TO DO: add image src" >
+                        <div class="card-body">
+                            <h2 class="card-title"><%= relationship.event.name %></h2>
+                            <p class="card-text"><%= relationship.event.location %></p>
+                            <p class="card-text"><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></p>
+                        </div>
+                    </div>
+                 </div>
+            <% end %>
+        </div>
+
+<% else %>
+    <div class='m-3'>
+        <h6>You have not organized any events yet...</h6>
+    </div>
+<% end %>

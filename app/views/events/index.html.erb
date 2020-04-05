@@ -1,114 +1,28 @@
 <%= provide(:title, 'home') %>
-<%= render 'shared/navbar_dark' %>
-
 
 <div data-controller="location">
   <% if current_user %>
-
-    <div class='container mb-6'>
-      <%= render 'shared/browse' %>
-    </div>
-
+    <%= render 'shared/navbar_dark' %>
     <% if current_user.events.length > 0 %>
-
-      <div class='ml-3 mt-4 mb-3'>
-        <h1>Events that I am attending</h1>
-      </div>
-
-      <% if UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).length > 0 %>
-        <div class="card-deck">
-          <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).each do |relationship| %>
-            <div class='col-sm-3'>
-              <div class="card text-black bg-light mb-3">
-                <img class="card-img-top" src = '' alt="TO DO: add image src" >
-                <div class="card-body">
-                  <h2 class="card-title"><%= relationship.event.name %></h2>
-                  <p class="card-text"><%= relationship.event.location %></p>
-                  <p class="card-text"><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></p>
-                </div>
-              </div>
-
-          <% end %>
-          </div>
-
-
-      <% else %>
-        <p>You have not signed up to attend any events yet</p>
-      <% end %>
-      </div>
-
-
-      <div class='top-buffer' >
-        <div class='ml-3 mt-4 mb-3'>
-          <h1>Events that I am an organizer for</h1>
-        </div>
-      </div>
-      <% if UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).length > 0 %>
-
-        <div class="card-deck">
-          <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).each do |relationship| %>
-            <div class='col-sm-3'>
-              <div class="card text-black bg-light mb-3">
-                <img class="card-img-top" src = '' alt="TO DO: add image src" >
-                <div class="card-body">
-                  <h2 class="card-title"><%= relationship.event.name %></h2>
-                  <p class="card-text"><%= relationship.event.location %></p>
-                  <p class="card-text"><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <% else %>
-        <p>You have not organized any events yet</p>
-      <% end %>
-
-
+      <!-- find events user is an attending for -->
+      <%= render 'events/eventsattending' %>
+      <!-- find events user is an organizer for -->
+      <%= render 'events/eventsorganized' %>
     <% else %>
-      <p>You have not signed up for or created any events yet</p>
-    <% end %>
-
-
-    <div class='top-buffer' >
-      <div class='ml-3 mt-4 mb-3'>
-        <h1>Nearby Events</h1>
+      <div class='container mb-6'>
+        <%= render 'shared/browse' %>
       </div>
-    </div>
-
-
-    <div class="card-deck">
-      <% if get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
-        <div class='col-sm-3'>
-          <div class="card text-black bg-light mb-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title"><%= event.name %></h2>
-              <p class="card-text"><%= event.location %></p>
-              <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-
-      <% else %>
-        <p>There are no nearby events currently</p>
-      <% end %>
-    </div>
-
+    <% end %>
+    <%= render 'events/nearbyevents' %>
     <div class='ml-3 mt-3'>
       Logged in as <%= current_user.user_name %>
     </div>
-
-
 
   <% else %>
     <%= link_to "Sign Up", signup_path %> or
     <%= link_to "Log In", login_path %>
   <% end %>
-
   <p id="notice"><%= notice %></p>
-
 </div>
 
 

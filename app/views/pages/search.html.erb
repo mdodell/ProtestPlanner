@@ -1,10 +1,31 @@
-<%= render 'shared/navbar_dark' %>
 
-<h3>Search Result</h3>  
-<% if @results.length == 0 %>
-    <p>No matching results.</p>
+<%= render 'shared/navbar_light' %>
+
+
+<div class='m-3'>
+    <h3>Search Results</h3>
+</div>
+
+<% if @results.length > 0 %> 
+
+        <div class="card-deck">
+            <% @results.uniq.each do |event| %>
+                <div class='col-sm-4'>
+                    <div class="card text-black bg-light mb-4">
+                        <img class="card-img-top" src = '' alt="TO DO: add image src" >
+                        <div class="card-body">
+                        <h2 class="card-title"><%= event.name %></h2>
+                        <h2 class="card-title"><%= (event.date_from).to_s[0...10] %></h2>
+                        <p class="card-text"><%= event.location %></p>
+                        <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
+                        </div>
+                    </div>
+                 </div>
+            <% end %>
+        </div>
+
 <% else %>
-    <% @results.each do |result| %>  
-        <%= result.name %><br>  
-    <% end %>
+    <div class='m-3'>
+        <h6>No keywords matched your search...</h6>
+    </div>
 <% end %>
