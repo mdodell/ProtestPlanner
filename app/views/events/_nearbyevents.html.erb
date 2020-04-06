@@ -1,17 +1,17 @@
 
-<div class="card">
+<div class="card border-0">
 <% if get_nearby_events_within_radius(5) && get_nearby_events_within_radius(5).each do |event| %>
-    <div class="card-header">
+    <div class="card-header border-0">
         <h1>Nearby Events</h1>
     </div>
-    <div class="card-body">
-    <div class="card-deck">
+    <div class="card-body border-0">
+    <div class="card-deck border-0">
         <div class='col-sm-4'>
-            <div class="card text-black bg-light mb-4">
+            <div class="card text-black bg-light mb-4 border-0">
                 <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body ">
                     <h2 class="card-title"><%= event.name %></h2>
-                    <p class="card-text"><%= event.location %></p>
+                    <p class="card-text "><%= event.location %></p>
                     <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
                 </div>
             </div>

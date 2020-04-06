@@ -1,12 +1,12 @@
 
 
-<div class="card">
-  <div class="card-header" >
+<div class="card border-0" >
+  <div class="card-header border-0" >
     <h1>Events I am attending</h1>
   </div>
-  <div class="card-body">
+  <div class="card-body border-0">
   <% if UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).length > 0 %>
-    <div class="card-deck">
+    <div class="card-deck border-0">
         <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).each do |relationship| %>
             <div class='col-sm-4'>
                 <div class="card text-black bg-light mb-4">
