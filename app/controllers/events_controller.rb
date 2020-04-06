@@ -8,17 +8,30 @@ class EventsController < ApplicationController
   end
 
   def search
-      @loc_results = Event.all.where(location: params[:location])
-      if !params[:tags].blank?  
-        @tags = Tag.all.find(params[:tags][0]).events
-        d = params[:date].gsub("/", "-")
-        if params[:date] != ''
-          @date = Event.where("CAST(date(date_from) as TEXT) like ?", "%#{d}%") 
-          @results = @loc_results.all + @tags.all + @date.all
-        else
-          @results = @loc_results.all + @tags.all
+        d = params[:date]
+        if d == 'Any Day'
+          @date = Event.where('date_from >= ?', DateTime.now)
+        elsif d == 'Today'
+          @date = Event.where(:date_from => DateTime.now.beginning_of_day..DateTime.now.end_of_day)
+        elsif d == 'Tomorrow'
+          @date = Event.where(:date_from => DateTime.tomorrow.beginning_of_day..DateTime.tomorrow.end_of_day)
+        elsif d == 'This Week'
+          @date = Event.where(:date_from => DateTime.now.beginning_of_week..DateTime.now.end_of_week) 
+        elsif d == 'Next Week'
+          @date = Event.where(:date_from => DateTime.now.beginning_of_week.advance(:days => +7)..DateTime.now.end_of_week.advance(:days => +7))
+        elsif d == 'This Month'
+          @date = Event.where(:date_from => DateTime.now.beginning_of_month..DateTime.now.end_of_month)
+        elsif d == 'Next Month'
+          @date = Event.where(:date_from => DateTime.now.beginning_of_month.advance(:months => +1)..DateTime.now.end_of_month.advance(:months => +1))
         end
+        @tags = Tag.all.find(params[:tags][0]).events
+      if params[:location] == ''
+        @loc= Event.all
+      else
+        @loc= Event.all.where(location: params[:location])
       end
+      
+      @results =  @tags.all & @date.all & @loc.all
   end
 
   def map

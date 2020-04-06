@@ -10,10 +10,8 @@ Rails.application.routes.draw do
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
   get 'events/:id/map', to: 'events#map', as: 'map'
-  get '/browse', to: 'events#search'
-  post '/browse', to: 'events#search', as: 'browse_filter'
-  get '/browse_results', to: 'events#search_results'
-  post '/browse_results', to: 'events#search_results'
+  get '/browse', to: 'events#browse', as: 'browse_filter'
+  get '/browse_results' => 'events#search', :as => 'browse_results'
 
   get  '/signup',  to: 'users#new'
 

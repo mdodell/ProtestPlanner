@@ -7,8 +7,9 @@
 <div class="container-xl mt-5">
 
 <div class='m-3'>
-    <h1>Search Results</h1>
+    <h1 class='display-4 text-primary'>Search Results</h1>
 </div>
+<br>
 
 <% if @results.length > 0 %> 
 
@@ -37,9 +38,7 @@
 <hr class="col-xs-12"/>
 
 <div class='m-3'>
-    <br>
-    <h1>Search by Filter</h1>
-    <br>
+   
     <%= render 'shared/browse' %>
   
 </div>
