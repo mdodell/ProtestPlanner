@@ -10,6 +10,10 @@
     <div class="container-xl mt-5">
     <%= render 'shared/home_hero' %>
     <!-- find events user is an attending for -->
+    <!-- find nearby events -->
+      <div id="nearby">
+        <%= render 'events/nearbyevents' %>
+      </div>
       <div id="attending">
         <%= render 'events/eventsattending' %>
       </div>
@@ -17,10 +21,7 @@
       <div id="organized">
         <%= render 'events/eventsorganized' %>
       </div>
-    <!-- find nearby events -->
-      <div id="nearby">
-        <%= render 'events/nearbyevents' %>
-      </div>
+  
     <div class='ml-3 mt-3'>
       Logged in as <%= current_user.user_name %>
     </div>
