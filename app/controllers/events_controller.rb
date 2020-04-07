@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  include EventsHelper
   before_action :set_event, only: [:show, :edit, :update, :destroy, :map]
 
   # GET /events
@@ -134,9 +135,5 @@ class EventsController < ApplicationController
       :location, :date_to, :description, :picture, :tags, :latitude, :longitude)
     end
 
-  def correct_editor
-    @user = current_user
-    (@user.user_event_relationships.map{|x| x[:event_id]}.include? params[:id].to_i) && (RoleTypePermission.find_by(id: UserEventRelationship.find_by(user_id: @user.id, event_id: params[:id]).role_type_id).modify_event)
-  end
 end
 

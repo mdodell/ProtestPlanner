@@ -26,6 +26,9 @@
           <%= fa_icon('share', class: "share-icon p-2") %> <h4 class="mb-0 ml-1">Share Event</h4>
         </div>
         <div class="col-sm row no-gutters align-items-center justify-content-end">
+          <%if correct_editor %>
+            <%= link_to 'Manage Protest', edit_event_path(@event) , class: "btn-info btn mr-2" %>
+          <%end %>
           <%= display_register_or_unregister_button(@event) %>
           <%= link_to 'View Map', map_path(@event), class: "btn-info btn ml-2" %>
         </div>
@@ -55,6 +58,7 @@
     </div>
     <div class="d-sm-none position-sticky mt-2 w-100" style="bottom: 0">
       <div class="d-flex flex-column no-gutters align-items-center border-top bg-light">
+
         <%= display_register_or_unregister_button(@event) %>
         <%= link_to 'View Map', map_path(@event), class: "btn-info btn w-75 mb-2 mt-2" %>
       </div>
