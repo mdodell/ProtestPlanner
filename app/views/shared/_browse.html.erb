@@ -9,7 +9,7 @@
 
 <script>
     $(document).ready(function(){
-        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var date_input=$('input[name="specificDate"]'); //our date input has the name "specificDate"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
             format: 'yyyy/mm/dd',
@@ -20,41 +20,40 @@
     })
 </script>
 
-<div class="w-100 bg-light position-relative">
-  <div class="background-image"></div>
-  <div class="bg-light background d-none d-sm-block" ></div>
+<br>
+<h1 class='display-4 text-primary'>Search by Filter</h1>
+<br>
 
   <!--Event Details -->
-  <div class="p-0 bg-white event-container">
-    <!--Image and Title-->
-    <div class="row no-gutters h-25">
-      <div class="col-md-8">
-          <!--TO ADD IMAGE-->
-            
-      </div>
-      <div class="col-md-4 bg-light">
-        <div class="ml-2">
-        <%= bootstrap_form_tag url: '/search_events' do |f| %>
+
+        <%= bootstrap_form_tag url: '/browse_results', method: :get do |f| %>
+
           <h3>I'm looking for a protest in...</h3>
-          <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "places.field", action: "keydown->places#keydown" }%>
+          <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group', data: { target: "places.field", action: "keydown->places#keydown" }%>
+          
           <h3>I want to rise up for...</h3>
           <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false, hide_label: true, required: true}, { multiple: false, class: "selectpicker" } %>
+          
           <h3>The date which best suits me is...</h3>
-          <div class="form-group"> <!-- Date input -->
-            <input class="form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text"/>
-          </div>
+          
+
+          <%= f.select :date, [['Any Day', 'Any Day'], ['Today', 'Today'], ['Tomorrow', 'Tomorrow'], ['This Week', 'This Week'], 
+          ['Next Week', 'Next Week'], ['This Month', 'This Month'], ['Next Month', 'Next Month']], { hide_label: true}, 
+          { class: "selectpicker" } %>
+
+
+          <!-- <%= f.check_box :selectTrue, label:'I want to select a specific date...'%> -->
+          <!-- <div class="form-group">  -->
+          <!-- <input class="form-control" id="specificDate" name="date" placeholder="YYYY/MM/DD" type="text"/> -->
+          <!-- </div> -->
+          <!-- <br> -->
+          
+          
           <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white" %>
         <% end %>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  </div>
-  </div>
-  </div>
-</div>
-</div>
+      
+  
+
 
 
     

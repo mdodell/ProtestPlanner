@@ -1,27 +1,38 @@
-<%= provide(:title, 'search') %>
+<%= provide(:title, 'results') %>
 <%= render 'shared/navbar_light' %>
-<div class='m-4'>
-    <h1>Search results</h1>
+
+
+<div class="row justify-content-center no-gutters">
+<div class="container-xl mt-5">
+
+
+<div class='m-3'>
+    <h1 class='display-4 text-primary'>Filter Results</h1>
+    <%= link_to 'Back to Browse', browse_filter_path, class: 'text-secondary' %>
 </div>
+<br>
 
-    <div class="card-deck">
-  
-    <% @results.uniq.each do |event| %>
-      <div class="card text-black bg-light mb-3">
-      <img class="card-img-top" src = '' alt="TO DO: add image src" >
-      <div class="card-body">
-        <h2 class="card-title"><%= event.name %></h2>
-        <h2 class="card-title"><%= (event.date_from).to_s[0...10] %></h2>
-        <p class="card-text"><%= event.location %></p>
-        <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
-      </div>
-  
-    </div>
-    <% end %>
-    </div>
-    
-    
+<% if @results != nil %> 
+
+        <div class="card-deck">
+            <% @results.uniq.each do |event| %>
+                <div class='col-sm-4'>
+                    <div class="card text-black bg-light mb-4">
+                        <img class="card-img-top" src = '' alt="TO DO: add image src" >
+                        <div class="card-body">
+                        <h2 class="card-title"><%= event.name %></h2>
+                        <h2 class="card-title"><%= (event.date_from).to_s[0...10] %></h2>
+                        <p class="card-text"><%= event.location %></p>
+                        <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
+                        </div>
+                    </div>
+                 </div>
+            <% end %>
+        </div>
+<%end%>
 
 
 
 
+</div>
+</div>
