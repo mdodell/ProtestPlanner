@@ -9,4 +9,11 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Account activation"
   end
+
+  def apply_organizer(organizer, attendee, event)
+    @organizer = organizer
+    @attendee = attendee
+    @event = event
+    mail to: @organizer.email, subject: "Apply to be an Organizer for event #{event.name}"
+  end
 end

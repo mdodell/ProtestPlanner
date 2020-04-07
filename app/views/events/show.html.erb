@@ -26,8 +26,10 @@
           <%= fa_icon('share', class: "share-icon p-2") %> <h4 class="mb-0 ml-1">Share Event</h4>
         </div>
         <div class="col-sm row no-gutters align-items-center justify-content-end">
-          <%if correct_editor %>
+          <%if correct_editor(current_user, @event) %>
             <%= link_to 'Manage Protest', edit_event_path(@event) , class: "btn-info btn mr-2" %>
+            <%else %>
+            <%= link_to 'Apply to be an Organizer', "/apply_organizer" + "?event_id=#{@event.id}", class: "btn-info btn mr-2" %>
           <%end %>
           <%= display_register_or_unregister_button(@event) %>
           <%= link_to 'View Map', map_path(@event), class: "btn-info btn ml-2" %>

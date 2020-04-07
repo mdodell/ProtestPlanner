@@ -51,7 +51,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
-    if !correct_editor
+    if !correct_editor(current_user, Event.find(params[:id]))
       flash[:error] = "Sorry, you don't have acces to edit"
       redirect_to root_url
     end

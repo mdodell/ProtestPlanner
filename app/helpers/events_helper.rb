@@ -35,8 +35,7 @@ module EventsHelper
     event.tags.map{|tag| tag.name}
   end
 
-  def correct_editor
-    @user = current_user
-    (@user.user_event_relationships.map{|x| x[:event_id]}.include? params[:id].to_i) && (RoleTypePermission.find_by(id: UserEventRelationship.find_by(user_id: @user.id, event_id: params[:id]).role_type_id).modify_event)
+  def correct_editor(user, event)
+    (user.user_event_relationships.map{|x| x[:event_id]}.include? event.id) && (RoleTypePermission.find_by(id: UserEventRelationship.find_by(user_id: user.id, event_id: event.id).role_type_id).modify_event)
   end
 end

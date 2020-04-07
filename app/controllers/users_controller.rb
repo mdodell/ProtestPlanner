@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   include SessionsHelper
+  include EventsHelper
   before_action :set_user, only: [:edit, :update, :destroy]
   skip_before_action :require_login, only: [:new, :create, :set_user, :user_params]
   before_action :correct_user,   only: [:edit, :update]
@@ -47,6 +48,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def applyOrganizer
+    event = Event.find(params[:event_id])
+    event.users.map do |x|
+      if correct_editor(x, event)
+        UserMailer.apply_organizer(x, current_user, event).deliver_now
+      end
+    end
+
+    redirect_to event
+  end
+
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -82,8 +94,10 @@ class UsersController < ApplicationController
                                  :password_confirmation, :phone)
   end
 
-  def correct_user
+
+  def correct_user()
     @user = User.find(params[:id])
     redirect_to(root_url) unless @user == current_user
   end
+
 end
