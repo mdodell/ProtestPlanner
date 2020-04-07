@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   get    '/apply_organizer',   to: 'users#applyOrganizer'
+  get    '/add_organizer', to: 'events#addOrganizer'
+
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

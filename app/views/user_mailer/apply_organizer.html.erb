@@ -6,13 +6,13 @@
   <%= @attendee.user_name %> hope to become an organizer of event <%= @event.name %>
 </p>
 
-<p>
-  Here is this user's profile page:
-  <%= link_to @attendee.user_name, user_url(@attendee) %>
-</p>
+<!--<p>-->
+<!--  Here is this user's profile page:-->
+  <%#= link_to @attendee.user_name, user_url(@attendee) %>
+<!--</p>-->
 
 <p>
   If you agree, Please click on this link:
-  <%= link_to "agree", user_url(@attendee) %>
+  <%= link_to "agree", add_organizer_url(:user_id => @attendee.id, :event_id => @event.id) %>
 </p>
 

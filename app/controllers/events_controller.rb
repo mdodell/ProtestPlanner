@@ -57,6 +57,22 @@ class EventsController < ApplicationController
     end
   end
 
+  def addOrganizer
+    event = Event.find(params[:event_id])
+    if !correct_editor(current_user, event)
+      flash[:error] = "Sorry, you don't have acces to edit"
+      redirect_to event
+    else
+      relation = UserEventRelationship.find_by(user_id: params[:user_id], event_id: params[:event_id])
+      relation.role_type_id = 0
+      if relation.save
+        flash[:success] = "User #{User.find(params[:user_id]).user_name} was successfully added as organizer"
+      end
+      redirect_to event
+    end
+
+    end
+
   def unregister
     event = Event.find(params[:id])
     if current_user.events.exists?(params[:id])
