@@ -55,7 +55,7 @@ class UsersController < ApplicationController
         UserMailer.apply_organizer(x, current_user, event).deliver_now
       end
     end
-
+    flash[:success] = "appllication was already sent to organizers"
     redirect_to event
   end
 
