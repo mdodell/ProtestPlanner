@@ -1,0 +1,12 @@
+<div id="flash-messages-section">
+ <% flash.each do |key, value| %>
+  <div class="<%= flash_class(key) %> no-radius fade in">
+   <a href="#" data-dismiss="alert" class="close">×</a>
+   <ul>
+    <li>
+     <strong><%= flash_prefix(key)%></strong>&nbsp;<%= value %>
+    </li>
+   </ul>
+  </div>
+ <% end %>
+</div>

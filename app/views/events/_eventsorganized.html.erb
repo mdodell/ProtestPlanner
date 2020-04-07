@@ -10,11 +10,17 @@
 
   <div class="card-deck">
       <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).each do |relationship| %>
-          <div class='col-sm-4'>
+          <div class='col-sm-6'>
               <div class="card text-black bg-light mb-4 ">
-                  <img class="card-img-top" src = '' alt="TO DO: add image src" >
+                  <% if relationship.event.picture.attached? %>
+                    <% @picture = url_for(relationship.event.picture) %>
+                  <% else %>
+                    <% @picture = relationship.event.tags.first['photo_url'] %>
+                  <% end %>
+                  <div class="card-img-top"><%= image_tag(@picture, class: "w-100 container-image p-2") %> </div>
                   <div class="card-body">
                       <h2 class="card-title"><%= relationship.event.name %></h2>
+                      <h5 class="card-text"><%= DateTime.parse(relationship.event.date_from.to_s).strftime("%A, %d %b %Y %l:%M %p")%></h5>
                       <p class="card-text"><%= relationship.event.location %></p>
                       <p class="card-text"><%= link_to 'Event Page', event_path(relationship.event), class: "btn-primary btn" %></p>
                   </div>
@@ -28,3 +34,5 @@
 <% end %>
   </div>
 </div>
+
+
