@@ -10,16 +10,20 @@
       <%= f.text_field :user_name, class: 'form-control' %>
 
       <%= f.label :profile %>
-      <%= f.email_field :profile, class: 'form-control' %>
+      <%= f.text_field :profile, class: 'form-control' %>
 
       <%= f.label :phone %>
-      <%= f.email_field :phone, class: 'form-control' %>
+      <%= f.phone_field :phone, class: 'form-control' %>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label "Update Profile Photo (Optional)"  %>
+      <%= f.file_field :avatar, input_group_class: 'input-group-lg' %>
+
       <br>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>

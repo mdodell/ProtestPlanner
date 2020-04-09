@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+
 gem 'simple_form'
 gem 'json'
 gem 'dotenv-rails', groups: [:development, :test]
@@ -23,6 +24,7 @@ gem 'binding_of_caller'
 gem "google-cloud-storage", "~> 1.8", require: false
 gem "bootstrap_form", "~> 4.0"
 gem 'activerecord-import'
+gem 'fog'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
