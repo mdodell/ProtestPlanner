@@ -20,18 +20,14 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+      <br>
       <%= f.label "Update Profile Photo (Optional)"  %>
       <%= f.file_field :avatar, input_group_class: 'input-group-lg' %>
-
+      <br>
       <br>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
-    <div class="gravatar_edit py-5">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change your photo</a>
-    </div>
   </div>
 </div>
 </div>

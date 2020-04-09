@@ -7,7 +7,12 @@
   <div class="m-3">
     <section class="user_info py-1 pl-1">
       <h1>
-        <%= gravatar_for @user %>
+         <% if @user.avatar.attached? %>
+          <% @avatar = url_for(@user.avatar) %>
+        <%= image_tag(@avatar, width: "130", height: "130") %>
+          <%else %>
+          <%= gravatar_for @user %>
+        <% end %>
         <br>
         <%= @user.user_name %>
       </h1>
