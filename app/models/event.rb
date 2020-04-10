@@ -10,7 +10,7 @@ class Event < ApplicationRecord
     geocoded_by :location
 
     def image_type
-        if !picture.content_type.in?(%('image/jpeg image/png'))
+        if picture.attached? && !picture.content_type.in?(%('image/jpeg image/png'))
             errors.add(:picture, "needs to be a jpeg or png!")
         end
     end
