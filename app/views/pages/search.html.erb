@@ -1,3 +1,22 @@
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+    $(document).ready(function(){
+        var date_input=$('input[name="specificDate"]'); //our date input has the name "specificDate"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'yyyy/mm/dd',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
 
 <%= render 'shared/navbar_dark' %>
 
@@ -8,16 +27,29 @@
 
 <div class='m-3'>
     <h1 class='display-4 text-primary'>Search Results</h1>
+
+    <%if @results.uniq.length == 1 %>
+        <h3><%=@results.uniq.length%> result for "<%=@parameter%>"</h3>
+    <% else %>
+        <h3><%=@results.uniq.length%> results for "<%=@parameter%>"</h3>
+    <% end %>
 </div>
 <br>
 
-<% if @results.length > 0 %> 
+<% if @results.uniq.length > 0 %> 
 
         <div class="card-deck">
-            <% @results.uniq.each do |event| %>
+            <% @results.uniq.sort_by(&:date_from).each do |event| %>
                 <div class='col-sm-4'>
                     <div class="card text-black bg-light mb-4">
-                        <img class="card-img-top" src = '' alt="TO DO: add image src" >
+                        <% if event.picture.attached? %>
+                            <% @picture = url_for(event.picture) %>
+                        <% else %>
+                            <% @picture = event.tags.first['photo_url'] %>
+                        <% end %>
+                        <div class="card-img-top">
+                            <%= image_tag(@picture, class: "w-100 h-50 container-image p-2") %> 
+                        </div>
                         <div class="card-body">
                         <h2 class="card-title"><%= event.name %></h2>
                         <h2 class="card-title"><%= (event.date_from).to_s[0...10] %></h2>
@@ -29,19 +61,49 @@
             <% end %>
         </div>
 
+        <hr class="col-xs-12"/>
+            <div class='m-3'>
+                <br>
+                    <h1 class='display-4 text-primary'>Search by Filter</h1>
+                <br>
+        
+                <!--Event Details -->
+                <%= bootstrap_form_tag url: '/browse_keyword_results', method: :get do |f| %>
+                
+                  <h3>My keyword is...</h3>
+                  <h2 class='font-weight-light text-secondary'><%=@parameter%></h2>
+                  <%= hidden_field_tag "keyword", "#{@parameter}" %>
+                  <br>
+              
+        
+                  <h3>I'm looking for a protest in...</h3>
+                  <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group', data: { target: "places.field", action: "keydown->places#keydown" }%>
+                  
+                  <h3>I want to rise up for...</h3>
+                  <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false, hide_label: true, required: true}, { multiple: false, class: "selectpicker" } %>
+                  
+                  <h3>The date which best suits me is...</h3>
+                  
+        
+                  <%= f.select :date, [['Any Day', 'Any Day'], ['Today', 'Today'], ['Tomorrow', 'Tomorrow'], ['This Week', 'This Week'], 
+                  ['Next Week', 'Next Week'], ['This Month', 'This Month'], ['Next Month', 'Next Month']], { hide_label: true}, 
+                  { class: "selectpicker" } %>
+                  
+                  <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white" %>
+                <% end %>
+        
+            </div>
+
 <% else %>
     <div class='m-3'>
-        <h3>No keywords matched your search...</h3>
+        <h5 class='font-weight-light text-secondary'>Try Searching without a keyword...</h5>
     </div>
+    <hr class="col-xs-12"/>
+        <div class='m-3'>
+            <%= render 'shared/browse' %>
+        </div>
+ 
 <% end %>
-
-<hr class="col-xs-12"/>
-
-<div class='m-3'>
-   
-    <%= render 'shared/browse' %>
-  
-</div>
-
 </div>
 </div>
+

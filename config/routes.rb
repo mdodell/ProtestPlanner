@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post '/events/:id/map/marker', to: 'markers#create', as: 'add_marker'
   get '/browse', to: 'events#browse', as: 'browse_filter'
   get '/browse_results' => 'events#search', :as => 'browse_results'
+  get '/browse_keyword_results' => 'events#search_keyword', :as => 'browse_keyword_results'
 
   get  '/signup',  to: 'users#new'
 
