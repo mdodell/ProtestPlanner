@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
-  get 'events/:id/map', to: 'events#map', as: 'map'
+  get '/events/:id/map', to: 'events#map', as: 'map'
+  get '/events/:id/map/marker', to: 'markers#show', as: 'get_markers'
+  post '/events/:id/map/marker', to: 'markers#create', as: 'add_marker'
   get '/browse', to: 'events#browse', as: 'browse_filter'
   get '/browse_results' => 'events#search', :as => 'browse_results'
 

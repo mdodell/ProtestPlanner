@@ -17,12 +17,44 @@ export default class extends Controller {
     }
 
     addMarker(){
-        console.log("Adding marker");
+        const protest_event = JSON.parse(this.data.get("event"));
+        let marker_params = {};
+        switch(event.target.id) {
+            case "rally_point":
+                marker_params = {
+                    marker_type: "rally_point"
+                };
+                break;
+            case "police":
+                marker_params = {
+                    marker_type: "police"
+                };
+                break;
+            case "counter_protestors":
+                marker_params = {
+                    marker_type: "counter_protestors"
+                };
+                break;
+            case "road_blocked":
+                marker_params = {
+                    marker_type: "road_blocked"
+                };
+                break;
+            case "end":
+                marker_params = {
+                    marker_type: "end"
+                };
+                break;
+        }
+
+        $.post(`/events/${protest_event.id}/map/marker`, {
+            ...marker_params,
+            event_id: protest_event.id
+        }).then(() => console.log("called!")); // This will let us fetch a list of events. This can be used to get mapmarkers for the current event
     }
 
     initMap(){
-        const { latitude, longitude } = JSON.parse(this.data.get("event"));
-
+        const { latitude, longitude, id} = JSON.parse(this.data.get("event"));
         this.map = new google.maps.Map(this.mapTarget, {
             center: new google.maps.LatLng(latitude || 39.5, longitude || -98.35),
             streetViewControl: false,
@@ -121,9 +153,6 @@ export default class extends Controller {
 
         // this.addMarkerButtonTarget.index = -4;
         // this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(this.addMarkerButtonTarget);
-
-
-        var myLatlng = new google.maps.LatLng(latitude || 39.5, longitude || -98.35);
         var counterProtestor = {
             path: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm33.8 189.7l80-48c11.6-6.9 24 7.7 15.4 18L343.6 208l33.6 40.3c8.7 10.4-3.9 24.8-15.4 18l-80-48c-7.7-4.7-7.7-15.9 0-20.6zm-163-30c-8.6-10.3 3.8-24.9 15.4-18l80 48c7.8 4.7 7.8 15.9 0 20.6l-80 48c-11.5 6.8-24-7.6-15.4-18l33.6-40.3-33.6-40.3zM248 288c51.9 0 115.3 43.8 123.2 106.7 1.7 13.6-8 24.6-17.7 20.4-25.9-11.1-64.4-17.4-105.5-17.4s-79.6 6.3-105.5 17.4c-9.8 4.2-19.4-7-17.7-20.4C132.7 331.8 196.1 288 248 288z",
             fillColor: '#E32831',
@@ -132,39 +161,54 @@ export default class extends Controller {
             scale: 0.1
         };
 
+        $.get(`/events/${id}/map/marker`, {
+            event_id: id
+        }).then((map_markers) => {
+            map_markers.forEach(marker => {
+                let latLng = new google.maps.LatLng(marker.latitude, marker.longitude);
+                let new_marker = new google.maps.Marker({
+                    position: latLng,
+                    icon: counterProtestor
+                });
+                new_marker.setMap(this.map);
+            })
+        }).catch(err => console.log(err));
+
+
+        var myLatlng = new google.maps.LatLng(latitude || 39.5, longitude || -98.35);
+
 
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title:"Hello World!",
-            icon: counterProtestor
+            icon: counterProtestor,
         });
 
-        var infowindow = new google.maps.InfoWindow({
-            content: '<div id="content" onclick="console.log(this.parentNode)">'+
-                '<div id="siteNotice">'+
-                '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-                '<div id="bodyContent" >'+
-                '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-                'sandstone rock formation in the southern part of the '+
-                'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-                'south west of the nearest large town, Alice Springs; 450&#160;km '+
-                '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-                'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-                'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-                'Aboriginal people of the area. It has many springs, waterholes, '+
-                'rock caves and ancient paintings. Uluru is listed as a World '+
-                'Heritage Site.</p>'+
-                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-                'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-                '(last visited June 22, 2009).</p>'+
-                '</div>'+
-                '</div>'
-        });
-
-        marker.addListener('click', function() {
-            infowindow.open(this.map, marker);
-        });
+        // var infowindow = new google.maps.InfoWindow({
+        //     content: '<div id="content" onclick="console.log(this.parentNode)">'+
+        //         '<div id="siteNotice">'+
+        //         '</div>'+
+        //         '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+        //         '<div id="bodyContent" >'+
+        //         '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+        //         'sandstone rock formation in the southern part of the '+
+        //         'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+        //         'south west of the nearest large town, Alice Springs; 450&#160;km '+
+        //         '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+        //         'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+        //         'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+        //         'Aboriginal people of the area. It has many springs, waterholes, '+
+        //         'rock caves and ancient paintings. Uluru is listed as a World '+
+        //         'Heritage Site.</p>'+
+        //         '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+        //         'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+        //         '(last visited June 22, 2009).</p>'+
+        //         '</div>'+
+        //         '</div>'
+        // });
+        //
+        // marker.addListener('click', function() {
+        //     infowindow.open(this.map, marker);
+        // });
         marker.setMap(this.map);
         this.resizeMap();
     }

@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   include EventsHelper
+  include SessionsHelper
   before_action :set_event, only: [:show, :edit, :update, :destroy, :map]
+  before_action :require_login
 
   # GET /events
   # GET /events.json
