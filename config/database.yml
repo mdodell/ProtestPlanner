@@ -6,18 +6,19 @@ default: &default
 production:
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV.fetch("HEROKU_DATABASE_KEY") %>
+  database: <%= ENV.fetch("HEROKU_DATABASE_KEY"){""} %>
   pool: 5
-  username: <%= ENV.fetch("HEROKU_USER_KEY") %>
-  password: <%= ENV.fetch("HEROKU_PASSWORD") %>
+  username: <%= ENV.fetch("HEROKU_USER_KEY"){""} %>
+  password: <%= ENV.fetch("HEROKU_PASSWORD"){""} %>
 
 development:
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: development
   pool: 5
-#  username: riseup
-#  password: riseup
+  username: riseup
+  password: riseup
 
 test:
   <<: *default
