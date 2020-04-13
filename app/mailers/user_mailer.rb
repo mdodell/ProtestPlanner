@@ -20,6 +20,6 @@ class UserMailer < ApplicationMailer
   def notification(event, user)
     @event = event
     @user = user
-    mail to: user.email, subject: "Notification from RiseUp!"
+    mail to: @user.email, subject: "Notification from RiseUp!"
   end
 end
