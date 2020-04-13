@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'events/:id/map', to: 'events#map', as: 'map'
   get '/browse', to: 'events#browse', as: 'browse_filter'
   get '/browse_results' => 'events#search', :as => 'browse_results'
+  get '/browse_keyword_results' => 'events#search_keyword', :as => 'browse_keyword_results'
 
   get  '/signup',  to: 'users#new'
 

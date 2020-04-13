@@ -1,15 +1,14 @@
 
-
 <div class="card border-0" >
   <div class="card-header border-0 bg-white" >
-    <h1 class="display-4">Upcoming Events I am attending</h1>
+    <h1 class="display-4">Events organized history</h1>
   </div>
  
   <div class="card-body border-0">
     <div class="card-deck ">
         <% @valid_events = [] %>
-        <% UserEventRelationship.where(role_type_id: '1', user_id: current_user.id ).each do |relationship| %>
-            <% if relationship.event.date_from >= DateTime.now %>
+        <% UserEventRelationship.where(role_type_id: '0', user_id: current_user.id ).each do |relationship| %>
+            <% if relationship.event.date_from < DateTime.now %>
                 <% @valid_events << relationship.event %>
             <% end %>
         <% end %>
@@ -37,8 +36,7 @@
             <% end %>
 
         <% else %>
-            <h3>You have not signed up for any upcoming events yet...</h3>
+            <h3>You have not attended any events yet...</h3>
         <% end %>
   </div>
 </div>
-

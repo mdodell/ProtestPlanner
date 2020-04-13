@@ -25,6 +25,14 @@ module EventsHelper
     end
   end
 
+  def get_upcoming_nearby_events_within_radius (radius)
+    if(session[:coordinates])
+      Event.near([session[:coordinates]['latitude'], session[:coordinates]['longitude']], radius).where('date_to >= ?', DateTime.now).order('date_from ASC')
+    else
+      nil
+    end
+  end
+
   def generate_description event
     "#{event.name} is a #{get_tags(event).join(",")} type of protest that will be happening from #{get_full_date_and_time(event.date_from)} to #{get_full_date_and_time(event.date_to)}. The event will be happening at #{event.location}."
   end
