@@ -1,18 +1,18 @@
 {
-  "application.js": "/packs/js/application-7a6f66956cee56328551.js",
-  "application.js.map": "/packs/js/application-7a6f66956cee56328551.js.map",
+  "application.js": "/packs/js/application-8095516eaa3712218581.js",
+  "application.js.map": "/packs/js/application-8095516eaa3712218581.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-7a6f66956cee56328551.js"
+        "/packs/js/application-8095516eaa3712218581.js"
       ],
       "js.map": [
-        "/packs/js/application-7a6f66956cee56328551.js.map"
+        "/packs/js/application-8095516eaa3712218581.js.map"
       ]
     }
   },
   "media/fonts/Flaticon.eot": "/packs/media/fonts/Flaticon-3056160392c55281735c39857e8e2f48.eot",
-  "media/fonts/Flaticon.svg": "/packs/media/fonts/Flaticon-cebcef19d71c1c67066c68d1d1aac27f.svg",
+  "media/fonts/Flaticon.svg": "/packs/media/fonts/Flaticon-d7c6f8f115ed9ebcd0ffba1473c2d9a2.svg",
   "media/fonts/Flaticon.ttf": "/packs/media/fonts/Flaticon-4f32ecd90f5cc3cea4e0f8a73b503ae3.ttf",
   "media/fonts/Flaticon.woff": "/packs/media/fonts/Flaticon-8878a85f966b02728a65e48bde6e2d0f.woff",
   "media/fonts/Flaticon.woff2": "/packs/media/fonts/Flaticon-4a34a649d1a47847aa1cb31f75b2c7b1.woff2",

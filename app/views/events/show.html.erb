@@ -27,7 +27,7 @@
         </div>
         <div class="col-sm row no-gutters align-items-center justify-content-end">
           <%if correct_editor(current_user, @event) %>
-            <%= link_to 'Manage Protest', edit_event_path(@event) , class: "btn-info btn mr-2" %>
+            <%= link_to 'Manage Protest', manage_event_path(:event_id => @event.id) , class: "btn-info btn mr-2" %>
             <%else %>
             <%= link_to 'Apply to be an Organizer', "/apply_organizer" + "?event_id=#{@event.id}", class: "btn-info btn mr-2" %>
           <%end %>

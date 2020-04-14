@@ -7,9 +7,12 @@ Rails.application.routes.draw do
 
   get '/home', to: 'events#index', as: 'home'
 
+  get '/events/manage_event/:event_id', to: 'events#manage_event', as: 'manage_event'
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
-  get 'events/:id/map', to: 'events#map', as: 'map'
+  get '/events/:id/map', to: 'events#map', as: 'map'
+  get '/events/:id/map/marker', to: 'markers#show', as: 'get_markers'
+  post '/events/:id/map/marker', to: 'markers#create', as: 'add_marker'
   get '/browse', to: 'events#browse', as: 'browse_filter'
   get '/browse_results' => 'events#search', :as => 'browse_results'
   get '/browse_keyword_results' => 'events#search_keyword', :as => 'browse_keyword_results'
@@ -24,6 +27,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+
 
 
   get '/search' => 'pages#search', :as => 'search_page'

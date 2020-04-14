@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_172005) do
   end
 
   create_table "map_markers", force: :cascade do |t|
-    t.string "message"
+    t.integer "user_id"
     t.float "latitude"
     t.float "longitude"
     t.integer "event_id"
