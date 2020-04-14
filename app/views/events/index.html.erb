@@ -1,36 +1,20 @@
 <%= provide(:title, 'home') %>
-
-
-
   <% if current_user %>
-    
     <%= render 'shared/navbar_dark' %>
-    
     <div class="row justify-content-center no-gutters">
     <div class="container-xl mt-5">
     <%= render 'shared/home_hero' %>
-
     <!-- find events user is an organizer for -->
-    <div id="organized">
-      <%= render 'events/eventsorganized' %>
-    </div>
+      <%= render 'event_card_deck', events: get_user_organizing_future_events, section_title: "Upcoming Events I am organizing", no_events_message: "You have not organized for any upcoming events yet..."%>
     <!-- find events user is an attending for -->
-      <div id="attending">
-        <%= render 'events/eventsattending' %>
-      </div>
-  
-
+        <%= render 'event_card_deck', events: get_user_attending_future_events, section_title: "Upcoming Events I am attending", no_events_message: "You have not signed up for any upcoming events yet..."%>
       <!-- find nearby events -->
-      <div id="nearby">
-        <%= render 'events/nearbyevents' %>
-      </div>
-  
+      <%= render 'event_card_deck', events: get_upcoming_nearby_events_within_radius(5), no_events_message: "There are no upcoming events near you!", section_title: "Upcoming Nearby Events" %>
     <div class='ml-3 mt-3'>
       Logged in as <%= current_user.user_name %>
     </div>
   </div>
   </div>
-
   <% else %>
     <%= link_to "Sign Up", signup_path %> or
     <%= link_to "Log In", login_path %>

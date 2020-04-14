@@ -22,7 +22,7 @@ class Event < ApplicationRecord
     end
 
     def valid_date
-        if date_from.present? && (date_from < DateTime.current)
+        if date_from.present? && (date_from < DateTime.now)
             errors.add(:date_from, "Starting date cannot be in the past!")
         end
     end
