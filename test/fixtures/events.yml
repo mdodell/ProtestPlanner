@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  tags: 1
+  tags: MyString
   date_from: 2020-02-07
   date_to: 2020-02-07
   location: MyString
@@ -10,7 +10,7 @@ one:
 
 two:
   name: MyString
-  tags: 1
+  tags: MyString
   date_from: 2020-02-07
   date_to: 2020-02-07
   location: MyString
