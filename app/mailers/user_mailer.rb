@@ -14,6 +14,12 @@ class UserMailer < ApplicationMailer
     @organizer = organizer
     @attendee = attendee
     @event = event
-    mail to: @organizer.email, subject: "Apply to be an Organizer for event #{event.name}"
+    mail to: @organizer.email, subject: "Application to be an Organizer for event #{event.name}"
+  end
+
+  def notification(event, user)
+    @event = event
+    @user = user
+    mail to: @user.email, subject: "Notification from RiseUp!"
   end
 end

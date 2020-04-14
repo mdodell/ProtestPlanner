@@ -37,6 +37,11 @@ class EventsController < ApplicationController
       @results =  @tags.all & @date.all & @loc.all
   end
 
+  def manage_event
+    @event = Event.find(params[:event_id])
+    @user = current_user
+  end
+
 
 
   def search_keyword
@@ -180,6 +185,9 @@ end
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    UserEventRelationship.where(event_id: @event.id).map do |relationship|
+      relationship.destroy
+    end
     @event.destroy
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/home', to: 'events#index', as: 'home'
 
+  get '/events/manage_event/:event_id', to: 'events#manage_event', as: 'manage_event'
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
   get '/events/:id/map', to: 'events#map', as: 'map'
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+
 
 
   get '/search' => 'pages#search', :as => 'search_page'

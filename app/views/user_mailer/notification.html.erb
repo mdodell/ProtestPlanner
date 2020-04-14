@@ -1,0 +1,12 @@
+<h1>Protest Planner</h1>
+
+<p>Hi <%= @user.user_name %>,</p>
+
+<p>
+  the Protest <%= @event.name %> you registered is coming! it will start at <%= @event.date_from %>.
+</p>
+
+<p>
+
+  <%= link_to "Rise Up!", event_url(@event) %>
+</p>
