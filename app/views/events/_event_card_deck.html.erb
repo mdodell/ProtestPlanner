@@ -1,18 +1,20 @@
 <h1 class="display-4"><%= section_title %></h1>
 <% unless events.empty? %>
-  <div class="row">
+  <div class="card-deck row">
     <% events.each do |event| %>
-      <div class="col-xl-4 col-md-6 col-xs-12">
-        <div class="card text-black bg-light mb-4 p-0">
-        <div class="card-img-top"><%= image_tag(get_event_image_or_default(event), class: "w-100 container-image p-2") %> </div>
+      <div class="col-lg-4 col-md-6 col-xs-12 mb-4 d-flex">
+        <div class="card flex-fill text-black bg-light p-0">
+        <%= image_tag(get_event_image_or_default(event), class: "card-img-top") %>
         <div class="card-body">
           <h2 class="card-title"><%= event.name %></h2>
           <h5 class="card-text"><%= DateTime.parse(event.date_from.to_s).strftime("%A, %d %b %Y %l:%M %p")%></h5>
           <p class="card-text "><%= event.location %></p>
-          <p class="card-text"><%= link_to 'Event Page', event_path(event), class: "btn-primary btn" %></p>
         </div>
+          <div class="card-footer">
+            <%= link_to 'Event Page', event_path(event), class: "text-white btn-primary btn" %>
+          </div>
       </div>
-    </div>
+      </div>
     <% end %>
   </div>
 <% else %>
