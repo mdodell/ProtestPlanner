@@ -1,4 +1,5 @@
 import { Controller } from 'stimulus';
+import { RALLY_ICON, POLICE_ICON, ROAD_BLOCKED, COUNTER_PROTESTORS, END, MAP_MARKER } from '../icons/map_icons';
 
 export default class extends Controller {
 
@@ -50,7 +51,78 @@ export default class extends Controller {
         $.post(`/events/${protest_event.id}/map/marker`, {
             ...marker_params,
             event_id: protest_event.id
-        }).then(() => console.log("called!")); // This will let us fetch a list of events. This can be used to get mapmarkers for the current event
+        }).catch(error => console.log(error));
+    }
+
+    loadMarkers(id, map){
+        $.get(`/events/${id}/map/marker`, {
+            event_id: id
+        }).then((map_markers) => {
+            map_markers.forEach(marker => {
+                console.log(marker);
+                let latLng = new google.maps.LatLng(marker.latitude, marker.longitude);
+                let icon = {
+                    path: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm33.8 189.7l80-48c11.6-6.9 24 7.7 15.4 18L343.6 208l33.6 40.3c8.7 10.4-3.9 24.8-15.4 18l-80-48c-7.7-4.7-7.7-15.9 0-20.6zm-163-30c-8.6-10.3 3.8-24.9 15.4-18l80 48c7.8 4.7 7.8 15.9 0 20.6l-80 48c-11.5 6.8-24-7.6-15.4-18l33.6-40.3-33.6-40.3zM248 288c51.9 0 115.3 43.8 123.2 106.7 1.7 13.6-8 24.6-17.7 20.4-25.9-11.1-64.4-17.4-105.5-17.4s-79.6 6.3-105.5 17.4c-9.8 4.2-19.4-7-17.7-20.4C132.7 331.8 196.1 288 248 288z",
+                    fillColor: '#77D353',
+                    fillOpacity: 1,
+                    strokeWeight: 0,
+                    scale: 0.1
+                };
+
+                switch(marker.marker_type){
+                    case 'police':
+                        icon = {
+                            path: POLICE_ICON,
+                            fillColor: '#17a2b8',
+                            fillOpacity: 1,
+                            strokeWeight: 0,
+                            scale: 0.1
+                        };
+                        break;
+                    case 'rally_point':
+                        icon = {
+                            path: RALLY_ICON,
+                            fillColor: '#77D353',
+                            fillOpacity: 1,
+                            strokeWeight: 0,
+                            scale: 0.1
+                        };
+                        break;
+                    case 'road_blocked':
+                        icon = {
+                            path: ROAD_BLOCKED,
+                            fillColor: '#6c757d',
+                            fillOpacity: 1,
+                            strokeWeight: 0,
+                            scale: 0.1
+                        };
+                        break;
+                    case 'counter_protestors':
+                        icon = {
+                            path: COUNTER_PROTESTORS,
+                            fillColor: '#dc3545',
+                            fillOpacity: 1,
+                            strokeWeight: 0,
+                            scale: 0.1
+                        };
+                        break;
+                    case 'end':
+                        icon = {
+                            path: END,
+                            fillColor: '#dc3545',
+                            fillOpacity: 1,
+                            strokeWeight: 0,
+                            scale: 0.1
+                        };
+                        break;
+                }
+                let new_marker = new google.maps.Marker({
+                    position: latLng,
+                    icon: icon
+                });
+                new_marker.setMap(map);
+            })
+        }).catch(err => console.log(err));
     }
 
     initMap(){
@@ -63,6 +135,13 @@ export default class extends Controller {
             zoomControl: false,
             zoom: latitude == null ? 4 : 17,
             styles: [
+                {
+                    "featureType": "poi",
+                    "elementType": "labels",
+                    "stylers": [
+                        { "visibility": "off" }
+                    ]
+                },
                 {
                     "featureType": "transit",
                     "elementType": "labels",
@@ -151,64 +230,23 @@ export default class extends Controller {
             ]
         });
 
-        // this.addMarkerButtonTarget.index = -4;
-        // this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(this.addMarkerButtonTarget);
-        var counterProtestor = {
-            path: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm33.8 189.7l80-48c11.6-6.9 24 7.7 15.4 18L343.6 208l33.6 40.3c8.7 10.4-3.9 24.8-15.4 18l-80-48c-7.7-4.7-7.7-15.9 0-20.6zm-163-30c-8.6-10.3 3.8-24.9 15.4-18l80 48c7.8 4.7 7.8 15.9 0 20.6l-80 48c-11.5 6.8-24-7.6-15.4-18l33.6-40.3-33.6-40.3zM248 288c51.9 0 115.3 43.8 123.2 106.7 1.7 13.6-8 24.6-17.7 20.4-25.9-11.1-64.4-17.4-105.5-17.4s-79.6 6.3-105.5 17.4c-9.8 4.2-19.4-7-17.7-20.4C132.7 331.8 196.1 288 248 288z",
-            fillColor: '#E32831',
+        this.loadMarkers(id, this.map);
+
+        const eventStartLatlng = new google.maps.LatLng(latitude || 39.5, longitude || -98.35);
+
+        var startMarker = {
+            path: MAP_MARKER,
+            fillColor: '#ffc107',
             fillOpacity: 1,
             strokeWeight: 0,
             scale: 0.1
         };
 
-        $.get(`/events/${id}/map/marker`, {
-            event_id: id
-        }).then((map_markers) => {
-            map_markers.forEach(marker => {
-                let latLng = new google.maps.LatLng(marker.latitude, marker.longitude);
-                let new_marker = new google.maps.Marker({
-                    position: latLng,
-                    icon: counterProtestor
-                });
-                new_marker.setMap(this.map);
-            })
-        }).catch(err => console.log(err));
-
-
-        var myLatlng = new google.maps.LatLng(latitude || 39.5, longitude || -98.35);
-
-
         var marker = new google.maps.Marker({
-            position: myLatlng,
-            icon: counterProtestor,
+            position: eventStartLatlng,
+            icon: startMarker,
         });
 
-        // var infowindow = new google.maps.InfoWindow({
-        //     content: '<div id="content" onclick="console.log(this.parentNode)">'+
-        //         '<div id="siteNotice">'+
-        //         '</div>'+
-        //         '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-        //         '<div id="bodyContent" >'+
-        //         '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-        //         'sandstone rock formation in the southern part of the '+
-        //         'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-        //         'south west of the nearest large town, Alice Springs; 450&#160;km '+
-        //         '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-        //         'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-        //         'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-        //         'Aboriginal people of the area. It has many springs, waterholes, '+
-        //         'rock caves and ancient paintings. Uluru is listed as a World '+
-        //         'Heritage Site.</p>'+
-        //         '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-        //         'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-        //         '(last visited June 22, 2009).</p>'+
-        //         '</div>'+
-        //         '</div>'
-        // });
-        //
-        // marker.addListener('click', function() {
-        //     infowindow.open(this.map, marker);
-        // });
         marker.setMap(this.map);
         this.resizeMap();
     }

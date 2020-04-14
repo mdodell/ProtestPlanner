@@ -1,8 +1,13 @@
 require 'test_helper'
+require_relative '../helpers/sign_in_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
+  include SignInHelper
+  fixtures :users
+
   setup do
     @event = events(:one)
+    sign_in_as(users(:one), 'secret')
   end
 
   test "should get index" do

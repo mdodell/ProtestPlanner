@@ -7,7 +7,7 @@
         <%= image_tag(get_event_image_or_default(event), class: "card-img-top") %>
         <div class="card-body">
           <h2 class="card-title"><%= event.name %></h2>
-          <h5 class="card-text"><%= DateTime.parse(event.date_from.to_s).strftime("%A, %d %b %Y %l:%M %p")%></h5>
+          <h5 class="card-text"><%= get_full_date_and_time(event.date_from) %></h5>
           <p class="card-text "><%= event.location %></p>
         </div>
           <div class="card-footer">
