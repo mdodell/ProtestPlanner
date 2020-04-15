@@ -17,6 +17,8 @@ development:
   encoding: unicode
   database: development
   pool: 5
+  username: riseup 
+  password: riseup 
 
 test:
   <<: *default
