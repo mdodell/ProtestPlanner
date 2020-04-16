@@ -1,5 +1,5 @@
 <h1 class="display-4"><%= section_title %></h1>
-<% unless events && events.empty? %>
+<% unless events.nil? && events.empty? %>
   <div class="card-deck row">
     <% events.each do |event| %>
       <div class="col-lg-4 col-md-6 col-xs-12 mb-4 d-flex">
