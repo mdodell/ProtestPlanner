@@ -45,23 +45,23 @@
           <div class="modal-body">
             <div class="row d-flex flex-wrap justify-content-around align-items-start">
               <div class="col-4 d-flex text-center flex-column justify-content-center align-items-center">
-                <%= far_icon('flag', class: "text-primary", size: '5x', id: "rally_point", data: { action: "click->maps#addMarker"} ) %>
+                <%= far_icon('flag', class: "text-primary fa-clickable", size: '5x', id: "rally_point", data: { action: "click->maps#addMarker"} ) %>
                 <p class="font-weight-bolder mt-1">Rally Point</p>
               </div>
               <div class="col-4 d-flex text-center flex-column justify-content-start align-items-center">
-                <i class="fi flaticon flaticon-5x flaticon-policeman text-info" id="police" data-action="click->maps#addMarker"></i>
+                <i class="fi flaticon flaticon-5x flaticon-policeman text-info fa-clickable" id="police" data-action="click->maps#addMarker"></i>
                 <p class="font-weight-bolder mt-1">Police</p>
               </div>
               <div class="col-4 d-flex text-center flex-column justify-content-center align-items-center">
-                <%= far_icon('angry', class: "text-danger", size: '5x', id: "counter_protestors", data: { action: "click->maps#addMarker"}) %>
+                <%= far_icon('angry', class: "text-danger fa-clickable", size: '5x', id: "counter_protestors", data: { action: "click->maps#addMarker"}) %>
                 <p class="font-weight-bolder mt-1">Counter Protestors</p>
               </div>
               <div class="col-4 d-flex text-center flex-column justify-content-center align-items-center">
-                <%= fa_icon('ban', class: "text-secondary", size: '5x', id: "road_blocked", data: { action: "click->maps#addMarker"}) %>
+                <%= fa_icon('ban', class: "text-secondary fa-clickable", size: '5x', id: "road_blocked", data: { action: "click->maps#addMarker"}) %>
                 <p class="font-weight-bolder mt-1">Road Blocked</p>
               </div>
               <div class="col-4 d-flex text-center flex-column justify-content-center align-items-center">
-                <%= fa_icon('hand-paper', class: "text-danger", size: '5x', id: "end",  data: { action: "click->maps#addMarker"}) %>
+                <%= fa_icon('hand-paper', class: "text-danger fa-clickable", size: '5x', id: "end",  data: { action: "click->maps#addMarker"}) %>
                 <p class="font-weight-bolder mt-1">End Marker</p>
               </div>
               <div class="col-4"></div>

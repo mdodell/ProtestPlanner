@@ -14,6 +14,11 @@
   opacity: 0.9;
 }
 
+.fa-clickable {
+  cursor:pointer;
+  outline:none;
+}
+
 @include respond-above(xs) {
   .flash-alert {
     top: 10%;
