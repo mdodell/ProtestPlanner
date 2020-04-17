@@ -4,4 +4,17 @@
   <br>
   <%= link_to 'Destroy Event', event_path(@event), method: :delete, class: "btn-info btn mr-2" %>
 
+  <div class="container text-center">
+
+    <form accept-charset="UTF-8" action="/send_notification" method="post">
+
+      <label for="content">Compose the message: </label>
+      <input id="content" name="content"
+             type="text" />
+      <input type="hidden" name="event_id" value= <%= @event.id %>>
+
+      <input class="btn btn-primary" type="submit">Send Notification to Members</button>
+    </form>
+  </div>
+
 </div>

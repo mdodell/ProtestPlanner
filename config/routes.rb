@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/browse', to: 'events#browse', as: 'browse_filter'
   get '/browse_results' => 'events#search', :as => 'browse_results'
   get '/browse_keyword_results' => 'events#search_keyword', :as => 'browse_keyword_results'
+  post '/send_notification', to: 'events#send_notification'
 
   get  '/signup',  to: 'users#new'
 
