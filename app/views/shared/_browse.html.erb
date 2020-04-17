@@ -1,56 +1,26 @@
-
-
-<!-- Include jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-<script>
-    $(document).ready(function(){
-        var date_input=$('input[name="specificDate"]'); //our date input has the name "specificDate"
-        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-        date_input.datepicker({
-            format: 'yyyy/mm/dd',
-            container: container,
-            todayHighlight: true,
-            autoclose: true,
-        })
-    })
-</script>
-
-<br>
 <h1 class='display-4 text-primary'>Search by Filter</h1>
-<br>
 
-  <!--Event Details -->
+<!--Event Details -->
 
-        <%= bootstrap_form_tag url: '/browse_results', method: :get do |f| %>
+<%= bootstrap_form_tag url: '/browse_results', data: {controller: 'places'}, method: :get do |f| %>
 
-          <h3>I'm looking for a protest in...</h3>
-          <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group', data: { target: "places.field", action: "keydown->places#keydown" }%>
-          
-          <h3>I want to rise up for...</h3>
-          <%= f.collection_select :tags, Tag.all, :id, :name, { placeholder: "Tag Id", include_hidden: false, hide_label: true, required: true}, { multiple: false, class: "selectpicker" } %>
-          
-          <h3>The date which best suits me is...</h3>
-          
+  <h3>I'm looking for a protest in...</h3>
+  <%= f.text_field :location, default: 'Any Location', placeholder: "Any Location", hide_label: true, input_group_class: 'input-group', data: {target: "places.field", action: "keydown->places#keydown"} %>
+  <%= f.hidden_field :latitude, step: :any, data: {target: "places.latitude"} %>
+  <%= f.hidden_field :longitude, step: :any, data: {target: "places.longitude"} %>
+  <h3>I want to rise up for...</h3>
+  <%= f.collection_select :tags, Tag.all, :id, :name, {placeholder: "Tag Id", include_hidden: false, hide_label: true, required: true}, {multiple: false, class: "selectpicker"} %>
 
-          <%= f.select :date, [['Any Day', 'Any Day'], ['Today', 'Today'], ['Tomorrow', 'Tomorrow'], ['This Week', 'This Week'], 
-          ['Next Week', 'Next Week'], ['This Month', 'This Month'], ['Next Month', 'Next Month']], { hide_label: true}, 
-          { class: "selectpicker" } %>
+  <h3>The date which best suits me is...</h3>
 
 
-          <!-- <%= f.check_box :selectTrue, label:'I want to select a specific date...'%> -->
-          <!-- <div class="form-group">  -->
-          <!-- <input class="form-control" id="specificDate" name="date" placeholder="YYYY/MM/DD" type="text"/> -->
-          <!-- </div> -->
-          <!-- <br> -->
-          
-          
-          <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white" %>
-        <% end %>
+  <%= f.select :date, [['Any Day', 'Any Day'], ['Today', 'Today'], ['Tomorrow', 'Tomorrow'], ['This Week', 'This Week'],
+                       ['Next Week', 'Next Week'], ['This Month', 'This Month'], ['Next Month', 'Next Month']], {hide_label: true},
+               {class: "selectpicker"} %>
+
+
+  <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white" %>
+<% end %>
       
   
 
