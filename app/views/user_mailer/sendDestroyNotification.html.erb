@@ -1,0 +1,12 @@
+<h1>Protest Planner</h1>
+
+<p>Hi <%= @user.user_name %>,</p>
+
+<p>
+  the Protest <%= @event.name %> got cancelled
+</p>
+
+<p>
+  Log in to browse other nearby protest!
+  <%= link_to "Rise Up!", root_url %>
+</p>

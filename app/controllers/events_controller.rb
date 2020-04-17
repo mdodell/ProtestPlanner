@@ -185,6 +185,10 @@ end
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    @event.users.each do |user|
+      UserMailer.sendDestroyNotification(user)
+    end
+
     UserEventRelationship.where(event_id: @event.id).map do |relationship|
       relationship.destroy
     end
