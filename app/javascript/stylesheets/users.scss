@@ -4,6 +4,10 @@
   width: 75vw;
 }
 
+.user-image {
+  border-radius: 50%!important;
+}
+
 @include respond-above(md) {
   .sign-up-container {
     width: 50vw;

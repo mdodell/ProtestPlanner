@@ -42,8 +42,6 @@ class EventsController < ApplicationController
     @user = current_user
   end
 
-
-
   def search_keyword
     d = params[:date]
     if d == 'Any Day'
