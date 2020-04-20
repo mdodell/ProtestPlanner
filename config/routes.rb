@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get '/home', to: 'events#index', as: 'home'
 
+  post '/remove_attendee', to: 'events#remove_attendee', as: 'remove_attendee'
+
   get '/events/manage_event/:event_id', to: 'events#manage_event', as: 'manage_event'
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
   get '/browse_results' => 'events#search', :as => 'browse_results'
   get '/browse_keyword_results' => 'events#search_keyword', :as => 'browse_keyword_results'
   post '/send_notification', to: 'events#send_notification'
+
+
 
   get  '/signup',  to: 'users#new'
 

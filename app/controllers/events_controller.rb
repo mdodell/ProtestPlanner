@@ -51,6 +51,14 @@ class EventsController < ApplicationController
     redirect_to @event
   end
 
+  def remove_attendee
+    @event = Event.find(params[:event_id].to_i)
+    @user = User.find(params[:user_id].to_i)
+    @event.users.delete(@user)
+    flash[:success] = "User are successfully moved out"
+    redirect_to manage_event_path(@event)
+  end
+
 
 
   def search_keyword
