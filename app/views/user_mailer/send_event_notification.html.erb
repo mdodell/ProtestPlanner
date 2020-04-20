@@ -3,10 +3,10 @@
 <p>Hi <%= @user.user_name %>,</p>
 
 <p>
-  the Protest <%= @event_name %> got cancelled
+  <%= @content %>
 </p>
 
 <p>
   Log in to browse other nearby protest!
-  <%= link_to "Rise Up!", root_url %>
+  <%= link_to "Check the Event", @event %>
 </p>

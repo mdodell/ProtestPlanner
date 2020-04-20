@@ -23,8 +23,16 @@ class UserMailer < ApplicationMailer
     mail to: @user.email, subject: "Notification from RiseUp!"
   end
 
-  def sendDestroyNotification(user)
+  def sendDestroyNotification(event_name, user)
     @user = user
+    @event_name = event_name
+    mail to: @user.email, subject: "Protest Cancel Notification from RiseUp!"
+  end
+
+  def send_event_notification(user, event, content)
+    @user = user
+    @event = event
+    @content = content
     mail to: @user.email, subject: "Protest Cancel Notification from RiseUp!"
   end
 end

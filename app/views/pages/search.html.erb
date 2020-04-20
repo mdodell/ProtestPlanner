@@ -1,27 +1,5 @@
-<!-- Include jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-<script>
-    $(document).ready(function(){
-        var date_input=$('input[name="specificDate"]'); //our date input has the name "specificDate"
-        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-        date_input.datepicker({
-            format: 'yyyy/mm/dd',
-            container: container,
-            todayHighlight: true,
-            autoclose: true,
-        })
-    })
-</script>
-
 <%= render 'shared/navbar_dark' %>
 
-
- 
 <div class="row justify-content-center no-gutters">
 <div class="container-xl mt-5">
 

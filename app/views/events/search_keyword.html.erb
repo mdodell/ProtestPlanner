@@ -22,8 +22,7 @@
 <br>
 
 
-<% if @results != nil %> 
-
+<% if @results != nil %>
         <div class="card-deck">
             <% @results.uniq.sort_by(&:date_from).each do |event| %>
                 <div class='col-sm-4'>
@@ -47,9 +46,5 @@
             <% end %>
         </div>
 <%end%>
-
-
-
-
 </div>
 </div>
