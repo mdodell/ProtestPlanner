@@ -1,4 +1,4 @@
-# README: Protest Planner 
+# RiseUp
 
 ## **Intro**  
 
