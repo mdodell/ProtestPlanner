@@ -19,9 +19,12 @@
           <div class="card" style="width: 30rem;">
             <div class="card-header font-weight-bold bg-light">Attendees</div>
               <div class="card-body">
+                <h5 class="card-title">Attendees</h5>
                 <h5 class="card-text font-weight-light">
                     <!-- attending: </b><%= UserEventRelationship.where(role_type_id: '1', user_name: current_user.user_name).display%>
                      </b><%= current_user.user_name %></h2> -->
+                    <p>Below are the attendees for this event</p>
+
                   <table class="table table-hover">
                     <thead>
                     <tr>
@@ -42,6 +45,7 @@
                   </table>
 
                   </h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
           </div>
         </div>
@@ -50,10 +54,11 @@
           <div class="card" style="width: 30rem;">
             <div class="card-header font-weight-bold bg-light">Organizers</div>
               <div class="card-body">
+                <h5 class="card-title">Organizers</h5>
                 <h5 class="card-text font-weight-light">
                     <!-- attending: </b><%= UserEventRelationship.where(role_type_id: '1', user_name: current_user.user_name).display%>
                      </b><%= current_user.user_name %></h2> -->
-                    <p><b>Below are the organizers for this event:</b></p>
+                    <p>Below are the organizers for this event:</p>
                     <% UserEventRelationship.where(event_id: @event, role_type_id: '0').each do |user| %>
                     <p><%=User.find(user.user_id).user_name%>
                     <%end%>
@@ -72,7 +77,7 @@
 
     <form accept-charset="UTF-8" action="/send_notification" method="post">
 
-      <label for="content"><h3>Send a message to your attendees!: </h3></label>
+      <label for="content">Compose the message: </label>
       <input id="content" name="content"
              type="text" />
       <input type="hidden" name="event_id" value= <%= @event.id %>>
