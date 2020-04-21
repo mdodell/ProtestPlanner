@@ -1,3 +1,5 @@
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
 <%= render 'shared/navbar_light' %>
 <div class="w-100 bg-light position-relative">
   <div class="background-image" style="background-image: url(<%= get_event_image_or_default(@event) %>);"></div>
@@ -12,8 +14,8 @@
       </div>
       <div class="col-md-4 bg-light">
         <div class="ml-2">
-          <h1 class="display-4 mt-1 mb-0"><%= get_date_month_short(@event.date_to, true) %></h1>
-          <h1 class="display-4 m-0"><%= get_date_day_number(@event.date_to) %></h1>
+          <h1 class="display-4 mt-1 mb-0"><%= get_date_month_short(@event.date_from, true) %></h1>
+          <h1 class="display-4 m-0"><%= get_date_day_number(@event.date_from) %></h1>
           <h1 class="font-weight-bold"><%= @event.name %></h1>
           <!--TODO: Display Organizer Name/organization here-->
         </div>
@@ -49,7 +51,17 @@
             <h2>Date and Time</h2>
             <p class="m-0"><%= get_full_date(@event.date_from) %></p>
             <p class="m-0"><%= get_full_time(@event.date_from) %></p>
-            <%= link_to 'Add to Calendar', event_path(@event), class: "text-info"%>
+            <br>
+            <div title="Add to Calendar" class="addeventatc">
+              Add to Calendar
+              <span class="start"><%= @event.date_from %></span>
+              <span class="end"><%= @event.date_to %></span>
+              <span class="title"><%= @event.name %></span>
+              <span class="description"><%= @event.description %></span>
+              <span class="location"><%= @event.location %></span>
+        </div
+  
+</div>
           </div>
           <div class="col-md-11">
             <h2>Tags</h2>

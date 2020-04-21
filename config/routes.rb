@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get '/home', to: 'events#index', as: 'home'
 
+  post '/remove_attendee', to: 'events#remove_attendee', as: 'remove_attendee'
+
   get '/events/manage_event/:event_id', to: 'events#manage_event', as: 'manage_event'
   post '/events/:id/signup', to: 'events#register', as: 'register'
   delete '/events/:id/unregister', to: 'events#unregister', as: 'unregister'
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
   get '/events/:id/map/marker', to: 'markers#show', as: 'get_markers'
   post '/events/:id/map/marker', to: 'markers#create', as: 'add_marker'
   get '/browse', to: 'events#browse', as: 'browse'
+  post '/send_notification', to: 'events#send_notification'
 
   get  '/signup',  to: 'users#new'
 

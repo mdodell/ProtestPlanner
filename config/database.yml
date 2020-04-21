@@ -17,7 +17,6 @@ development:
   encoding: unicode
   database: development
   pool: 5
-
 test:
   <<: *default
   database: db/test.sqlite3

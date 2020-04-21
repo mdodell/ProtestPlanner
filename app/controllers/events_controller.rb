@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   include SessionsHelper
   before_action :set_event, only: [:show, :edit, :update, :destroy, :map]
   before_action :require_login
+  skip_before_action :verify_authenticity_token
 
   # GET /events
   # GET /events.json
@@ -19,8 +20,24 @@ class EventsController < ApplicationController
   end
 
   def manage_event
-    @event = Event.find(params[:event_id])
+    @event = Event.find(params[:event_id].to_i)
     @user = current_user
+  end
+
+  def send_notification
+    @event = Event.find(params[:event_id].to_i)
+    @event.users.map do |user|
+      UserMailer.send_event_notification(user, @event, params[:content]).deliver_now
+    end
+    redirect_to @event
+  end
+
+  def remove_attendee
+    @event = Event.find(params[:event_id].to_i)
+    @user = User.find(params[:user_id].to_i)
+    @event.users.delete(@user)
+    flash[:success] = "User are successfully moved out"
+    redirect_to manage_event_path(@event)
   end
 
   def map
@@ -131,8 +148,8 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event.users.each do |user|
-      UserMailer.sendDestroyNotification(user)
+    @event.users.map do |user|
+      UserMailer.sendDestroyNotification(@event.name, user).deliver_now
     end
 
     UserEventRelationship.where(event_id: @event.id).map do |relationship|
