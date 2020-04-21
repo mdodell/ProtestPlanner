@@ -10,70 +10,18 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def search
-        d = params[:date]
-        if d == 'Any Day'
-          @date = Event.where('date_from >= ?', DateTime.now)
-        elsif d == 'Today'
-          @date = Event.where(:date_from => DateTime.now.beginning_of_day..DateTime.now.end_of_day)
-        elsif d == 'Tomorrow'
-          @date = Event.where(:date_from => DateTime.tomorrow.beginning_of_day..DateTime.tomorrow.end_of_day)
-        elsif d == 'This Week'
-          @date = Event.where(:date_from => DateTime.now.beginning_of_week..DateTime.now.end_of_week) 
-        elsif d == 'Next Week'
-          @date = Event.where(:date_from => DateTime.now.beginning_of_week.advance(:days => +7)..DateTime.now.end_of_week.advance(:days => +7))
-        elsif d == 'This Month'
-          @date = Event.where(:date_from => DateTime.now.beginning_of_month..DateTime.now.end_of_month)
-        elsif d == 'Next Month'
-          @date = Event.where(:date_from => DateTime.now.beginning_of_month.advance(:months => +1)..DateTime.now.end_of_month.advance(:months => +1))
-        end
-        @tags = Tag.all.find(params[:tags][0]).events
-      if params[:location] == ''
-        @loc= Event.all
-      else
-        @loc= Event.all.where(location: params[:location])
-      end
-      
-      @results =  @tags.all & @date.all & @loc.all
+  def browse
+    event_params = params.permit(:keyword, :tags, :location, :latitude, :longitude, :date)
+    if(!event_params[:keyword].blank? || !event_params[:tags].blank? || !event_params[:location].blank? || !event_params[:date].blank?) # If any of the search parameters exist
+      @events = Event.filter(event_params)
+      @search_query = params
+    end
   end
 
   def manage_event
     @event = Event.find(params[:event_id])
     @user = current_user
   end
-
-  def search_keyword
-    d = params[:date]
-    if d == 'Any Day'
-      @date = Event.where('date_from >= ?', DateTime.now)
-    elsif d == 'Today'
-      @date = Event.where(:date_from => DateTime.now.beginning_of_day..DateTime.now.end_of_day)
-    elsif d == 'Tomorrow'
-      @date = Event.where(:date_from => DateTime.tomorrow.beginning_of_day..DateTime.tomorrow.end_of_day)
-    elsif d == 'This Week'
-      @date = Event.where(:date_from => DateTime.now.beginning_of_week..DateTime.now.end_of_week) 
-    elsif d == 'Next Week'
-      @date = Event.where(:date_from => DateTime.now.beginning_of_week.advance(:days => +7)..DateTime.now.end_of_week.advance(:days => +7))
-    elsif d == 'This Month'
-      @date = Event.where(:date_from => DateTime.now.beginning_of_month..DateTime.now.end_of_month)
-    elsif d == 'Next Month'
-      @date = Event.where(:date_from => DateTime.now.beginning_of_month.advance(:months => +1)..DateTime.now.end_of_month.advance(:months => +1))
-    end
-    @tags = Tag.all.find(params[:tags][0]).events
-  if params[:location] == ''
-    @loc= Event.all
-  else
-    @loc= Event.all.where(location: params[:location])
-  end
-  if params[:keyword].blank?  
-    @results =  []
-  else
-    @parameter = params[:keyword].downcase  
-    @key = Event.all.where("lower(name) like ?", "%#{@parameter}%") 
-    @results =  @tags.all & @date.all & @loc.all & @key.all
-  end 
-end
-
 
   def map
   end

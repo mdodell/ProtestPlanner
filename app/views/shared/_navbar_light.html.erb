@@ -4,9 +4,9 @@
     <span class="navbar-toggler-icon text-white"></span>
   </button>
   <div class="collapse navbar-collapse row justify-content-between" id="navbarTogglerDemo02">
-    <%= form_tag(search_page_path, :method => "get",
+    <%= form_tag(browse_path, :method => "get",
                  class: "form-inline my-2 my-lg-0 ml-2 d-none d-xl-block") do %>
-      <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control mr-2" %>
+      <%= search_field_tag :keyword, params[:keyword], placeholder: "Search", class: "form-control mr-2" %>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     <% end %>
 
@@ -19,6 +19,11 @@
       <li class="nav-item d-flex justify-content-lg-center ml-3">
         <a class="nav-link" href="/events/new"><h4 class="text-gray m-0">Create Events
           <%= fa_icon('plus-circle', class: "primary-green ml-1") %>
+        </h4></a>
+      </li>
+      <li class="nav-item d-flex justify-content-lg-center ml-3">
+        <a class="nav-link" href="/browse"><h4 class="text-gray m-0 ">Browse Events
+          <%= fa_icon('search', class: "primary-green ml-1") %>
         </h4></a>
       </li>
       <li class="nav-item d-flex justify-content-lg-center ml-3">

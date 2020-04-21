@@ -13,12 +13,9 @@ Rails.application.routes.draw do
   get '/events/:id/map', to: 'events#map', as: 'map'
   get '/events/:id/map/marker', to: 'markers#show', as: 'get_markers'
   post '/events/:id/map/marker', to: 'markers#create', as: 'add_marker'
-  get '/browse', to: 'events#browse', as: 'browse_filter'
-  get '/browse_results' => 'events#search', :as => 'browse_results'
-  get '/browse_keyword_results' => 'events#search_keyword', :as => 'browse_keyword_results'
+  get '/browse', to: 'events#browse', as: 'browse'
 
   get  '/signup',  to: 'users#new'
-
 
   get 'sessions/new'
   get    '/apply_organizer',   to: 'users#applyOrganizer'
@@ -28,13 +25,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-
-
-  get '/search' => 'pages#search', :as => 'search_page'
   post '/setUserLocation', to: 'users#setUserLocation'
-  
 
   root 'events#index'
-
-
 end

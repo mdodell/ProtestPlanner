@@ -28,8 +28,6 @@ module EventsHelper
   def get_upcoming_nearby_events_within_radius (radius)
     if(session[:coordinates])
       Event.near([session[:coordinates]['latitude'], session[:coordinates]['longitude']], radius).where('date_to >= ?', DateTime.now).order('date_from ASC')
-    #else
-    #  nil
     end
   end
 

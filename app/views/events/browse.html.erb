@@ -3,7 +3,31 @@
 
 <div class="row justify-content-center no-gutters">
   <div class="container-xl mt-5">
-    <%= render 'shared/browse' %>
+    <% unless @events.nil? %>
+      <h1 class="text-primary display-4">Search Results</h1>
+      <%= render 'browse_query', query: @search_query, number_of_events: @events.length %>
+      <%= render 'event_card_deck', events: @events, section_title: "", no_events_message: "No events were found with those parameters!" %>
+      <hr />
+    <% end %>
+      <h1 class="text-primary display-4">Search Events</h1>
+      <%= bootstrap_form_tag(url: browse_path, data: {controller: 'autocomplete', action: "google-maps-callback@window->autocomplete#initAutoComplete"}, method: "get", html: { class: "mb-4" }) do |f| %>
+        <h3>I'm looking for a protest that contains...</h3>
+        <%= f.text_field :keyword, placeholder: "Keyword", input_group_class: 'input-group-lg', hide_label: true %>
+        <h3>I'm looking for a protest in...</h3>
+        <%= f.search_field :location, placeholder: "Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "autocomplete.field", action: "keydown->autocomplete#keydown" }%>
+        <%= f.hidden_field :latitude, step: :any, data: { target: "autocomplete.latitude" }%>
+        <%= f.hidden_field :longitude, step: :any, data: { target: "autocomplete.longitude"} %>
+        <h3>I want to rise up for...</h3>
+        <%= f.collection_select :tags, Tag.all, :id, :name, {placeholder: "Tag Id", include_hidden: false, hide_label: true, required: true, prompt: "Select a type of event"}, {multiple: false, class: "selectpicker"} %>
+
+        <h3>The date which best suits me is...</h3>
+
+        <%= f.select :date, [['Any Day', 'Any Day'], ['Today', 'Today'], ['Tomorrow', 'Tomorrow'], ['This Week', 'This Week'],
+                             ['Next Week', 'Next Week'], ['This Month', 'This Month'], ['Next Month', 'Next Month']], {hide_label: true},
+                     {class: "selectpicker"} %>
+
+        <%= f.submit "Browse", class: "btn btn-primary btn-lg text-white", name: nil %>
+      <% end %>
   </div>
 </div>
 
