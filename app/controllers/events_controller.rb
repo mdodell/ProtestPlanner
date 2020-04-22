@@ -1,3 +1,4 @@
+require 'kaminari/activerecord'
 class EventsController < ApplicationController
   include EventsHelper
   include SessionsHelper
@@ -8,13 +9,15 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @organizing_future_events = get_user_organizing_future_events
+    @attending_future_events = get_user_attending_future_events
+    @nearby_events = get_user_attending_future_events
   end
 
   def browse
     event_params = params.permit(:keyword, :tags, :location, :latitude, :longitude, :date)
     if(!event_params[:keyword].blank? || !event_params[:tags].blank? || !event_params[:location].blank? || !event_params[:date].blank?) # If any of the search parameters exist
-      @events = Event.filter(event_params)
+      @events = Kaminari.paginate_array(Event.filter(event_params)).page(params[:page]).per(6)
       @search_query = params
     end
   end

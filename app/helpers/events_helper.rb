@@ -58,7 +58,7 @@ module EventsHelper
   end
 
   def user_events_query (sign, role_type)
-    Event.where("date_from #{sign} ?", DateTime.now).joins(:user_event_relationships).where(user_event_relationships: {user_id: current_user.id, role_type_id: role_type}).sort_by(&:date_from)
+    Kaminari.paginate_array(Event.where("date_from #{sign} ?", DateTime.now).joins(:user_event_relationships).where(user_event_relationships: {user_id: current_user.id, role_type_id: role_type}).sort_by(&:date_from)).page(params[:page]).per(6)
   end
 
   def correct_editor(user, event)

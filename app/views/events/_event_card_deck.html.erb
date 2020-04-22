@@ -1,5 +1,6 @@
 <h1 class="display-4"><%= section_title %></h1>
 <% unless events.nil? || events.empty? %>
+  <%= paginate events %>
   <div class="card-deck row">
     <% events.each do |event| %>
       <div class="col-lg-4 col-md-6 col-xs-12 mb-4 d-flex">

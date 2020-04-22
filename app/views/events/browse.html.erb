@@ -5,7 +5,7 @@
   <div class="container-xl mt-5">
     <% unless @events.nil? %>
       <h1 class="text-primary display-4">Search Results</h1>
-      <%= render 'browse_query', query: @search_query, number_of_events: @events.length %>
+      <%= render 'browse_query', query: @search_query, number_of_events: @events.total_count %>
       <%= render 'event_card_deck', events: @events, section_title: "", no_events_message: "No events were found with those parameters!" %>
       <hr />
     <% end %>
