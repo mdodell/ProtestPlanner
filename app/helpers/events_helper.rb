@@ -27,7 +27,7 @@ module EventsHelper
 
   def get_upcoming_nearby_events_within_radius (radius)
     if(session[:coordinates])
-      Event.near([session[:coordinates]['latitude'], session[:coordinates]['longitude']], radius).where('date_to >= ?', DateTime.now).order('date_from ASC')
+      Kaminari.paginate_array(Event.near([session[:coordinates]['latitude'], session[:coordinates]['longitude']], radius).where('date_to >= ?', DateTime.now).order('date_from ASC')).page(params[:nearby_pages]).per(6)
     end
   end
 
@@ -36,19 +36,19 @@ module EventsHelper
   end
 
   def get_user_attending_future_events
-    user_events_query('>', '1')
+    user_events_query('>', '1', :attending_pages)
   end
 
   def get_user_attended_past_events
-    user_events_query('<', '1')
+    user_events_query('<', '1', :attended_pages)
   end
 
   def get_user_organizing_future_events
-    user_events_query('>', '0')
+    user_events_query('>', '0', :organizing_pages)
   end
 
   def get_user_organized_past_events
-    user_events_query('<', '0')
+    user_events_query('<', '0', :organized_pages)
   end
 
   private
@@ -57,8 +57,8 @@ module EventsHelper
     event.tags.map{|tag| tag.name}
   end
 
-  def user_events_query (sign, role_type)
-    Kaminari.paginate_array(Event.where("date_from #{sign} ?", DateTime.now).joins(:user_event_relationships).where(user_event_relationships: {user_id: current_user.id, role_type_id: role_type}).sort_by(&:date_from)).page(params[:page]).per(6)
+  def user_events_query (sign, role_type, page)
+    Kaminari.paginate_array(Event.where("date_from #{sign} ?", DateTime.now).joins(:user_event_relationships).where(user_event_relationships: {user_id: current_user.id, role_type_id: role_type}).sort_by(&:date_from)).page(params[page]).per(6)
   end
 
   def correct_editor(user, event)

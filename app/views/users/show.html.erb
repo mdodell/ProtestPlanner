@@ -44,9 +44,9 @@
 <div class="container-xl mt-5">
   <% if current_user.events.length > 0 %>
     <!-- find events user is an attending for -->
-    <%= render 'events/event_card_deck', events: get_user_attended_past_events, no_events_message: "You have not attended any events yet...", section_title: "Events attended history" %>
+    <%= render 'events/event_card_deck', events: get_user_attended_past_events, no_events_message: "You have not attended any events yet...", section_title: "Events attended history", pagination_param: 'attended_pages' %>
     <!-- find events user is an organizer for -->
-    <%= render 'events/event_card_deck', events: get_user_organized_past_events, no_events_message: "You have not organized any events yet...", section_title: "Events organized history" %>
+    <%= render 'events/event_card_deck', events: get_user_organized_past_events, no_events_message: "You have not organized any events yet...", section_title: "Events organized history", pagination_param: 'organized_pages' %>
 <% end %>
 </div>
 </div>

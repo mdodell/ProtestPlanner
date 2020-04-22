@@ -5,11 +5,11 @@
     <div class="container-xl mt-5">
     <%= render 'shared/home_hero' %>
     <!-- find events user is an organizer for -->
-      <%= render 'event_card_deck', events: @organizing_future_events, section_title: "Upcoming Events I am organizing", no_events_message: "You have not organized for any upcoming events yet..."%>
+      <%= render 'event_card_deck', events: @organizing_future_events, section_title: "Upcoming Events I am organizing", no_events_message: "You have not organized for any upcoming events yet...", pagination_param: 'organizing_pages'%>
     <!-- find events user is an attending for -->
-        <%= render 'event_card_deck', events: @attending_future_events, section_title: "Upcoming Events I am attending", no_events_message: "You have not signed up for any upcoming events yet..."%>
+        <%= render 'event_card_deck', events: @attending_future_events, section_title: "Upcoming Events I am attending", no_events_message: "You have not signed up for any upcoming events yet...", pagination_param: 'attending_pages' %>
       <!-- find nearby events -->
-      <%= render 'event_card_deck', events: @nearby_events, no_events_message: "There are no upcoming events near you!", section_title: "Upcoming Nearby Events" %>
+      <%= render 'event_card_deck', events: @nearby_events, no_events_message: "There are no upcoming events near you!", section_title: "Upcoming Nearby Events", pagination_param: 'nearby_pages' %>
     <div class='ml-3 mt-3'>
       Logged in as <%= current_user.user_name %>
     </div>
