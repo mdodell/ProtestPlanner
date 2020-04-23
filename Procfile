@@ -1,1 +1,1 @@
-hardworker: bundle exegitc sidekiq -c 2
+hardworker: bundle exec sidekiq -e production -c 2
