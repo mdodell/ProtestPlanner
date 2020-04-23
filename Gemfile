@@ -27,7 +27,7 @@ gem "bootstrap_form", "~> 4.0"
 gem 'activerecord-import'
 gem 'kaminari'
 gem 'whenever', require: false
-gem 'sidekiq'
+gem 'sidekiq', '5.2.7'
 gem 'sinatra', :require => nil
 gem 'config'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
