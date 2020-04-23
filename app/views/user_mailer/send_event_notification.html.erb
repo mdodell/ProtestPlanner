@@ -1,6 +1,6 @@
 <h1>Protest Planner</h1>
 
-<p>Hi <%= @user.user_name %>,</p>
+<p>Hi <%= @user_name %>,</p>
 
 <p>
   <%= @content %>
@@ -8,5 +8,5 @@
 
 <p>
   Log in to browse other nearby protest!
-  <%= link_to "Check the Event", @event %>
+  <%= link_to "Check the Event", event_url(@event_id) %>
 </p>

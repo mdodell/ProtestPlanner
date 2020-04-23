@@ -27,6 +27,9 @@ gem "bootstrap_form", "~> 4.0"
 gem 'activerecord-import'
 gem 'kaminari'
 gem 'whenever', require: false
+gem 'sidekiq'
+gem 'sinatra', :require => nil
+gem 'config'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record

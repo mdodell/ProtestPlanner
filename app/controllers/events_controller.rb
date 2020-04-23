@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   def send_notification
     @event = Event.find(params[:event_id].to_i)
     @event.users.map do |user|
-      UserMailer.send_event_notification(user, @event, params[:content]).deliver_now
+      HardWorker.perform_async(user.email, user.user_name, @event.id, params[:content])
     end
     redirect_to @event
   end
