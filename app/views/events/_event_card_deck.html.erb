@@ -5,7 +5,11 @@
     <% events.each do |event| %>
       <div class="col-lg-4 col-md-6 col-xs-12 mb-4 d-flex">
         <div class="card flex-fill text-black bg-light p-0">
-        <%= image_tag(get_event_image_or_default(event), class: "card-img-top") %>
+          <% if event.picture.attached? %>
+            <%= image_tag(url_for(event.picture), class: "card-img-top event-card-image") %>
+          <% else %>
+            <%= image_pack_tag(get_event_tag_photo(event), class: "card-img-top event-card-image") %>
+          <% end %>
         <div class="card-body">
           <h2 class="card-title"><%= event.name %></h2>
           <h5 class="card-text"><%= get_full_date_and_time(event.date_from) %></h5>

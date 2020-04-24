@@ -40,6 +40,12 @@
   width: 100vw;
 }
 
+.event-card-image {
+  height: 175px;
+  background-size: cover;
+  background-position: center bottom;
+}
+
 @include respond-above(xs) {
   .event-container {
     top: 40px;

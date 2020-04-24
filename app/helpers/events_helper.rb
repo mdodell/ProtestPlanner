@@ -1,12 +1,8 @@
 module EventsHelper
   include DatesHelper, SessionsHelper
 
-  def get_event_image_or_default(event)
-    if event.picture.attached?
-      url_for(event.picture)
-    else
-      event.tags.first['photo_url']
-    end
+  def get_event_tag_photo(event)
+    event.tags.first['photo_url']
   end
 
   def display_register_or_unregister_button (event)

@@ -2,15 +2,22 @@
 
 <%= render 'shared/navbar_light' %>
 <div class="w-100 bg-light position-relative">
-  <div class="background-image" style="background-image: url(<%= get_event_image_or_default(@event) %>);"></div>
+  <% if @event.picture.attached? %>
+    <%= image_tag(url_for(@event.picture), class: "w-100 background-image") %>
+  <% else %>
+    <%= image_pack_tag(get_event_tag_photo(@event), class: "w-100 background-image") %>
+  <% end %>
   <div class="bg-light background d-none d-sm-block"></div>
-
   <!--Event Details -->
   <div class="p-0 bg-white event-container">
     <!--Image and Title-->
     <div class="row no-gutters h-25">
       <div class="col-md-8">
-        <%= image_tag(get_event_image_or_default(@event), class: "w-100 container-image") %>
+        <% if @event.picture.attached? %>
+          <%= image_tag(url_for(@event.picture), class: "w-100 container-image") %>
+        <% else %>
+          <%= image_pack_tag(get_event_tag_photo(@event), class: "w-100 container-image") %>
+        <% end %>
       </div>
       <div class="col-md-4 bg-light">
         <div class="ml-2">
