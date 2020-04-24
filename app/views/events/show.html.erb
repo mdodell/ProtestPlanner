@@ -35,12 +35,12 @@
           <%= fa_icon('share', class: "share-icon p-2") %> <h4 class="mb-0 ml-1">Share Event</h4>
         </div>
         <div class="col-sm row no-gutters align-items-center justify-content-end">
-          <%if correct_editor(current_user, @event) %>
-            <%= link_to 'Manage Protest', manage_event_path(:event_id => @event.id) , class: "btn-info btn mr-2" %>
-            <%else %>
+          <% if correct_editor(current_user, @event) %>
+            <%= link_to 'Manage Protest', manage_event_path(:event_id => @event.id), class: "btn-info btn mr-2" %>
+          <% else %>
             <%= link_to 'Apply to be an Organizer', "/apply_organizer" + "?event_id=#{@event.id}", class: "btn-info btn mr-2" %>
             <%= display_register_or_unregister_button(@event) %>
-          <%end %>
+          <% end %>
 
           <%= link_to 'View Map', map_path(@event), class: "btn-info btn ml-2" %>
         </div>
@@ -48,42 +48,40 @@
     </div>
 
     <!--Description, Date and Time, and Location-->
-    <div class="row no-gutters justify-content-center mt-3 mb-3">
-        <div class="row w-100 no-gutters justify-content-around ml-2 mr-2">
-          <div class="col-md-7">
-            <h2>Description</h2>
-            <p><%= !@event.description.blank? ? @event.description : generate_description(@event) %></p>
-          </div>
-          <div class="col-md-3">
-            <h2>Date and Time</h2>
-            <p class="m-0"><%= get_full_date(@event.date_from) %></p>
-            <p class="m-0"><%= get_full_time(@event.date_from) %></p>
-            <br>
-            <div title="Add to Calendar" class="addeventatc">
+    <div class="row no-gutters justify-content-center mt-3 mb-lg-3">
+      <div class="row w-100 no-gutters justify-content-around ml-2 mr-2">
+        <div class="col-md-7">
+          <h2>Description</h2>
+          <p><%= !@event.description.blank? ? @event.description : generate_description(@event) %></p>
+        </div>
+        <div class="col-md-3">
+          <h2>Date and Time</h2>
+          <p class="m-0"><%= get_full_date(@event.date_from) %></p>
+          <p class="m-0"><%= get_full_time(@event.date_from) %></p>
+          <div title="Add to Calendar" class="addeventatc mt-3 mb-3">
               Add to Calendar
               <span class="start"><%= @event.date_from %></span>
               <span class="end"><%= @event.date_to %></span>
               <span class="title"><%= @event.name %></span>
               <span class="description"><%= @event.description %></span>
               <span class="location"><%= @event.location %></span>
-            </div>
-</div>
-          </div>
-          <div class="col-md-11">
-            <h2>Tags</h2>
-            <% get_tags(@event).each do |tag| %>
-              <span class="badge bagde-pill badge-primary text-white"><p class="m-0 font-weight-bolder"><%= tag %></p></span>
-            <% end %>
           </div>
         </div>
-    </div>
-    <div class="d-sm-none position-sticky mt-2 w-100" style="bottom: 0">
-      <div class="d-flex flex-column no-gutters align-items-center border-top bg-light">
-
-        <%= display_register_or_unregister_button(@event) %>
-        <%= link_to 'View Map', map_path(@event), class: "btn-info btn w-75 mb-2 mt-2" %>
+        <div class="col-md-11">
+          <h2>Tags</h2>
+          <% get_tags(@event).each do |tag| %>
+            <span class="badge bagde-pill badge-primary text-white"><p class="m-0 font-weight-bolder"><%= tag %></p></span>
+          <% end %>
+        </div>
+      </div>
+      <div class="d-sm-none position-sticky mt-2 w-100" style="bottom: 0">
+        <div class="d-flex flex-column no-gutters align-items-center border-top bg-light">
+          <%= display_register_or_unregister_button(@event) %>
+          <%= link_to 'View Map', map_path(@event), class: "btn-info btn w-75 mb-2 mt-2" %>
+        </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 <!--Share, Map, and Register for Mobile-->
