@@ -50,9 +50,9 @@ class UsersController < ApplicationController
 
   def applyOrganizer
     event = Event.find(params[:event_id])
-    event.users.map do |x|
-      if correct_editor(x, event)
-        UserMailer.apply_organizer(x, current_user, event).deliver_now
+    event.users.map do |user|
+      if correct_editor(user, event) && UserEventRelationship.find_by(user_id: user.id, event_id: params[:event_id]).receive_notification
+        UserMailer.apply_organizer(user, current_user, event).deliver_now
       end
     end
     flash[:success] = "appllication was already sent to organizers"

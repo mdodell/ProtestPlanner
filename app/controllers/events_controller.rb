@@ -44,7 +44,9 @@ class EventsController < ApplicationController
   def send_notification
     @event = Event.find(params[:event_id].to_i)
     @event.users.map do |user|
-      HardWorker.perform_async(user.email, user.user_name, @event.id, params[:content])
+      if UserEventRelationship.find_by(user_id: user.id, event_id: @event.id).receive_notification
+          HardWorker.perform_async(user.email, user.user_name, @event.id, params[:content])
+      end
     end
     redirect_to @event
   end
@@ -166,7 +168,9 @@ class EventsController < ApplicationController
   # DELETE /events/1.json
   def destroy
     @event.users.map do |user|
-      UserMailer.sendDestroyNotification(@event.name, user).deliver_now
+      if UserEventRelationship.find_by(user_id: user.id, event_id: @event.id).receive_notification
+          UserMailer.sendDestroyNotification(@event.name, user).deliver_new
+      end
     end
 
     UserEventRelationship.where(event_id: @event.id).map do |relationship|
