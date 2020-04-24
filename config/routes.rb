@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   post '/events/:id/map/marker', to: 'markers#create', as: 'add_marker'
   get '/browse', to: 'events#browse', as: 'browse'
   post '/send_notification', to: 'events#send_notification'
+  get'/event_unsubscribe', to: 'events#unsubscribe', as: 'unsubscribe'
+  get'/event_subscribe', to: 'events#subscribe', as: 'subscribe'
 
   get  '/signup',  to: 'users#new'
 

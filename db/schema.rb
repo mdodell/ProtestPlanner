@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_172005) do
     t.integer "event_id"
     t.integer "user_id"
     t.integer "role_type_id"
+    t.boolean "receive_notification", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

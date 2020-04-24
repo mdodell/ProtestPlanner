@@ -4,6 +4,7 @@ class CreateUserEventRelationships < ActiveRecord::Migration[6.0]
       t.integer :event_id
       t.integer :user_id
       t.integer :role_type_id
+      t.boolean :receive_notification, :default => true
 
       t.timestamps
     end

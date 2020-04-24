@@ -27,6 +27,20 @@ class EventsController < ApplicationController
     @user = current_user
   end
 
+  def unsubscribe
+    uer = UserEventRelationship.find_by(user_id: current_user.id, event_id: params[:event_id])
+    uer.receive_notification = false
+    uer.save
+    redirect_to root_url
+  end
+
+  def subscribe
+    uer = UserEventRelationship.find_by(user_id: current_user.id, event_id: params[:event_id])
+    uer.receive_notification = true
+    uer.save
+    redirect_to root_url
+  end
+
   def send_notification
     @event = Event.find(params[:event_id].to_i)
     @event.users.map do |user|
