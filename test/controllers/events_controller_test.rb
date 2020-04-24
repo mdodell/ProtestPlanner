@@ -20,16 +20,8 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create event" do
-    assert_difference('Event.count') do
-      post events_url, params: { event: {  } }
-    end
-
-    assert_redirected_to event_url(Event.last)
-  end
-
   test "should show event" do
-    get event_url(@event)
+    get event_url(events(:one))
     assert_response :success
   end
 

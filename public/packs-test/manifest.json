@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs-test/js/application-714a2f497faa2a7e4cfc.js",
-  "application.js.map": "/packs-test/js/application-714a2f497faa2a7e4cfc.js.map",
+  "application.js": "/packs-test/js/application-0f2b997880eebb60eb78.js",
+  "application.js.map": "/packs-test/js/application-0f2b997880eebb60eb78.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs-test/js/application-714a2f497faa2a7e4cfc.js"
+        "/packs-test/js/application-0f2b997880eebb60eb78.js"
       ],
       "js.map": [
-        "/packs-test/js/application-714a2f497faa2a7e4cfc.js.map"
+        "/packs-test/js/application-0f2b997880eebb60eb78.js.map"
       ]
     }
   },
@@ -16,6 +16,12 @@
   "media/fonts/Flaticon.ttf": "/packs-test/media/fonts/Flaticon-4f32ecd90f5cc3cea4e0f8a73b503ae3.ttf",
   "media/fonts/Flaticon.woff": "/packs-test/media/fonts/Flaticon-8878a85f966b02728a65e48bde6e2d0f.woff",
   "media/fonts/Flaticon.woff2": "/packs-test/media/fonts/Flaticon-4a34a649d1a47847aa1cb31f75b2c7b1.woff2",
+  "media/images/black_lives_matter.jpeg": "/packs-test/media/images/black_lives_matter-7ccbf662cf17dd74f5cfa85b505d3b8f.jpeg",
+  "media/images/gun_activism.jpeg": "/packs-test/media/images/gun_activism-a90c3a30ef65a19eb13185f22f5bf51f.jpeg",
+  "media/images/immigration.jpeg": "/packs-test/media/images/immigration-94decfec559862263264dab8cb67ec1f.jpeg",
+  "media/images/other_protest.jpeg": "/packs-test/media/images/other_protest-3885db63a5684883cac97411d058565e.jpeg",
+  "media/images/political_government.jpeg": "/packs-test/media/images/political_government-ed4fb9ec71d1c31896bb931d7562dc8d.jpeg",
+  "media/images/womens_march.jpeg": "/packs-test/media/images/womens_march-f47ae68b5a6e49a256963098a225e738.jpeg",
   "media/webfonts/fa-brands-400.eot": "/packs-test/media/webfonts/fa-brands-400-57dcda6f.eot",
   "media/webfonts/fa-brands-400.svg": "/packs-test/media/webfonts/fa-brands-400-9d67fa14.svg",
   "media/webfonts/fa-brands-400.ttf": "/packs-test/media/webfonts/fa-brands-400-9ec698d1.ttf",

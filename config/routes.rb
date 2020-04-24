@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 
-  get 'markers/create'
-  get 'markers/show'
   resources :users
   resources :events
   resources :account_activations, only: [:edit]

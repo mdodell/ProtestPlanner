@@ -8,8 +8,8 @@ one:
   marker_type: 0
 
 two:
-  user_id: 1
-  latitude: 1
-  longitude: 1
-  event_id: 1
+  user_id: 2
+  latitude: 2
+  longitude: 2
+  event_id: 2
   marker_type: 0

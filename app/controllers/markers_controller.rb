@@ -18,7 +18,7 @@ class MarkersController < ApplicationController
         when "road_blocked"
           @marker.road_blocked!
     end
-    AddMarkerJob.perform_later(@marker.to_json)
+    AddMarkerJob.perform_now(@marker.to_json)
   end
 
   def show

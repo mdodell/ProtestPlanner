@@ -1,16 +1,20 @@
 require 'test_helper'
+require_relative '../helpers/sign_in_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
+  include SignInHelper
   setup do
     @user = users(:one)
   end
 
   test "should get index" do
+    sign_in_as(users(:one), 'secret')
     get users_url
     assert_response :success
   end
 
   test "should get new" do
+
     get new_user_url
     assert_response :success
   end
@@ -24,11 +28,13 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show user" do
+    sign_in_as(users(:one), 'secret')
     get user_url(@user)
     assert_response :success
   end
 
   test "should get edit" do
+    sign_in_as(users(:one), 'secret')
     get edit_user_url(@user)
     assert_response :success
   end

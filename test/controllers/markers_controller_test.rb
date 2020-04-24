@@ -1,14 +1,13 @@
 require 'test_helper'
+require_relative '../helpers/sign_in_helper'
 
 class MarkersControllerTest < ActionDispatch::IntegrationTest
-  test "should get create" do
-    get markers_create_url
-    assert_response :success
+  include SignInHelper
+  fixtures :users
+
+  setup do
+    sign_in_as(users(:one), 'secret')
   end
 
-  test "should get show" do
-    get markers_show_url
-    assert_response :success
-  end
 
 end
