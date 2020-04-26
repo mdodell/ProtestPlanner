@@ -1,0 +1,8 @@
+<span id=<%= event.id %>>
+              <%if event.date_to > DateTime.current && !UserEventRelationship.find_by(user_id: current_user.id, event_id: event.id).nil? && UserEventRelationship.find_by(user_id: current_user.id, event_id: event.id).receive_notification%>
+                <%= render 'unsubscribe', event_id: event.id %>
+              <%elsif event.date_to > DateTime.current && !UserEventRelationship.find_by(user_id: current_user.id, event_id: event.id).nil?%>
+              <%= render 'subscribe', event_id: event.id %>
+
+              <%end%>
+</span>

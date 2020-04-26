@@ -31,14 +31,23 @@ class EventsController < ApplicationController
     uer = UserEventRelationship.find_by(user_id: current_user.id, event_id: params[:event_id])
     uer.receive_notification = false
     uer.save
-    redirect_to root_url
+    @event_id = params[:event_id]
+    respond_to do |format|
+      format.html {redirect_to root_url}
+      format.js
+    end
+
   end
 
   def subscribe
     uer = UserEventRelationship.find_by(user_id: current_user.id, event_id: params[:event_id])
     uer.receive_notification = true
     uer.save
-    redirect_to root_url
+    @event_id = params[:event_id]
+    respond_to do |format|
+      format.html {redirect_to root_url}
+      format.js
+    end
   end
 
   def send_notification
