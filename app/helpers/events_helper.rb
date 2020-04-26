@@ -15,9 +15,7 @@ module EventsHelper
 
   def get_nearby_events_within_radius (radius)
     if(session[:coordinates])
-      Event.near([session[:coordinates]['latitude'], session[:coordinates]['longitude']], radius)
-    else
-      nil
+      Kaminari.paginate_array(Event.near([session[:coordinates]['latitude'], session[:coordinates]['longitude']], radius).order('date_from ASC')).page(params[:nearby_pages]).per(6)
     end
   end
 
