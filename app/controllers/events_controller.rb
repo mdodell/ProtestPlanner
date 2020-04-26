@@ -76,7 +76,7 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     if !correct_editor(current_user, Event.find(params[:id]))
-      flash[:error] = "Sorry, you don't have acces to edit"
+      flash[:danger] = "Sorry, you don't have acces to edit"
       redirect_to root_url
     end
   end
@@ -84,7 +84,7 @@ class EventsController < ApplicationController
   def addOrganizer
     event = Event.find(params[:event_id])
     if !correct_editor(current_user, event)
-      flash[:error] = "Sorry, you don't have acces to edit"
+      flash[:danger] = "Sorry, you don't have acces to edit"
       redirect_to event
     else
       relation = UserEventRelationship.find_by(user_id: params[:user_id], event_id: params[:event_id])
@@ -101,25 +101,25 @@ class EventsController < ApplicationController
     event = Event.find(params[:id])
     if current_user.events.exists?(params[:id])
       UserEventRelationship.find_by(event_id: event.id, user_id: current_user.id).destroy
-      flash[:alert] = 'You have been removed from this event.'
+      flash[:danger] = 'You have been removed from this event.'
       redirect_to home_path
     else
-      flash[:error] = 'Sorry, you can not unregister for an event you haven\'t signed up for!'
+      flash[:danger] = 'Sorry, you can not unregister for an event you haven\'t signed up for!'
     end
   end
 
   def register
     @event = Event.find(params[:id])
     if @event.nil?
-      flash[:error] = 'Sorry, that event does not exist!'
+      flash[:danger] = 'Sorry, that event does not exist!'
       redirect_to home_path
     else
       if current_user.events.exists?(params[:id])
-        flash[:error] = 'Sorry, you can\'t join because you are already part of this event.'
+        flash[:danger] = 'Sorry, you can\'t join because you are already part of this event.'
         redirect_to home_path
       else
         UserEventRelationship.create(event_id: @event.id, user_id: current_user.id, role_type_id: 1)
-        flash[:alert] = 'You were successfully added as an attendee'
+        flash[:success] = 'You were successfully added as an attendee'
         redirect_to home_path
       end
     end

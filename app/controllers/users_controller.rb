@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
     if @user.save
       UserMailer.account_activation(@user).deliver_now
-      flash[:error] = "Please check your email to activate your account."
+      flash[:danger] = "Please check your email to activate your account."
       redirect_to login_path
     else
       render 'new'
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     if params[:coordinates]
       session[:coordinates] = params[:coordinates]
     else
-      flash[:error] = "Could not find the user coordinates"
+      flash[:danger] = "Could not find the user coordinates"
     end
   end
 
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to user_url(@user)
     else
-      flash[:error] = "Fail Update!"
+      flash[:danger] = "Fail Update!"
       render 'edit'
     end
   end
