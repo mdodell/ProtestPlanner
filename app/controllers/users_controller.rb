@@ -52,7 +52,7 @@ class UsersController < ApplicationController
     event = Event.find(params[:event_id])
     event.users.map do |user|
       if correct_editor(user, event) && UserEventRelationship.find_by(user_id: user.id, event_id: params[:event_id]).receive_notification
-        UserMailer.apply_organizer(user, current_user, event).deliver_now
+        HardWorkerTwo.perform_async(user.user_name, user.email, current_user.user_name, event.name, event.id, current_user.id)
       end
     end
     flash[:success] = "appllication was already sent to organizers"

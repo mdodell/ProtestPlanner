@@ -1,9 +1,9 @@
 <h1>Protest Planner</h1>
 
-<p>Hi <%= @organizer.user_name %>,</p>
+<p>Hi <%= @organizer_name %>,</p>
 
 <p>
-  <%= @attendee.user_name %> hope to become an organizer of event <%= @event.name %>
+  <%= @user_name %> hope to become an organizer of event <%= @event_name %>
 </p>
 
 <!--<p>-->
@@ -13,6 +13,6 @@
 
 <p>
   If you agree, Please click on this link:
-  <%= link_to "agree", add_organizer_url(:user_id => @attendee.id, :event_id => @event.id) %>
+  <%= link_to "agree", add_organizer_url(:user_id => @user_id, :event_id => @event_id) %>
 </p>
 

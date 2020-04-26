@@ -10,11 +10,13 @@ class UserMailer < ApplicationMailer
     mail to: user.email, subject: "Account activation"
   end
 
-  def apply_organizer(organizer, attendee, event)
-    @organizer = organizer
-    @attendee = attendee
-    @event = event
-    mail to: @organizer.email, subject: "Application to be an Organizer for event #{event.name}"
+  def apply_organizer(organizer_name, organizer_email, user_name, event_name, event_id, user_id)
+    @organizer_name = organizer_name
+    @organizer_email = organizer_email
+    @user_name = user_name
+    @event_id = event_id
+    @user_id = user_id
+    mail to: organizer_email, subject: "Application to be an Organizer for event #{event_name}"
   end
 
   def notification(event, user)

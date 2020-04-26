@@ -9,3 +9,5 @@ class HardWorker
   end
 
 end
+
+
