@@ -40,7 +40,7 @@
           <% if correct_editor(current_user, @event) %>
             <%= link_to 'Manage Protest', manage_event_path(:event_id => @event.id), class: "btn-info btn mr-2" %>
           <% else %>
-            <%= link_to 'Apply to be an Organizer', "/apply_organizer" + "?event_id=#{@event.id}", class: "btn-info btn mr-2" %>
+            <%= button_to 'Apply to be an Organizer', "/apply_organizer" + "?event_id=#{@event.id}", class: "btn-info btn mr-2", data: { confirm: 'Are you sure for the application?', disable_with: 'loading...' } %>
             <%= display_register_or_unregister_button(@event) %>
           <% end %>
 

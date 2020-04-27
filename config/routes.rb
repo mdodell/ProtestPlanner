@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get  '/signup',  to: 'users#new'
 
   get 'sessions/new'
-  get    '/apply_organizer',   to: 'users#applyOrganizer'
+  post    '/apply_organizer',   to: 'users#applyOrganizer'
   get    '/add_organizer', to: 'events#addOrganizer'
 
   get    '/login',   to: 'sessions#new'
