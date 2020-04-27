@@ -11,7 +11,7 @@ class EventsController < ApplicationController
   def index
     @organizing_future_events = get_user_organizing_future_events
     @attending_future_events = get_user_attending_future_events
-    @nearby_events = get_user_attending_future_events
+    @nearby_events = get_nearby_events_within_radius(5)
   end
 
   def browse
@@ -31,14 +31,23 @@ class EventsController < ApplicationController
     uer = UserEventRelationship.find_by(user_id: current_user.id, event_id: params[:event_id])
     uer.receive_notification = false
     uer.save
-    redirect_to root_url
+    @event_id = params[:event_id]
+    respond_to do |format|
+      format.html {redirect_to root_url}
+      format.js
+    end
+
   end
 
   def subscribe
     uer = UserEventRelationship.find_by(user_id: current_user.id, event_id: params[:event_id])
     uer.receive_notification = true
     uer.save
-    redirect_to root_url
+    @event_id = params[:event_id]
+    respond_to do |format|
+      format.html {redirect_to root_url}
+      format.js
+    end
   end
 
   def send_notification
@@ -169,7 +178,7 @@ class EventsController < ApplicationController
   def destroy
     @event.users.map do |user|
       if UserEventRelationship.find_by(user_id: user.id, event_id: @event.id).receive_notification
-          UserMailer.sendDestroyNotification(@event.name, user).deliver_new
+        HardWorkerThree.perform_async(@event.name, user.email, user.user_name)
       end
     end
 

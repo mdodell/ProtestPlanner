@@ -5,4 +5,5 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     url = sessions_new_url
     assert_not_nil url
   end
+
 end

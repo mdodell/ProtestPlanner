@@ -4,7 +4,7 @@
 
 <div class = "fixed-bottom ml-3 pb-4">
     <br>
-    <%= link_to 'Destroy Event', event_path(@event), method: :delete, class: "btn-info btn mr-2 btn-danger" %>
+    <%= link_to 'Destroy Event', event_path(@event), method: :delete, class: "btn-info btn mr-2 btn-danger" ,data: { confirm: 'Are you sure ?', disable_with: 'loading...' } %>
   <%= link_to 'Edit my Protest', edit_event_path(@event), class: "btn-primary btn" %>
 </div>
 

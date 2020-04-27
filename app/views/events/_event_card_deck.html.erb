@@ -17,11 +17,7 @@
         </div>
           <div class="card-footer">
             <%= link_to 'Event Page', event_path(event), class: "text-white btn-primary btn" %>
-            <%if event.date_to > DateTime.current && !UserEventRelationship.find_by(user_id: current_user.id, event_id: event.id).nil? && UserEventRelationship.find_by(user_id: current_user.id, event_id: event.id).receive_notification%>
-            <%= link_to 'Unsubscribe', unsubscribe_path(event_id: event.id), class: "text-white btn-danger btn" %>
-              <%elsif event.date_to > DateTime.current && !UserEventRelationship.find_by(user_id: current_user.id, event_id: event.id).nil?%>
-              <%= link_to 'Subscribe', subscribe_path(event_id: event.id), class: "text-white btn-primary btn" %>
-            <%end%>
+            <%= render "events/subscribe_form", event: event %>
           </div>
       </div>
       </div>
