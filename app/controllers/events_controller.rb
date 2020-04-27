@@ -178,7 +178,7 @@ class EventsController < ApplicationController
   def destroy
     @event.users.map do |user|
       if UserEventRelationship.find_by(user_id: user.id, event_id: @event.id).receive_notification
-          UserMailer.sendDestroyNotification(@event.name, user).deliver_new
+        HardWorkerThree.perform_async(@event.name, user.email, user.user_name)
       end
     end
 
