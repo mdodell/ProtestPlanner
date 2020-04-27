@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.expand_path("../../test_helper", __FILE__)
 require_relative '../helpers/sign_in_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
@@ -18,21 +18,6 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_event_url
     assert_response :success
-  end
-
-  test "should show event" do
-    get event_url(events(:one))
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_event_url(@event)
-    assert_response :success
-  end
-
-  test "should update event" do
-    patch event_url(@event), params: { event: {  } }
-    assert_redirected_to event_url(@event)
   end
 
   test "should destroy event" do

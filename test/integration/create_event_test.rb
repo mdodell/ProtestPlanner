@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.expand_path("../../test_helper", __FILE__)
 require_relative '../helpers/sign_in_helper'
 
 class CreateEventTest < ActionDispatch::IntegrationTest
@@ -7,7 +7,6 @@ class CreateEventTest < ActionDispatch::IntegrationTest
 
   test "can create an event" do
     sign_in_as(users(:one), 'secret')
-
     get "/events/new"
     assert_response :success
     assert_equal "/events/new", path
