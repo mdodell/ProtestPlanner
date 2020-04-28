@@ -8,18 +8,17 @@
           <div class="card card-inverse bg-light">
             <div class="card-block ">
               <div class="row m-3">
+              
                 <div class="col-md-8 col-sm-8">
-                  <h1 class="display-4">Profile
+                  <h1 class="display-4 font-weight-normal">Profile
                     Page <%= link_to 'Edit my profile', edit_user_path(@user), class: "btn-primary btn" %></h1>
-                  <h2 class="card-title font-weight-light"><b>Username: </b><%= current_user.user_name %></h2>
-                  <h2 class="card-text font-weight-light"><b>Events
-                    attending: </b><%= UserEventRelationship.where(role_type_id: '1', user_id: current_user.id).length %>
-                  </h2>
-                  <h2 class="card-text font-weight-light"><b>Events
-                    organized: </b><%= UserEventRelationship.where(role_type_id: '0', user_id: current_user.id).length %>
-                  </h2>
-                  <h2 class="card-text font-weight-light"><b>Email: </b><%= current_user.profile %></h2>
-                  <h2 class="card-text font-weight-light"><b>Phone: </b><%= current_user.phone %></h2>
+                  <h2 class="card-title font-weight-normal"><b>Username: </b><%= current_user.user_name %></h2>
+                  <h2 class="card-text font-weight-normal"><b>Events
+                    attending: </b><%= UserEventRelationship.where(role_type_id: '1', user_id: current_user.id).length %></h2>
+                  <h2 class="card-text font-weight-normal"><b>Events
+                    organized: </b><%= UserEventRelationship.where(role_type_id: '0', user_id: current_user.id).length %></h2> 
+                  <h2 class="card-text font-weight-normal"><b>Email: </b><%= current_user.email %></h2>
+                  <h2 class="card-text font-weight-normal"><b>Phone: </b><%= current_user.phone %></h2>
                 </div>
 
                 <div class="col-md-4 col-sm-4 mt-4 mb-4 pl-1 pr-2 text-center ">
@@ -32,6 +31,7 @@
                     <% end %>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -44,7 +44,8 @@
 <div class="container-xl mt-5">
   <% if current_user.events.length > 0 %>
     <!-- find events user is an attending for -->
-    <%= render 'events/event_card_deck', events: get_user_attended_past_events, no_events_message: "You have not attended any events yet...", section_title: "Events attended history", pagination_param: 'attended_pages' %>
+    <div class = 'font-weight-bold'>
+    <%= render 'events/event_card_deck', events: get_user_attended_past_events, no_events_message: "You have not attended any events yet...", section_title: "Events attended history", pagination_param: 'attended_pages' %></div>
     <!-- find events user is an organizer for -->
     <%= render 'events/event_card_deck', events: get_user_organized_past_events, no_events_message: "You have not organized any events yet...", section_title: "Events organized history", pagination_param: 'organized_pages' %>
 <% end %>
