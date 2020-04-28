@@ -64,8 +64,11 @@ class EventsController < ApplicationController
     @event = Event.find(params[:event_id].to_i)
     @user = User.find(params[:user_id].to_i)
     @event.users.delete(@user)
-    flash[:success] = "User are successfully moved out"
-    redirect_to manage_event_path(@event)
+    respond_to do |format|
+      format.html {redirect_to manage_event_path(@event)}
+      format.js
+    end
+
   end
 
   def map

@@ -33,12 +33,13 @@
                     </thead>
                     <tbody>
                     <% UserEventRelationship.where(event_id: @event, role_type_id: '1').each do |relation| %>
-                      <tr>
+                      <tr id="attendee<%= relation.user.id %>" >
                         <td class="text-center"><%= relation.user.user_name %></td>
 <!--                        <td class="text-center"><%#= user.self_intro %></td>-->
-                        <td><%= link_to "Move Out", "/remove_attendee?event_id=#{@event.id}&user_id=#{relation.user.id}", method: :post, class: "btn btn-primary" %></td>
+                        <td><%= link_to "Move Out", "/remove_attendee?event_id=#{@event.id}&user_id=#{relation.user.id}", method: :post, remote: true, class: "btn btn-primary", data: {confirm: "Are you sure?"} %></td>
                       </tr>
                     <% end %>
+
                     </tbody>
                   </table>
 

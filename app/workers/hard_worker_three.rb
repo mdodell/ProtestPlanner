@@ -7,6 +7,7 @@ class HardWorkerThree
     UserMailer.sendDestroyNotification(event_name, user_email, user_name).deliver_now
     puts"=============="
   end
+
 end
 
 
