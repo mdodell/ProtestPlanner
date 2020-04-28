@@ -11,7 +11,7 @@ class EventsController < ApplicationController
   def index
     @organizing_future_events = get_user_organizing_future_events
     @attending_future_events = get_user_attending_future_events
-    @nearby_events = get_nearby_events_within_radius(5)
+    @nearby_events = get_upcoming_nearby_events_within_radius(5)
   end
 
   def browse
