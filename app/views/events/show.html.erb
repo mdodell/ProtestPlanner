@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
 <%= render 'shared/navbar_light' %>
@@ -38,13 +39,13 @@
         </div>
         <div class="col-sm row no-gutters align-items-center justify-content-end">
           <% if correct_editor(current_user, @event) %>
-            <%= link_to 'Manage Protest', manage_event_path(:event_id => @event.id), class: "btn-info btn mr-2" %>
+            <%= link_to 'Manage Protest', manage_event_path(:event_id => @event.id), class: "btn-light btn mr-2" %>
           <% else %>
             <%= button_to 'Apply to be an Organizer', "/apply_organizer" + "?event_id=#{@event.id}", class: "btn-info btn mr-2", data: {disable_with: 'loading...' } %>
             <%= display_register_or_unregister_button(@event) %>
           <% end %>
 
-          <%= link_to 'View Map', map_path(@event), class: "btn-info btn ml-2" %>
+          <%= link_to 'View Map', map_path(@event), class: "btn-light btn ml-2" %>
         </div>
       </div>
     </div>

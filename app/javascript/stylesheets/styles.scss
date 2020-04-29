@@ -1,4 +1,5 @@
 @import "media_query_utils";
+//@import "bootstrap_custom"
 
 .full-page {
   min-height: 100vh;
@@ -38,26 +39,5 @@
   z-index: 0!important;
 }
 
-// testing implementing new fonts 
+//testing implementing new fonts 
 
-//Google Font
-//@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
-
-// Styles 
-//$bangers: 'Bangers', cursive;
-
-/* body { 
-  font-family: $body-font; 
-  font-weight: normal; 
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font;
-  font-weight: normal;
-}
-
-.button {
-  font-family: $oswald;
-  font-weight: bold;
-} */ 
