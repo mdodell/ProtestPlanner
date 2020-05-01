@@ -1,12 +1,13 @@
 import { Controller } from 'stimulus';
 import consumer from "../channels/consumer";
 import { RALLY_ICON, POLICE_ICON, ROAD_BLOCKED, COUNTER_PROTESTORS, END, MAP_MARKER } from '../icons/map_icons';
+import { LIGHT_STYLE, NIGHT_STYLE, RETRO_STYLE, AUBERGINE_STYLE, DARK_STYLE, SILVER_STYLE } from "../map_styles/map_styles";
 
 let google_map = null;
 
 export default class extends Controller {
 
-    static targets = ["map", "topNav", "bottomNav", "addMarkerButton"]
+    static targets = ["map", "topNav", "bottomNav", "poiToggle", "neighborhoodToggle", "transitToggle", "roadToggle", "mapColor"];
 
     initialize(){
         consumer.subscriptions.create({ channel: 'MarkersChannel'}, {
@@ -81,6 +82,51 @@ export default class extends Controller {
         if(typeof(google) != "undefined"){
             this.initMap();
         }
+    }
+
+    editMap(){
+
+    }
+
+    toggleMapLabelStyle(featureType, visibility){
+        const toggleVisibility = visibility ? "on" : "off"
+        return {
+            "featureType": featureType,
+            "elementType": "labels",
+            "stylers": [
+                { "visibility": toggleVisibility }
+            ]
+        }
+    }
+    
+    getMapColorScheme(mapColor){
+        switch(mapColor){
+            case "LIGHT":
+                return LIGHT_STYLE;
+            case "SILVER":
+                return SILVER_STYLE;
+            case "RETRO":
+                return RETRO_STYLE;
+            case "DARK":
+                return DARK_STYLE;
+            case "AUBERGINE":
+                return AUBERGINE_STYLE;
+            default:
+                return NIGHT_STYLE;
+        }
+    }
+
+    toggleMapStyles(){
+        const mapColor = this.getMapColorScheme(document.getElementById("map_color").value);
+        google_map.setOptions({
+            styles: [
+                this.neighborhoodToggleTarget.checked ? this.toggleMapLabelStyle("administrative.neighborhood", true) : this.toggleMapLabelStyle("administrative.neighborhood", false),
+                this.poiToggleTarget.checked ? this.toggleMapLabelStyle("poi", true) : this.toggleMapLabelStyle("poi", false),
+                this.transitToggleTarget.checked ? this.toggleMapLabelStyle("transit", true) : this.toggleMapLabelStyle("transit", false),
+                this.roadToggleTarget.checked? this.toggleMapLabelStyle("road", true) : this.toggleMapLabelStyle("road", false),
+                ...mapColor
+            ]
+        })
     }
 
     resizeMap(){
@@ -206,98 +252,9 @@ export default class extends Controller {
             zoomControl: false,
             zoom: latitude == null ? 4 : 17,
             styles: [
-                {
-                    "featureType": "poi",
-                    "elementType": "labels",
-                    "stylers": [
-                        { "visibility": "off" }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "labels",
-                    "stylers": [
-                        { "visibility": "off" }
-                    ]
-                },
-                {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-                {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-                {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-                {
-                    featureType: 'administrative.locality',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#d59563'}]
-                },
-                {
-                    featureType: 'poi',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#d59563'}]
-                },
-                {
-                    featureType: 'poi.park',
-                    elementType: 'geometry',
-                    stylers: [{color: '#263c3f'}]
-                },
-                {
-                    featureType: 'poi.park',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#6b9a76'}]
-                },
-                {
-                    featureType: 'road',
-                    elementType: 'geometry',
-                    stylers: [{color: '#38414e'}]
-                },
-                {
-                    featureType: 'road',
-                    elementType: 'geometry.stroke',
-                    stylers: [{color: '#212a37'}]
-                },
-                {
-                    featureType: 'road',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#9ca5b3'}]
-                },
-                {
-                    featureType: 'road.highway',
-                    elementType: 'geometry',
-                    stylers: [{color: '#746855'}]
-                },
-                {
-                    featureType: 'road.highway',
-                    elementType: 'geometry.stroke',
-                    stylers: [{color: '#1f2835'}]
-                },
-                {
-                    featureType: 'road.highway',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#f3d19c'}]
-                },
-                {
-                    featureType: 'transit',
-                    elementType: 'geometry',
-                    stylers: [{color: '#2f3948'}]
-                },
-                {
-                    featureType: 'transit.station',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#d59563'}]
-                },
-                {
-                    featureType: 'water',
-                    elementType: 'geometry',
-                    stylers: [{color: '#17263c'}]
-                },
-                {
-                    featureType: 'water',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#515c6d'}]
-                },
-                {
-                    featureType: 'water',
-                    elementType: 'labels.text.stroke',
-                    stylers: [{color: '#17263c'}]
-                }
+                this.toggleMapLabelStyle("poi", false),
+                this.toggleMapLabelStyle("transit", false),
+                ...NIGHT_STYLE
             ]
         });
 

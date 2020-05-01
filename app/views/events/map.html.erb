@@ -6,7 +6,7 @@
     <div class="position-relative">
       <div class="position-relative" data-target="maps.map" data-action="resize@window->maps#resizeMap" style="height: 10vh">
       </div>
-      <div class="position-absolute border m-3 bg-primary d-flex justify-content-center align-items-center add-marker" data-target="maps.addMarkerButton, #addMarker" data-toggle="modal">
+      <div class="position-absolute border m-3 bg-primary d-flex justify-content-center align-items-center add-marker" data-target="#addMarker" data-toggle="modal">
         <%= fa_icon('map-marker-alt', class: "text-white", size: '2x') %>
       </div>
     </div>
@@ -19,7 +19,7 @@
           <% end %>
         </h2>
       </div>
-      <div class="col-6 border-left text-center d-flex justify-content-center align-items-center">
+      <div class="col-6 border-left text-center d-flex justify-content-center align-items-center" data-target="#editMap" data-toggle="modal">
         <h2 class="text-white"><%= fa_icon('edit', class: "text-white") %>Edit Map</h2>
       </div>
     </div>
@@ -64,6 +64,46 @@
               </div>
               <div class="col-4"></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="editMap"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="editMapLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Map</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <%= bootstrap_form_tag do |f| %>
+              <%= f.select :map_color, %w(DEFAULT LIGHT SILVER RETRO DARK AUBERGINE), {label: "Map Theme", wrapper: {data: {action: 'change->maps#toggleMapStyles', target: 'maps.mapColor'}}}, {include_blank: false} %>
+              <div class="row no-gutters justify-content-start">
+                <div class="col-lg-3 col-md-4 col-xs-12">
+                  <%= f.check_box :poi, custom: :switch, label: "Points of Interest", data: { action: 'maps#toggleMapStyles', target: "maps.poiToggle"} %>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12">
+                  <%= f.check_box :neighborhoods, custom: :switch, data: { action: 'maps#toggleMapStyles',target: "maps.neighborhoodToggle"}, checked: true %>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12">
+                  <%= f.check_box :transit, custom: :switch, data: { action: 'maps#toggleMapStyles',target: "maps.transitToggle"} %>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12">
+                  <%= f.check_box :roads, custom: :switch, data: { action: 'maps#toggleMapStyles',target: "maps.roadToggle"}, checked: true %>
+                </div>
+              </div>
+          <% end %>
           </div>
         </div>
       </div>
