@@ -17,17 +17,12 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
 
    test "should get edit" do
      get edit_event_path(@event)
-     assert_response :success
+     assert_response :redirect
    end
 
    test "should show event" do
      get events_path(events(:one))
      assert_response :success
-   end
-
-   test "should update event" do
-     patch event_path(@event), params: { event: {  } }
-     assert_redirected_to event_url(@event)
    end
 
   test "should get new" do

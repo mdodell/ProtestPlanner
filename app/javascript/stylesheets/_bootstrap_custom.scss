@@ -1,5 +1,6 @@
 $enable-responsive-font-sizes: true;
 $enable-shadows: true;
+$font-family-base: 'Roboto Slab', serif;
 
 $primary-green: #77D353;
 $dark-primary: #5A6978;
@@ -23,4 +24,8 @@ $theme-colors: (
 
 hr {
   border-top: 2px solid rgba(0, 0, 0, 0.1)
+}
+
+* {
+  font-family: 'Roboto Slab', serif;
 }

@@ -1,8 +1,11 @@
+<!-- fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <div class="row justify-content-center no-gutters">
   <div class="container-xl mt-5">
     <%= bootstrap_form_for(@event, data: {controller: 'places', action: 'google-maps-callback@window->places#initMap', places_event: @event}, html: {novalidate: true}) do |f| %>
       <!--Basic Information Section-->
-      <h1 class="display-4"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
+      <h1 class="display-4 primary-green"><i class="fas fa-info-circle mr-2 primary-green"></i>Basic Information</h1>
       <h3 class="font-weight-light">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</h3>
       <%= f.text_field :name, placeholder: "Event Name", hide_label: true, input_group_class: 'input-group-lg' %>
       <br>
@@ -15,7 +18,7 @@
       <hr class="col-xs-12"/>
 
       <!--Location Section-->
-      <h1 class="display-4"><i class="fas fa-map-marker-alt mr-2 primary-green"></i>Location</h1>
+      <h1 class="display-4 primary-green"><i class="fas fa-map-marker-alt mr-2 primary-green"></i>Location</h1>
       <h3 class="font-weight-light">Help people in the area discover your event and let attendees know where to show up.</h3>
       <%= f.search_field :location, placeholder: "Location", hide_label: true, input_group_class: 'input-group-lg', data: { target: "places.field", action: "keydown->places#keydown" }%>
       <%= f.hidden_field :latitude, step: :any, data: { target: "places.latitude" }%>
@@ -28,7 +31,7 @@
       <hr class="col-xs-12"/>
 
       <!--Date and Time Section-->
-      <h1 class="display-4"><i class="far fa-clock mr-2 primary-green"></i>Date & Time</h1>
+      <h1 class="display-4 primary-green"><i class="far fa-clock mr-2 primary-green"></i>Date & Time</h1>
       <h3 class="font-weight-light">Tell event-goers when your event starts and ends so they can make plans to attend.</h3>
 
       <div class="row no-gutters align-items-center justify-content-between">

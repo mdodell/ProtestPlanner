@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <% provide(:title, @user.user_name) %>
 <%= render 'shared/navbar_dark' %>
 <div class="row justify-content-center no-gutters">
@@ -8,7 +9,7 @@
           <div class="card card-inverse bg-light">
             <div class="card-block ">
               <div class="row m-3">
-              
+
                 <div class="col-md-8 col-sm-8">
                   <h1 class="display-4 font-weight-normal">Profile
                     Page <%= link_to 'Edit my profile', edit_user_path(@user), class: "btn-primary btn" %></h1>
