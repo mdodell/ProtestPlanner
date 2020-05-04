@@ -2,6 +2,7 @@
 <% unless events.nil? || events.empty? %>
   <%= paginate events, param_name: pagination_param %>
   <div class="card-deck row">
+  
     <% events.each do |event| %>
       <div class="col-lg-4 col-md-6 col-xs-12 mb-4 d-flex">
         <div class="card flex-fill text-black bg-light p-0">

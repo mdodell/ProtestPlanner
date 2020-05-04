@@ -64,6 +64,8 @@ class Event < ApplicationRecord
             else
                 where('date_from >= ?', DateTime.now)
             end
+        else 
+            where('date_from >= ?', DateTime.now)
         end
     }
 

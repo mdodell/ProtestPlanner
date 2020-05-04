@@ -17,7 +17,8 @@ class EventsController < ApplicationController
   def browse
     event_params = params.permit(:keyword, :tags, :location, :latitude, :longitude, :date)
     if(!event_params[:keyword].blank? || !event_params[:tags].blank? || !event_params[:location].blank? || !event_params[:date].blank?) # If any of the search parameters exist
-      @events = Kaminari.paginate_array(Event.filter(event_params)).page(params[:page]).per(6)
+      @events = Event.filter(event_params)
+      @events = Kaminari.paginate_array(@events.reverse).page(params[:page]).per(6)
       @search_query = params
     end
   end
