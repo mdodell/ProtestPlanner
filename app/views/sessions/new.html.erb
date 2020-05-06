@@ -1,6 +1,7 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <% provide(:title, "Login") %>
 <div class="bg-primary full-page row no-gutters justify-content-center align-items-center">
-  <div class="sign-up-container bg-white text-center p-3 m-5">
+  <div class="sign-up-container bg-white text-center shadow-lg rounded p-3 m-5">
 
     <%= render 'shared/logo_dark', logo_text: "RiseUp" %>
     <p>Want to get together and join us in the right for <br> a free world? Sign in now, and get started!</p>
@@ -15,7 +16,7 @@
           <%= f.submit "Log in", class: "btn btn-secondary btn-lg w-100 mt-1" %>
         <% end %>
 
-        <p class="mt-1">New user? <%= link_to "Sign up now!", signup_path %></p>
+        <p class="mt-3">New user? <%= link_to "Sign up now!", signup_path %></p>
       </div>
     </div>
   </div>
