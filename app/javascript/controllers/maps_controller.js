@@ -118,7 +118,6 @@ export default class extends Controller {
 
     toggleMapStyles(){
         const mapColor = this.getMapColorScheme(document.getElementById("map_color").value);
-        console.log("called!");
         google_map.setOptions({
             styles: [
                 this.neighborhoodToggleTarget.checked ? this.toggleMapLabelStyle("administrative.neighborhood", true) : this.toggleMapLabelStyle("administrative.neighborhood", false),
