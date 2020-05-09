@@ -22,37 +22,37 @@ end
 
 Tag.import tag_columns, tags, validate: false
 
-10.times do
-    User.create(
-        user_name: Faker::Name.name,
-                  email: Faker::Internet.email,
-                  profile: Faker::Hacker.say_something_smart,
-                  phone: Faker::Number.number(digits:10),
-                  password: Faker::Number.number(digits:10).to_s
-    )
-end
+#10.times do
+#    User.create(
+#        user_name: Faker::Name.name,
+#                  email: Faker::Internet.email,
+#                  profile: Faker::Hacker.say_something_smart,
+#                  phone: Faker::Number.number(digits:10),
+#                  password: Faker::Number.number(digits:10).to_s
+#    )
+#end
 
-5.times do
-  event = Event.create!(
-      name: Faker::Movie.quote,
-      date_from: DateTime.current + 60 * 60 * 24,
-      date_to: DateTime.current + 60 * 60 * 48,
-      location: Faker::Address.full_address,
-      longitude: Faker::Address.longitude,
-      latitude: Faker::Address.latitude,
-      description: Faker::Movie.quote
-  )
-  event.tags << Tag.all.sample
-  event.save
-end
+#5.times do
+#  event = Event.create!(
+#      name: Faker::Movie.quote,
+#      date_from: DateTime.current + 60 * 60 * 24,
+#      date_to: DateTime.current + 60 * 60 * 48,
+#      location: Faker::Address.full_address,
+#      longitude: Faker::Address.longitude,
+#      latitude: Faker::Address.latitude,
+#      description: Faker::Movie.quote
+#  )
+#  event.tags << Tag.all.sample
+#  event.save
+#end
 
-5.times do
-  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)
-end
-
-5.times do
-  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 0)
-end
+#5.times do
+#  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 1)
+#end
+#
+#5.times do
+#  UserEventRelationship.create(event_id: Event.all.sample.id, user_id: User.all.sample.id, role_type_id: 0)
+#end
 
 RoleTypePermission.create(id: 0, role_type: "organizor", modify_event: true, delete_event: true);
 RoleTypePermission.create(id: 1, role_type: "atendee", modify_event: false, delete_event: false);
