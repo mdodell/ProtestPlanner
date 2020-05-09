@@ -9,14 +9,6 @@ export const SILVER_STYLE = [
         ]
     },
     {
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
         "elementType": "labels.text.fill",
         "stylers": [
             {
@@ -380,14 +372,6 @@ export const DARK_STYLE = [
         "stylers": [
             {
                 "color": "#212121"
-            }
-        ]
-    },
-    {
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
             }
         ]
     },
