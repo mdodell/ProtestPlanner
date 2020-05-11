@@ -8,26 +8,17 @@
 
 ### Inspiration 
 
-#### As mentioned in the descrption, one application we will be pulling from is Eventbrite, with its event creating capabilities (as seen below)
+#### As mentioned in the descrption, one application we will be pulling from is Eventbrite, with its event creating capabilities (as seen below). This includes the following components: 
 
-// insert image below 
-// Screenshot 1: Creating Events 
-
-<img src=""  width="400"/>
-
-// Screenshot 2: Looking for specific event tags  
-
-<img src=""  width="400"/>
-
-// Screenshot 3: Events nearby 
-
-<img src=""  width="400"/>
+- Creating/organizing events 
+- Tagging an event and being able to search based on (e.g. BLM, Womens Rights, Gun Activism, etc.) 
+- Searching for events near the user's location and opt to attend them 
 
 #### The real-time aspect is drawn from Waze, which includes certain icons that represent different indicators (police, traffice, accident)
 
-// Screenshot 4: Markers 
-
-<img src=""  width="400"/>
+- Placing 'markers' on the map to indicate different types of hot spots (police, conflicts, checkpoints, etc.) 
+- During an active event/protest, organizers and attendees can use these markers in real-time to help inform one another 
+- Real-time aspect also includes organizer's ability to send emails to their attendees to alert them before/during/after 
 
 ## **Requirements** 
 
@@ -55,18 +46,18 @@ https://gorails.com/setup/ubuntu/19.10
 
 
 ### Heroku 
-- more to add 
 
-### MySQL 
+#### For Windows (Not recommended method): 
 
-- more to add 
+https://devcenter.heroku.com/articles/getting-started-with-jruby
+
+#### For Mac / WSL : 
+
+https://devcenter.heroku.com/articles/getting-started-with-rails6
 
 ## **Schema** 
 
-- more to add 
-
 #### Link displaying DB Schema: https://drive.google.com/open?id=1-1pdKsBODWZG2AeLYroyUIRjv6Ih5FFJ
-
 
 
 ## **Test Suite** 
