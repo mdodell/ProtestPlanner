@@ -45,7 +45,7 @@ https://gorails.com/setup/windows/10
 https://gorails.com/setup/ubuntu/19.10
 
 
-### Heroku 
+## Heroku guide
 
 #### For Windows (Not recommended method): 
 
@@ -55,22 +55,8 @@ https://devcenter.heroku.com/articles/getting-started-with-jruby
 
 https://devcenter.heroku.com/articles/getting-started-with-rails6
 
-## **Schema** 
-
-#### Link displaying DB Schema: https://drive.google.com/open?id=1-1pdKsBODWZG2AeLYroyUIRjv6Ih5FFJ
-
-
-## **Test Suite** 
-
-- more to add
-
-## **Services** 
-
-- more to add
-
-## **Deployment Instructions** 
-
-- more to add 
+#### Heroku link:
+https://rise-up-brandeis.herokuapp.com/
 
 ## ** Authors **
 
